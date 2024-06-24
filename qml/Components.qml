@@ -18,42 +18,42 @@ Item {
     /*初始或结束点的树洞动画*/
     property var images: [
         "../assets/part2/Obj_acc2.img.shineWood.gate.0.0.png",
-        "part2/Obj_acc2.img.shineWood.gate.0.1.png",
-        "part2/Obj_acc2.img.shineWood.gate.0.2.png",
-        "part2/Obj_acc2.img.shineWood.gate.0.3.png",
-        "part2/Obj_acc2.img.shineWood.gate.0.4.png",
-        "part2/Obj_acc2.img.shineWood.gate.0.5.png",
-        "part2/Obj_acc2.img.shineWood.gate.0.6.png",
-        "part2/Obj_acc2.img.shineWood.gate.0.7.png",
-        "part2/Obj_acc2.img.shineWood.gate.0.8.png",
-        "part2/Obj_acc2.img.shineWood.gate.0.9.png",
-        "part2/Obj_acc2.img.shineWood.gate.0.10.png",
-        "part2/Obj_acc2.img.shineWood.gate.0.11.png",
+        "../assets/part2/Obj_acc2.img.shineWood.gate.0.1.png",
+        "../assets/part2/Obj_acc2.img.shineWood.gate.0.2.png",
+        "../assets/part2/Obj_acc2.img.shineWood.gate.0.3.png",
+        "../assets/part2/Obj_acc2.img.shineWood.gate.0.4.png",
+        "../assets/part2/Obj_acc2.img.shineWood.gate.0.5.png",
+        "../assets/part2/Obj_acc2.img.shineWood.gate.0.6.png",
+        "../assets/part2/Obj_acc2.img.shineWood.gate.0.7.png",
+        "../assets/part2/Obj_acc2.img.shineWood.gate.0.8.png",
+        "../assets/part2/Obj_acc2.img.shineWood.gate.0.9.png",
+        "../assets/part2/Obj_acc2.img.shineWood.gate.0.10.png",
+        "../assets/part2/Obj_acc2.img.shineWood.gate.0.11.png",
     ]
     property int currentIndex:0//图片索引
 //第三关组件
     //黄金旋风
     property var images1: [
-    "images/Obj_dungeon.img.metroSubway.acc.20.0.png",
-    "images/Obj_dungeon.img.metroSubway.acc.20.1.png",
-    "images/Obj_dungeon.img.metroSubway.acc.20.2.png",
-    "images/Obj_dungeon.img.metroSubway.acc.20.3.png",
-    "images/Obj_dungeon.img.metroSubway.acc.20.4.png",
-    "images/Obj_dungeon.img.metroSubway.acc.20.5.png",
-    "images/Obj_dungeon.img.metroSubway.acc.20.6.png",
-    "images/Obj_dungeon.img.metroSubway.acc.20.7.png",
-    "images/Obj_dungeon.img.metroSubway.acc.20.8.png",
-    "images/Obj_dungeon.img.metroSubway.acc.20.9.png",
-    "images/Obj_dungeon.img.metroSubway.acc.20.10.png",
-    "images/Obj_dungeon.img.metroSubway.acc.20.11.png",
+    "../assets/images/Obj_dungeon.img.metroSubway.acc.20.0.png",
+    "../assets/images/Obj_dungeon.img.metroSubway.acc.20.1.png",
+    "../assets/images/Obj_dungeon.img.metroSubway.acc.20.2.png",
+    "../assets/images/Obj_dungeon.img.metroSubway.acc.20.3.png",
+    "../assets/images/Obj_dungeon.img.metroSubway.acc.20.4.png",
+    "../assets/images/Obj_dungeon.img.metroSubway.acc.20.5.png",
+    "../assets/images/Obj_dungeon.img.metroSubway.acc.20.6.png",
+    "../assets/images/Obj_dungeon.img.metroSubway.acc.20.7.png",
+    "../assets/images/Obj_dungeon.img.metroSubway.acc.20.8.png",
+    "../assets/images/Obj_dungeon.img.metroSubway.acc.20.9.png",
+    "../assets/images/Obj_dungeon.img.metroSubway.acc.20.10.png",
+    "../assets/images/Obj_dungeon.img.metroSubway.acc.20.11.png",
     ]
     property int currentIndex1:0
     //法阵
     property var circle:[
-    "images/Obj_dungeon2.img.toyCastle2.gate.6.0.png",
-        "images/Obj_dungeon2.img.toyCastle2.gate.6.1.png",
-        "images/Obj_dungeon2.img.toyCastle2.gate.6.2.png",
-        "images/Obj_dungeon2.img.toyCastle2.gate.6.0.png",
+        "../assets/images/Obj_dungeon2.img.toyCastle2.gate.6.0.png",
+        "../assets/images/Obj_dungeon2.img.toyCastle2.gate.6.1.png",
+        "../assets/images/Obj_dungeon2.img.toyCastle2.gate.6.2.png",
+        "../assets/images/Obj_dungeon2.img.toyCastle2.gate.6.0.png",
     ]
     property int  circleIndex: 0
     //星星
@@ -61,8 +61,8 @@ Item {
         id:skylight
         Item{
     property var light: [
-    "images/Obj_acc6.img.folkvillige.nature.24.0.png",
-    "images/Obj_acc6.img.folkvillige.nature.23.1.png",
+    "../assets/images/Obj_acc6.img.folkvillige.nature.24.0.png",
+    "../assets/images/Obj_acc6.img.folkvillige.nature.23.1.png",
     ]
     property int lightIndex: 0
             Image {
@@ -85,9 +85,9 @@ Item {
     }
     //喷泉
     property var water: [
-    "images/Obj_acc11.img.erebTW.holybird.17.0.png",
-    "images/Obj_acc11.img.erebTW.holybird.17.1.png",
-    "images/Obj_acc11.img.erebTW.holybird.17.2.png",
+    "../assets/images/Obj_acc11.img.erebTW.holybird.17.0.png",
+    "../assets/images/Obj_acc11.img.erebTW.holybird.17.1.png",
+    "../assets/images/Obj_acc11.img.erebTW.holybird.17.2.png",
     ]
     property int waterIndex: 0
     // //火炉
@@ -112,16 +112,16 @@ Item {
     Item{
         property var fire: [
         "images/Obj_acc10.img.timeTemplefire.acc.3.0.png",
-            "images/Obj_acc10.img.timeTemplefire.acc.3.1.png",
-            "images/Obj_acc10.img.timeTemplefire.acc.3.2.png",
-            "images/Obj_acc10.img.timeTemplefire.acc.3.4.png",
-            "images/Obj_acc10.img.timeTemplefire.acc.3.5.png",
-            "images/Obj_acc10.img.timeTemplefire.acc.3.6.png",
-            "images/Obj_acc10.img.timeTemplefire.acc.3.7.png",
-            "images/Obj_acc10.img.timeTemplefire.acc.3.8.png",
-            "images/Obj_acc10.img.timeTemplefire.acc.3.9.png",
-            "images/Obj_acc10.img.timeTemplefire.acc.3.10.png",
-            "images/Obj_acc10.img.timeTemplefire.acc.3.11.png",
+            "../assets/images/Obj_acc10.img.timeTemplefire.acc.3.1.png",
+            "../assets/images/Obj_acc10.img.timeTemplefire.acc.3.2.png",
+            "../assets/images/Obj_acc10.img.timeTemplefire.acc.3.4.png",
+            "../assets/images/Obj_acc10.img.timeTemplefire.acc.3.5.png",
+            "../assets/images/Obj_acc10.img.timeTemplefire.acc.3.6.png",
+            "../assets/images/Obj_acc10.img.timeTemplefire.acc.3.7.png",
+            "../assets/images/Obj_acc10.img.timeTemplefire.acc.3.8.png",
+            "../assets/images/Obj_acc10.img.timeTemplefire.acc.3.9.png",
+            "../assets/images/Obj_acc10.img.timeTemplefire.acc.3.10.png",
+            "../assets/images/Obj_acc10.img.timeTemplefire.acc.3.11.png",
         ]
         property int fireIndex: 0
         Image {
@@ -147,16 +147,16 @@ Item {
     id:bergComponent
     Item{
         property var berg: [
-        "images/Obj_acc10.img.timeTempleice.acc.0.0.png",
-            "images/Obj_acc10.img.timeTempleice.acc.0.1.png",
-            "images/Obj_acc10.img.timeTempleice.acc.0.2.png",
-            "images/Obj_acc10.img.timeTempleice.acc.0.3.png",
-            "images/Obj_acc10.img.timeTempleice.acc.0.4.png",
-            "images/Obj_acc10.img.timeTempleice.acc.0.5.png",
-            "images/Obj_acc10.img.timeTempleice.acc.0.6.png",
-            "images/Obj_acc10.img.timeTempleice.acc.0.7.png",
-            "images/Obj_acc10.img.timeTempleice.acc.0.8.png",
-            "images/Obj_acc10.img.timeTempleice.acc.0.9.png",
+            "../assets/images/Obj_acc10.img.timeTempleice.acc.0.0.png",
+            "../assets/images/Obj_acc10.img.timeTempleice.acc.0.1.png",
+            "../assets/images/Obj_acc10.img.timeTempleice.acc.0.2.png",
+            "../assets/images/Obj_acc10.img.timeTempleice.acc.0.3.png",
+            "../assets/images/Obj_acc10.img.timeTempleice.acc.0.4.png",
+            "../assets/images/Obj_acc10.img.timeTempleice.acc.0.5.png",
+            "../assets/images/Obj_acc10.img.timeTempleice.acc.0.6.png",
+            "../assets/images/Obj_acc10.img.timeTempleice.acc.0.7.png",
+            "../assets/images/Obj_acc10.img.timeTempleice.acc.0.8.png",
+            "../assets/images/Obj_acc10.img.timeTempleice.acc.0.9.png",
         ]
         property int bergIndex: 0
         Image {
@@ -182,12 +182,12 @@ Item {
     id:fire1Component
     Item{
         property var fire1: [
-        "images/Obj_acc12.img.aran.fire.0.0.png",
-        "images/Obj_acc12.img.aran.fire.0.1.png",
-            "images/Obj_acc12.img.aran.fire.0.2.png",
-            "images/Obj_acc12.img.aran.fire.0.3.png",
-            "images/Obj_acc12.img.aran.fire.0.4.png",
-            "images/Obj_acc12.img.aran.fire.0.5.png",
+            "../assets/images/Obj_acc12.img.aran.fire.0.0.png",
+            "../assets/images/Obj_acc12.img.aran.fire.0.1.png",
+            "../assets/images/Obj_acc12.img.aran.fire.0.2.png",
+            "../assets/images/Obj_acc12.img.aran.fire.0.3.png",
+            "../assets/images/Obj_acc12.img.aran.fire.0.4.png",
+            "../assets/images/Obj_acc12.img.aran.fire.0.5.png",
         ]
         property int fire1Index: 0
         Image {
@@ -212,9 +212,9 @@ Item {
     id:cordComponent
     Item{
         property var cord: [
-        "images/Obj_acc11.img.erebTR.trap.3.0.png",
-        "images/Obj_acc11.img.erebTR.trap.3.1.png",
-        "images/Obj_acc11.img.erebTR.trap.3.2.png",
+        "../assets/images/Obj_acc11.img.erebTR.trap.3.0.png",
+        "../assets/images/Obj_acc11.img.erebTR.trap.3.1.png",
+        "../assets/images/Obj_acc11.img.erebTR.trap.3.2.png",
         ]
         property int cordIndex: 0
         Image {
@@ -239,12 +239,12 @@ Item {
      id:firesComponent
      Item{
          property var fires: [
-             "images/Obj_acc12.img.aran.fire.1.0.png",
-             "images/Obj_acc12.img.aran.fire.1.1.png",
-             "images/Obj_acc12.img.aran.fire.1.2.png",
-             "images/Obj_acc12.img.aran.fire.1.3.png",
-             "images/Obj_acc12.img.aran.fire.1.4.png",
-             "images/Obj_acc12.img.aran.fire.1.5.png",
+             "../assets/images/Obj_acc12.img.aran.fire.1.0.png",
+             "../assets/images/Obj_acc12.img.aran.fire.1.1.png",
+             "../assets/images/Obj_acc12.img.aran.fire.1.2.png",
+             "../assets/images/Obj_acc12.img.aran.fire.1.3.png",
+             "../assets/images/Obj_acc12.img.aran.fire.1.4.png",
+             "../assets/images/Obj_acc12.img.aran.fire.1.5.png",
          ]
          property int firesIndex: 0
          Image {
@@ -268,18 +268,18 @@ Item {
     id:thunderComponent
     Item{
         property var thunder: [
-        "images/Obj_acc13.img.cityLT.quest.2.0.png",
-        "images/Obj_acc13.img.cityLT.quest.2.1.png",
-        "images/Obj_acc13.img.cityLT.quest.2.2.png",
-        "images/Obj_acc13.img.cityLT.quest.2.3.png",
-        "images/Obj_acc13.img.cityLT.quest.2.4.png",
-        "images/Obj_acc13.img.cityLT.quest.2.5.png",
-        "images/Obj_acc13.img.cityLT.quest.2.6.png",
-        "images/Obj_acc13.img.cityLT.quest.2.7.png",
-        "images/Obj_acc13.img.cityLT.quest.2.8.png",
-        "images/Obj_acc13.img.cityLT.quest.2.9.png",
-        "images/Obj_acc13.img.cityLT.quest.2.10.png",
-        "images/Obj_acc13.img.cityLT.quest.2.11.png",
+        "../assets/images/Obj_acc13.img.cityLT.quest.2.0.png",
+        "../assets/images/Obj_acc13.img.cityLT.quest.2.1.png",
+        "../assets/images/Obj_acc13.img.cityLT.quest.2.2.png",
+        "../assets/images/Obj_acc13.img.cityLT.quest.2.3.png",
+        "../assets/images/Obj_acc13.img.cityLT.quest.2.4.png",
+        "../assets/images/Obj_acc13.img.cityLT.quest.2.5.png",
+        "../assets/images/Obj_acc13.img.cityLT.quest.2.6.png",
+        "../assets/images/Obj_acc13.img.cityLT.quest.2.7.png",
+        "../assets/images/Obj_acc13.img.cityLT.quest.2.8.png",
+        "../assets/images/Obj_acc13.img.cityLT.quest.2.9.png",
+        "../assets/images/Obj_acc13.img.cityLT.quest.2.10.png",
+        "../assets/images/Obj_acc13.img.cityLT.quest.2.11.png",
         ]
         property int thunderIndex: 0
         Image {
@@ -304,12 +304,12 @@ Item {
     id:fires1Component
     Item{
         property var fires1: [
-        "images/Obj_acc12.img.aran.fire.4.0.png",
-            "images/Obj_acc12.img.aran.fire.4.1.png",
-            "images/Obj_acc12.img.aran.fire.4.2.png",
-            "images/Obj_acc12.img.aran.fire.4.3.png",
-            "images/Obj_acc12.img.aran.fire.4.4.png",
-            "images/Obj_acc12.img.aran.fire.4.5.png",
+            "../assets/images/Obj_acc12.img.aran.fire.4.0.png",
+            "../assets/images/Obj_acc12.img.aran.fire.4.1.png",
+            "../assets/images/Obj_acc12.img.aran.fire.4.2.png",
+            "../assets/images/Obj_acc12.img.aran.fire.4.3.png",
+            "../assets/images/Obj_acc12.img.aran.fire.4.4.png",
+            "../assets/images/Obj_acc12.img.aran.fire.4.5.png",
         ]
         property int fires1Index: 0
         Image {
@@ -334,47 +334,47 @@ Item {
 id:goddessComponent
 Item{
     property var god: [
-    "images/Obj_acc11.img.erebTW.holybird.3.0.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.1.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.2.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.3.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.4.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.5.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.6.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.7.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.8.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.9.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.10.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.11.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.12.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.13.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.14.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.15.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.16.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.17.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.18.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.19.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.20.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.21.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.22.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.23.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.24.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.25.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.26.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.27.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.28.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.29.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.30.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.31.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.32.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.33.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.34.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.35.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.36.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.37.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.38.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.39.png",
-        "images/Obj_acc11.img.erebTW.holybird.3.40.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.0.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.1.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.2.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.3.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.4.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.5.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.6.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.7.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.8.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.9.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.10.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.11.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.12.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.13.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.14.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.15.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.16.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.17.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.18.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.19.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.20.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.21.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.22.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.23.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.24.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.25.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.26.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.27.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.28.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.29.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.30.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.31.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.32.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.33.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.34.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.35.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.36.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.37.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.38.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.39.png",
+        "../assets/images/Obj_acc11.img.erebTW.holybird.3.40.png",
     ]
     property int godIndex: 0
     Image {
@@ -397,19 +397,19 @@ Item{
 }
      //第一关怪物动画
     property var images2:[
-        "part1/image133.png",
-        "part1/image135.png",
-        "part1/image137.png"
+        "../assets/part1/image133.png",
+        "../assets/part1/image135.png",
+        "../assets/part1/image137.png"
     ]
     property int currentIndex2: 0
 
     property var images3:[
-        "part1/image143.png",
-        "part1/image145.png",
-        "part1/image147.png",
-        "part1/image149.png",
-        "part1/image151.png",
-        "part1/image153.png"
+        "../assets/part1/image143.png",
+        "../assets/part1/image145.png",
+        "../assets/part1/image147.png",
+        "../assets/part1/image149.png",
+        "../assets/part1/image151.png",
+        "../assets/part1/image153.png"
     ]
     property int currentIndex3:0
 
@@ -418,7 +418,6 @@ Item{
         upDownAnimation.start()
         rightLeftAnimation1.start()
         upDownAnimation1.start()
-        // var imageInstance1=_cokeImage.createObject(parent,{"x":10,"y":800})
             }
     /*关卡1 组件*/
     Component{
@@ -433,63 +432,63 @@ Item{
                 height: 84
                 x:stand_pink_left.x+11
                 y:stand_pink_left.y-stand_pink.height*8-stand_pink_top.height
-                source: "part1/Obj_acc4.img.toyCastle.pet.11.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.11.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right.x
                 y:stand_pink_left.y-stand_pink.height*8
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right.x
                 y:stand_pink_left.y-stand_pink.height*7
-                source: "part1/Obj_acc4.img.toyCastle.pet.12.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.12.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right.x
                 y:stand_pink_left.y-stand_pink.height*6
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right.x
                 y:stand_pink_left.y-stand_pink.height*5
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right.x
                 y:stand_pink_left.y-stand_pink.height*4
-                source: "part1/Obj_acc4.img.toyCastle.pet.12.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.12.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right.x
                 y:stand_pink_left.y-stand_pink.height*3
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right.x
                 y:stand_pink_left.y-stand_pink.height*2
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right.x
                 y:stand_pink_left.y-stand_pink.height
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 id: stand_pink_left
@@ -497,7 +496,7 @@ Item{
                 height: 38
                 x:stand_pink.x-31
                 y:stand_pink.y-stand_pink_left.height
-                source: "part1/Obj_acc4.img.toyCastle.pet.13.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.13.0.png"
             }
             Image {
                 id: stand_pink
@@ -505,28 +504,28 @@ Item{
                 height: 38
                 x:stand_pink_right.x
                 y:stand_pink_right.y-stand_pink.height*4
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right.x
                 y:stand_pink_right.y-stand_pink.height*3
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right.x
                 y:stand_pink_right.y-stand_pink.height*2
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right.x
                 y:stand_pink_right.y-stand_pink.height
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 id: stand_pink_right
@@ -534,28 +533,28 @@ Item{
                 height: 38
                 x:stand_pink_bottom.x+4
                 y:stand_pink_bottom.y-stand_pink.height*3-stand_pink_right.height
-                source: "part1/Obj_acc4.img.toyCastle.pet.12.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.12.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right.x
                 y:stand_pink_bottom.y-stand_pink.height*3
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right.x
                 y:stand_pink_bottom.y-stand_pink.height*2
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right.x
                 y: stand_pink_bottom.y-stand_pink.height
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 id: stand_pink_bottom
@@ -563,7 +562,7 @@ Item{
                 height:38
                 x:100
                 y:800
-                source: "part1/Obj_acc4.img.toyCastle.pet.14.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.14.0.png"
             }
         }
     }
@@ -578,63 +577,63 @@ Item{
                 height: 84
                 x:stand_green_left.x-20
                 y:stand_green_left.y-stand_green.height*8-stand_green_top.height
-                source: "part1/Obj_acc4.img.toyCastle.pet.15.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.15.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right.x
                 y:stand_green_left.y-stand_green.height*8
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right.x
                 y:stand_green_left.y-stand_green.height*7
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right.x
                 y:stand_green_left.y-stand_green.height*6
-                source: "part1/Obj_acc4.img.toyCastle.pet.17.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.17.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right.x-31
                 y:stand_green_left.y-stand_green.height*5
-                source: "part1/Obj_acc4.img.toyCastle.pet.16.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.16.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right.x
                 y:stand_green_left.y-stand_green.height*4
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right.x
                 y:stand_green_left.y-stand_green.height*3
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right.x-31
                 y:stand_green_left.y-stand_green.height*2
-                source: "part1/Obj_acc4.img.toyCastle.pet.16.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.16.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right.x
                 y:stand_green_left.y-stand_green.height
-                source: "part1/Obj_acc4.img.toyCastle.pet.17.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.17.0.png"
             }
             Image {
                 id: stand_green_left
@@ -642,7 +641,7 @@ Item{
                 height: 38
                 x:stand_green.x
                 y:stand_green.y-stand_green_left.height
-                source: "part1/Obj_acc4.img.toyCastle.pet.17.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.17.0.png"
             }
             Image {
                 id: stand_green
@@ -650,28 +649,28 @@ Item{
                 height: 38
                 x:stand_green_right.x
                 y:stand_green_right.y-stand_green.height*4
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right.x
                 y:stand_green_right.y-stand_green.height*3
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right.x-31
                 y:stand_green_right.y-stand_green.height*2
-                source: "part1/Obj_acc4.img.toyCastle.pet.16.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.16.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right.x
                 y:stand_green_right.y-stand_green.height
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 id: stand_green_right
@@ -679,28 +678,28 @@ Item{
                 height: 38
                 x:stand_green_bottom.x+4
                 y:stand_green_bottom.y-stand_green.height*3-stand_green_right.height
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right.x
                 y:stand_green_bottom.y-stand_green.height*3
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right.x
                 y:stand_green_bottom.y-stand_green.height*2
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right.x
                 y: stand_green_bottom.y-stand_green.height
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 id: stand_green_bottom
@@ -708,7 +707,7 @@ Item{
                 height:38
                 x:200
                 y:800
-                source: "part1/Obj_acc4.img.toyCastle.pet.18.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.18.0.png"
             }
 
         }
@@ -724,84 +723,84 @@ Item{
                 height: 84
                 x:stand_green_left1.x-20
                 y:stand_green_left1.y-stand_green1.height*11-stand_green_top1.height
-                source: "part1/Obj_acc4.img.toyCastle.pet.15.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.15.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right1.x
                 y:stand_green_left1.y-stand_green1.height*11
-                source: "part1/Obj_acc4.img.toyCastle.pet.17.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.17.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right1.x
                 y:stand_green_left1.y-stand_green1.height*10
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right1.x
                 y:stand_green_left1.y-stand_green1.height*9
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right1.x
                 y:stand_green_left1.y-stand_green1.height*8
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right1.x
                 y:stand_green_left1.y-stand_green1.height*7
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right1.x
                 y:stand_green_left1.y-stand_green1.height*6
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right1.x
                 y:stand_green_left1.y-stand_green1.height*5
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right1.x
                 y:stand_green_left1.y-stand_green1.height*4
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right1.x
                 y:stand_green_left1.y-stand_green1.height*3
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right1.x-31
                 y:stand_green_left1.y-stand_green1.height*2
-                source: "part1/Obj_acc4.img.toyCastle.pet.16.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.16.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right1.x
                 y:stand_green_left1.y-stand_green1.height
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 id: stand_green_left1
@@ -809,7 +808,7 @@ Item{
                 height: 38
                 x:stand_green1.x
                 y:stand_green1.y-stand_green_left1.height
-                source: "part1/Obj_acc4.img.toyCastle.pet.17.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.17.0.png"
             }
             Image {
                 id: stand_green1
@@ -817,28 +816,28 @@ Item{
                 height: 38
                 x:stand_green_right1.x
                 y:stand_green_right1.y-stand_green1.height*4
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right1.x
                 y:stand_green_right1.y-stand_green1.height*3
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right1.x-31
                 y:stand_green_right1.y-stand_green1.height*2
-                source: "part1/Obj_acc4.img.toyCastle.pet.16.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.16.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right1.x
                 y:stand_green_right1.y-stand_green1.height
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 id: stand_green_right1
@@ -846,28 +845,28 @@ Item{
                 height: 38
                 x:stand_green_bottom1.x+4
                 y:stand_green_bottom1.y-stand_green1.height*3-stand_green_right1.height
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right1.x
                 y:stand_green_bottom1.y-stand_green1.height*3
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right1.x
                 y:stand_green_bottom1.y-stand_green1.height*2
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right1.x
                 y: stand_green_bottom1.y-stand_green1.height
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 id: stand_green_bottom1
@@ -875,7 +874,7 @@ Item{
                 height:38
                 x:300
                 y:950
-                source: "part1/Obj_acc4.img.toyCastle.pet.18.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.18.0.png"
             }
         }
     }
@@ -890,112 +889,112 @@ Item{
                 height: 84
                 x:stand_pink_left1.x+11
                 y:stand_pink_left1.y-stand_pink1.height*15-stand_pink_top1.height
-                source: "part1/Obj_acc4.img.toyCastle.pet.11.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.11.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right1.x
                 y:stand_pink_left1.y-stand_pink1.height*15
-                source: "part1/Obj_acc4.img.toyCastle.pet.12.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.12.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right1.x-31
                 y:stand_pink_left1.y-stand_pink1.height*14
-                source: "part1/Obj_acc4.img.toyCastle.pet.13.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.13.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right1.x
                 y:stand_pink_left1.y-stand_pink1.height*13
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right1.x
                 y:stand_pink_left1.y-stand_pink1.height*12
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right1.x-31
                 y:stand_pink_left1.y-stand_pink1.height*11
-                source: "part1/Obj_acc4.img.toyCastle.pet.13.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.13.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right1.x
                 y:stand_pink_left1.y-stand_pink1.height*10
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right1.x
                 y:stand_pink_left1.y-stand_pink1.height*9
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right1.x
                 y:stand_pink_left1.y-stand_pink1.height*8
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right1.x
                 y:stand_pink_left1.y-stand_pink1.height*7
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right1.x
                 y:stand_pink_left1.y-stand_pink1.height*6
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right1.x
                 y:stand_pink_left1.y-stand_pink1.height*5
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right1.x
                 y:stand_pink_left1.y-stand_pink1.height*4
-                source: "part1/Obj_acc4.img.toyCastle.pet.12.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.12.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right1.x
                 y:stand_pink_left1.y-stand_pink1.height*3
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right1.x
                 y:stand_pink_left1.y-stand_pink1.height*2
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right1.x
                 y:stand_pink_left1.y-stand_pink1.height
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 id: stand_pink_left1
@@ -1003,7 +1002,7 @@ Item{
                 height: 38
                 x:stand_pink1.x-31
                 y:stand_pink1.y-stand_pink_left1.height
-                source: "part1/Obj_acc4.img.toyCastle.pet.13.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.13.0.png"
             }
             Image {
                 id: stand_pink1
@@ -1011,28 +1010,28 @@ Item{
                 height: 38
                 x:stand_pink_right1.x
                 y:stand_pink_right1.y-stand_pink1.height*4
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right1.x
                 y:stand_pink_right1.y-stand_pink1.height*3
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right1.x
                 y:stand_pink_right1.y-stand_pink1.height*2
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right1.x
                 y:stand_pink_right1.y-stand_pink1.height
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 id: stand_pink_right1
@@ -1040,28 +1039,28 @@ Item{
                 height: 38
                 x:stand_pink_bottom1.x+4
                 y:stand_pink_bottom1.y-stand_pink1.height*3-stand_pink_right1.height
-                source: "part1/Obj_acc4.img.toyCastle.pet.12.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.12.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right1.x
                 y:stand_pink_bottom1.y-stand_pink1.height*3
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right1.x
                 y:stand_pink_bottom1.y-stand_pink1.height*2
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_pink_right1.x
                 y: stand_pink_bottom1.y-stand_pink1.height
-                source: "part1/stand_pink.png"
+                source: "../assets/part1/stand_pink.png"
             }
             Image {
                 id: stand_pink_bottom1
@@ -1069,7 +1068,7 @@ Item{
                 height:38
                 x:400
                 y:1000
-                source: "part1/Obj_acc4.img.toyCastle.pet.14.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.14.0.png"
             }
         }
     }
@@ -1084,84 +1083,84 @@ Item{
                 height: 84
                 x:stand_green_left2.x-20
                 y:stand_green_left2.y-stand_green2.height*11-stand_green_top2.height
-                source: "part1/Obj_acc4.img.toyCastle.pet.15.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.15.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right2.x
                 y:stand_green_left2.y-stand_green2.height*11
-                source: "part1/Obj_acc4.img.toyCastle.pet.17.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.17.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right2.x-31
                 y:stand_green_left2.y-stand_green2.height*10
-                source: "part1/Obj_acc4.img.toyCastle.pet.16.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.16.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right2.x
                 y:stand_green_left2.y-stand_green2.height*9
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right2.x
                 y:stand_green_left2.y-stand_green2.height*8
-                source: "part1/Obj_acc4.img.toyCastle.pet.17.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.17.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right2.x
                 y:stand_green_left2.y-stand_green2.height*7
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right2.x
                 y:stand_green_left2.y-stand_green2.height*6
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right2.x
                 y:stand_green_left2.y-stand_green2.height*5
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right2.x
                 y:stand_green_left2.y-stand_green2.height*4
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right2.x
                 y:stand_green_left2.y-stand_green2.height*3
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right2.x-31
                 y:stand_green_left2.y-stand_green2.height*2
-                source: "part1/Obj_acc4.img.toyCastle.pet.16.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.16.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right2.x
                 y:stand_green_left2.y-stand_green2.height
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 id: stand_green_left2
@@ -1169,7 +1168,7 @@ Item{
                 height: 38
                 x:stand_green2.x
                 y:stand_green2.y-stand_green_left2.height
-                source: "part1/Obj_acc4.img.toyCastle.pet.17.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.17.0.png"
             }
             Image {
                 id: stand_green2
@@ -1177,28 +1176,28 @@ Item{
                 height: 38
                 x:stand_green_right2.x
                 y:stand_green_right2.y-stand_green2.height*4
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right2.x
                 y:stand_green_right2.y-stand_green2.height*3
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right2.x-31
                 y:stand_green_right2.y-stand_green2.height*2
-                source: "part1/Obj_acc4.img.toyCastle.pet.16.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.16.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right2.x
                 y:stand_green_right2.y-stand_green2.height
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 id: stand_green_right2
@@ -1206,28 +1205,28 @@ Item{
                 height: 38
                 x:stand_green_bottom2.x+4
                 y:stand_green_bottom2.y-stand_green2.height*3-stand_green_right2.height
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right2.x-31
                 y:stand_green_bottom2.y-stand_green2.height*3
-                source: "part1/Obj_acc4.img.toyCastle.pet.16.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.16.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right2.x
                 y:stand_green_bottom2.y-stand_green2.height*2
-                source: "part1/Obj_acc4.img.toyCastle.pet.17.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.17.0.png"
             }
             Image {
                 width: 46
                 height: 38
                 x:stand_green_right2.x
                 y: stand_green_bottom2.y-stand_green2.height
-                source: "part1/stand_green.png"
+                source: "../assets/part1/stand_green.png"
             }
             Image {
                 id: stand_green_bottom2
@@ -1235,7 +1234,7 @@ Item{
                 height:38
                 x:500
                 y:800
-                source: "part1/Obj_acc4.img.toyCastle.pet.18.0.png"
+                source: "../assets/part1/Obj_acc4.img.toyCastle.pet.18.0.png"
             }
 
         }
@@ -1254,14 +1253,14 @@ Item{
                 height: 800
                 width: 683
                 x:0
-                source: "image/back.14.png"
+                source: "../assets/image/back.14.png"
             }
             Image {
                 height: 153*2
                 width: 159*2
                 anchors.bottom: parent.bottom
                 anchors.right: parent.right
-                source: "image/tree1.PNG"
+                source: "../assets/image/tree1.PNG"
             }
 
 
@@ -1294,7 +1293,7 @@ Item{
                             onTapped:{
                                 backgroundMusic.pause()
                                 // text_guanqia.color="#a89a9a"
-                                numImage.source="image/changenum" + index + ".png"
+                                numImage.source="../assets/image/changenum" + index + ".png"
                                 console.log("进入关卡【"+index+"】")
                                 if(index==0){
                                     _page0.visible=true
@@ -1333,7 +1332,7 @@ Item{
                             id: numImage
                             width: 44
                             height: 46
-                            source: "image/num" + index + ".png"
+                            source: "../assets/image/num" + index + ".png"
                             anchors.centerIn: parent
                         }
 
@@ -1341,7 +1340,7 @@ Item{
                             id: iconImage
                             width: 75
                             height:75
-                            source: "image/cake" + index + ".gif" // 动态设置图像源
+                            source: "../assets/image/cake" + index + ".gif" // 动态设置图像源
                             fillMode: Image.PreserveAspectFit
                                 }
 
@@ -1378,7 +1377,7 @@ Item{
                     audioOutput: AudioOutput{
                     volume: 0.5 // 音量设置为50%
                     }
-                    source: "music/Bgm01.img.BadGuys.mp3" // 使用本地资源
+                    source: "../assets/music/Bgm01.img.BadGuys.mp3" // 使用本地资源
                     loops: MediaPlayer.Infinite // 无限循环播放
                 }
             Player{
@@ -1393,7 +1392,7 @@ Item{
                 height:800
                 width:2258
                 x:0
-                source: "part1/background3.png"
+                source: "../assets/part1/background3.png"
 
                 Loader{
                     sourceComponent: _cokeImage
@@ -1481,62 +1480,6 @@ Item{
                         _end.source=images1[currentIndex1]
                     }
                 }
-
-                /*npc1的图像动画*/
-                // Image {
-                //     id: _npc1
-                //     source: images2[currentIndex2]
-                //     width: 63
-                //     height: 74
-                //     y:-100
-                //     x:800
-                // }
-                // NumberAnimation{
-                //     id:_npc1Fall
-                //     target: _npc1
-                //     property: "y"
-                //     to:705
-                //     duration: 3000
-                //     easing.type: Easing.InOutQuad
-                // }
-
-                // Timer{
-                //     id:_npc1Timer
-                //     interval: 200
-                //     running: true
-                //     repeat: true
-                //     onTriggered: {
-                //         currentIndex2=(currentIndex2+1)%images2.length//循环每张图
-                //         _npc1.source=images2[currentIndex2]
-                //     }
-                // }
-
-                // function chasePlayer() {
-                //         var direction = player.x - _npc1.x;
-                //         var speed = 5; // 怪物移动速度
-                //         if(direction<0){
-                //             _npc1.x+=speed
-                //         }else{
-                //             _npc1.x-=speed
-                //         }
-                //         console.log("sssss")
-                //     }
-
-                // 定时器，每隔一段时间调用一次chasePlayer函数
-                // Timer {
-                //     interval: 1000
-                //     repeat: true
-                //     onTriggered: {
-                //         var direction = player.x - _npc1.x;
-                //         var speed = 5; // 怪物移动速度
-                //         if(direction<0){
-                //             _npc1.x+=speed
-                //         }else{
-                //             _npc1.x-=speed
-                //         }
-                //         console.log("sssss")
-                //     }
-                // }
             }
         }
 
@@ -1544,9 +1487,7 @@ Item{
     /*关卡2*/
     Page{
         id:_page1
-        visible: false/*
-        property int sceneWidth:5000
-        property int scrollThreshold:960*/
+        visible: false
         Rectangle{
             id:gameScene1
             width: 1200
@@ -1556,14 +1497,14 @@ Item{
                     audioOutput: AudioOutput{
                     volume: 0.5 // 音量设置为50%
                     }
-                    source: "music/Bgm01.img.HighlandStar.mp3" // 使用本地资源
+                    source: "../assets/music/Bgm01.img.HighlandStar.mp3" // 使用本地资源
                     loops: MediaPlayer.Infinite // 无限循环播放
                 }
             Image {
                 id: background1
                 width:1200
                 height: 900
-                source: "part2/Obj_acc1.img.lv200.magician.0.0.png"
+                source: "../assets/part2/Obj_acc1.img.lv200.magician.0.0.png"
                 fillMode: Image.PreserveAspectCrop
                 /*延长背景图背景图*/
                 Image {
@@ -1571,21 +1512,21 @@ Item{
                     x:parent.width
                     width:1200
                     height: 900
-                    source: "part2/Obj_acc1.img.lv200.magician.0.0.png"
+                    source: "../assets/part2/Obj_acc1.img.lv200.magician.0.0.png"
                 }
                 Image {
                     id: background1C
                     x:2400
                     width:1200
                     height: 900
-                    source: "part2/Obj_acc1.img.lv200.magician.0.0.png"
+                    source: "../assets/part2/Obj_acc1.img.lv200.magician.0.0.png"
                 }
                 Image {
                     id: background1D
                     x:3600
                     width:1200
                     height: 900
-                    source: "part2/Obj_acc1.img.lv200.magician.0.0.png"
+                    source: "../assets/part2/Obj_acc1.img.lv200.magician.0.0.png"
                 }
 
                 /*树洞的动画*/
@@ -1616,7 +1557,7 @@ Item{
                     width:850
                     height: 150*3
                     fillMode: Image.PreserveAspectCrop
-                    source: "part2/Obj_acc1.img.lv200.archer.2.0.png"
+                    source: "../assets/part2/Obj_acc1.img.lv200.archer.2.0.png"
                 }
 
                 /*下吊桥*/
@@ -1626,7 +1567,7 @@ Item{
                     y:tree.height-50
                     width:403*2
                     height:227*2
-                    source:"part2/Obj_acc2.img.shineWood.foot.23.0.png"
+                    source:"../assets/part2/Obj_acc2.img.shineWood.foot.23.0.png"
                 }
 
                 /*小平台*/
@@ -1636,7 +1577,7 @@ Item{
                     y:_bridge.y+300
                     width: 64*2
                     height:37*2
-                    source: "part2/image456.png"
+                    source: "../assets/part2/image456.png"
                 }
                 Image {
                     id:_stand1
@@ -1644,7 +1585,7 @@ Item{
                     y:_stand.y
                     width: 64*2
                     height:37*2
-                    source: "part2/image456.png"
+                    source: "../assets/part2/image456.png"
                 }
                 Image {
                     id:_stand2
@@ -1653,7 +1594,7 @@ Item{
                     width: 119*2
                     height:83*2
                     z:1
-                    source: "part2/Obj_acc2.img.common.foothold.2.0.png"
+                    source: "../assets/part2/Obj_acc2.img.common.foothold.2.0.png"
                 }
 
                 /*连接*/
@@ -1663,14 +1604,14 @@ Item{
                     x:_stand2.x
                     width: 367*2
                     height: 127*2
-                    source: "part2/Obj_acc2.img.shineWood.foot.26.0.png"
+                    source: "../assets/part2/Obj_acc2.img.shineWood.foot.26.0.png"
                 }
                 /*横向移动*/
                 Image {
                     id: _stand3
                     width: 200
                     height: 20
-                    source: "part2/Obj_acc1.img.lv200.archer.2.0.png"
+                    source: "../assets/part2/Obj_acc1.img.lv200.archer.2.0.png"
                     x:_bridge1.x+_bridge1.width+50
                     y:_bridge1.y-60
 
@@ -1699,7 +1640,7 @@ Item{
                     id: _stand4
                     width: 200
                     height: 20
-                    source: "part2/Obj_acc1.img.lv200.archer.2.0.png"
+                    source: "../assets/part2/Obj_acc1.img.lv200.archer.2.0.png"
                     x:_bridge1.x+_bridge1.width+_stand3.width+450
                     y:_stand3.y-200
                 }
@@ -1782,14 +1723,14 @@ Item{
                 id: background2
                 width: parent.width
                 height: parent.height
-                source: "images/sky1.jpg"
+                source: "../assets/images/sky1.jpg"
                 fillMode: Image.PreserveAspectCrop
                 Image {
                     id: background2B
                     x:parent.width
                     width:1300
                     height: 900
-                    source: "images/sky1.jpg"
+                    source: "../assets/images/sky1.jpg"
                     Image {
                         id: cloud0
                         source: "images/cloud.png"
@@ -1800,7 +1741,7 @@ Item{
                     }
                     Image {
                         id: clouds
-                        source: "images/clouds.png"
+                        source: "../assets/images/clouds.png"
                         width: 1200
                         height: 640
                         y:-200
@@ -1811,10 +1752,10 @@ Item{
                     x:parent.width*2
                     width:1300
                     height: 900
-                    source: "images/sky1.jpg"
+                    source: "../assets/images/sky1.jpg"
                     Image {
                         id: cloud1
-                        source: "images/cloud.png"
+                        source: "../assets/images/cloud.png"
                         width: background2B.width
                         height: background2.height
                         opacity: 0.7
@@ -2901,7 +2842,7 @@ Item{
                 anchors.fill:parent
                 anchors.bottom: parent.bottom // 使图片底部与Rectangle底部对齐
                 id:_portrait_image
-                source: "image/portrait.png"
+                source: "../assets/image/portrait.png"
             }
             TapHandler{
                 onTapped: {
@@ -2999,7 +2940,7 @@ Item{
             }
             Image {
                 anchors.fill: parent
-                source: "image/bag1.png"
+                source: "../assets/image/bag1.png"
             }
         }
 
@@ -3013,7 +2954,7 @@ Item{
             color:"transparent"
             Image {
                 anchors.fill: parent
-                source: "image/attribute.png"
+                source: "../assets/image/attribute.png"
             }
             TapHandler{
                 onTapped: {dialogs.attributeDialog.open()}

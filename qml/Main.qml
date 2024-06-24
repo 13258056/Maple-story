@@ -1,6 +1,5 @@
 import Felgo 4.0
 import QtQuick 2.0
-//import "Contents.qml"
 
 GameWindow {
     id: gameWindow
@@ -8,6 +7,7 @@ GameWindow {
     width: 1200
     height: 800
     visible: true
+    menuBarFelgoEnabled: false
     PhysicsWorld{
         id: physicsWorld
         gravity: Qt.point(0, 25)

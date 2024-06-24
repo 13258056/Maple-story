@@ -5,43 +5,43 @@ import QtQuick.Layouts
 Item {
     //蝴蝶飞行
     property var butterfly:[
-    "../assets/images/Obj_acc1.img.grassySoil.nature.19.0.png",
-    "images/Obj_acc1.img.grassySoil.nature.19.1.png",
-    "images/Obj_acc1.img.grassySoil.nature.19.2.png",
-    "images/Obj_acc1.img.grassySoil.nature.19.3.png",
-        "images/Obj_acc1.img.grassySoil.nature.19.4.png",
-        "images/Obj_acc1.img.grassySoil.nature.19.5.png",
-        "images/Obj_acc1.img.grassySoil.nature.19.6.png",
-        "images/Obj_acc1.img.grassySoil.nature.19.7.png",
-        "images/Obj_acc1.img.grassySoil.nature.19.8.png"
+        "../assets/images/Obj_acc1.img.grassySoil.nature.19.0.png",
+        "../assets/images/Obj_acc1.img.grassySoil.nature.19.1.png",
+        "../assets/images/Obj_acc1.img.grassySoil.nature.19.2.png",
+        "../assets/images/Obj_acc1.img.grassySoil.nature.19.3.png",
+        "../assets/images/Obj_acc1.img.grassySoil.nature.19.4.png",
+        "../assets/images/Obj_acc1.img.grassySoil.nature.19.5.png",
+        "../assets/images/Obj_acc1.img.grassySoil.nature.19.6.png",
+        "../assets/images/Obj_acc1.img.grassySoil.nature.19.7.png",
+        "../assets/images/Obj_acc1.img.grassySoil.nature.19.8.png"
     ]
     property int currentIndex:0
     //蝴蝶落地
     property var butterfly1:[
-    "images/Obj_acc1.img.grassySoil.nature.20.0.png",
-    "images/Obj_acc1.img.grassySoil.nature.20.1.png",
-    "images/Obj_acc1.img.grassySoil.nature.20.2.png",
-    "images/Obj_acc1.img.grassySoil.nature.20.3.png",
+        "../assets/images/Obj_acc1.img.grassySoil.nature.20.0.png",
+        "../assets/images/Obj_acc1.img.grassySoil.nature.20.1.png",
+        "../assets/images/Obj_acc1.img.grassySoil.nature.20.2.png",
+        "../assets/images/Obj_acc1.img.grassySoil.nature.20.3.png",
     ]
     property int currentIndex1:0
     //粉色蝴蝶
     property var butterfly2: [
-    "images/Obj_acc1.img.grassySoil.nature.21.0.png",
-        "images/Obj_acc1.img.grassySoil.nature.21.1.png",
-        "images/Obj_acc1.img.grassySoil.nature.21.2.png",
-        "images/Obj_acc1.img.grassySoil.nature.21.3.png",
-        "images/Obj_acc1.img.grassySoil.nature.21.4.png",
-        "images/Obj_acc1.img.grassySoil.nature.21.5.png",
-        "images/Obj_acc1.img.grassySoil.nature.21.6.png",
-        "images/Obj_acc1.img.grassySoil.nature.21.7.png",
-        "images/Obj_acc1.img.grassySoil.nature.21.8.png",
+        "../assets/images/Obj_acc1.img.grassySoil.nature.21.0.png",
+        "../assets/images/Obj_acc1.img.grassySoil.nature.21.1.png",
+        "../assets/images/Obj_acc1.img.grassySoil.nature.21.2.png",
+        "../assets/images/Obj_acc1.img.grassySoil.nature.21.3.png",
+        "../assets/images/Obj_acc1.img.grassySoil.nature.21.4.png",
+        "../assets/images/Obj_acc1.img.grassySoil.nature.21.5.png",
+        "../assets/images/Obj_acc1.img.grassySoil.nature.21.6.png",
+        "../assets/images/Obj_acc1.img.grassySoil.nature.21.7.png",
+        "../assets/images/Obj_acc1.img.grassySoil.nature.21.8.png",
     ]
     property int currentIndex2: 0
     Rectangle{
         // anchors.fill:parent
         Image{
             id:tubiao
-            source:"images/ims.png"
+            source:"../assets/images/ims.png"
             width:650
             height:250
             // anchors.horizontalCenter: parent.horizontalCenter
@@ -50,7 +50,7 @@ Item {
           }
         Image{
             id:zuo
-            source:"images/zuo.png"
+            source:"../assets/images/zuo.png"
             width:350
             height:550
             x:-19
@@ -58,7 +58,7 @@ Item {
           }
         Image{
             id:you
-            source:"images/you.png"
+            source:"../assets/images/you.png"
             width:350
             height:650
             x:859
@@ -66,7 +66,7 @@ Item {
           }
         Image{
             id:duo
-            source:"images/duo.png"
+            source:"../assets/images/duo.png"
             width:150
             height:300
             x:-20
@@ -74,7 +74,7 @@ Item {
           }
         Image{
             id:duo1
-            source:"images/duo.png"
+            source:"../assets/images/duo.png"
             width:150
             height:300
             x:100
@@ -82,7 +82,7 @@ Item {
           }
         Image{
             id:dt1
-            source:"images/dt3.png"
+            source:"../assets/images/dt3.png"
             width:60
             height:120
             x:45
@@ -90,7 +90,7 @@ Item {
           }
         Image{
             id:dt2
-            source:"images/dt3.png"
+            source:"../assets/images/dt3.png"
             width:60
             height:120
             x:15
@@ -98,7 +98,7 @@ Item {
           }
         Image{
             id:dt3
-            source:"images/dt3.png"
+            source:"../assets/images/dt3.png"
             width:60
             height:120
             x:65
@@ -106,7 +106,7 @@ Item {
           }
         Image{
             id:dt0
-            source:"images/dt3.png"
+            source:"../assets/images/dt3.png"
             width:60
             height:120
             x:25
@@ -114,7 +114,7 @@ Item {
           }
         Image{
             id:dt4
-            source:"images/dt2.png"
+            source:"../assets/images/dt2.png"
             width:60
             height:120
             x:-10
@@ -122,7 +122,7 @@ Item {
           }
         Image{
             id:dt5
-            source:"images/dt2.png"
+            source:"../assets/images/dt2.png"
             width:60
             height:120
             x:95
@@ -130,7 +130,7 @@ Item {
           }
         Image{
             id:dt6
-            source:"images/dt2.png"
+            source:"../assets/images/dt2.png"
             width:60
             height:120
             x:105
@@ -138,7 +138,7 @@ Item {
           }
         Image{
             id:dt7
-            source:"images/dt2.png"
+            source:"../assets/images/dt2.png"
             width:60
             height:120
             x:145
@@ -146,7 +146,7 @@ Item {
           }
         Image{
             id:qiu3
-            source:"images/qiu3.png"
+            source:"../assets/images/qiu3.png"
             width:50
             height:50
             x:-15
@@ -154,7 +154,7 @@ Item {
           }
         Image{
             id:qiu4
-            source:"images/qu4.png"
+            source:"i../assets/mages/qu4.png"
             width:50
             height:50
             x:25
@@ -162,7 +162,7 @@ Item {
           }
         Image{
             id:qiu
-            source:"images/qiu3.png"
+            source:"../assets/images/qiu3.png"
             width:50
             height:50
             x:55
@@ -170,7 +170,7 @@ Item {
           }
         Image{
             id:lihua
-            source:"images/lihua.png"
+            source:"../assets/images/lihua.png"
             width:200
             height:500
             x:100
@@ -197,7 +197,7 @@ Item {
         }
         Image{
             id:qiu1
-            source:"images/qu4.png"
+            source:"../assets/images/qu4.png"
             width:50
             height:50
             x:230
@@ -205,7 +205,7 @@ Item {
           }
         Image{
             id:qiu2
-            source:"images/qiu3.png"
+            source:"../assets/images/qiu3.png"
             width:50
             height:50
             x:200
@@ -213,7 +213,7 @@ Item {
           }
         Image{
             id:qiu5
-            source:"images/qiu3.png"
+            source:"../assets/images/qiu3.png"
             width:50
             height:50
             x:170
@@ -221,7 +221,7 @@ Item {
           }//
         Image{
             id:cao
-            source:"images/cao1.png"
+            source:"../assets/images/cao1.png"
             width:50
             height:50
             x:0
@@ -229,7 +229,7 @@ Item {
           }
         Image{
           id:cao1
-          source:"images/cao2.png"
+          source:"../assets/images/cao2.png"
           width:50
           height:50
           x:40
@@ -237,7 +237,7 @@ Item {
         }
         Image{
           id:cao2
-          source:"images/cao1.png"
+          source:"../assets/images/cao1.png"
           width:50
           height:50
           x:165
@@ -245,7 +245,7 @@ Item {
         }
         Image{
           id:cao3
-          source:"images/cao3.png"
+          source:"../assets/images/cao3.png"
           width:50
           height:50
           x:205
@@ -253,7 +253,7 @@ Item {
         }//左石头上
         Image{
             id:bi
-            source:"images/bi.png"
+            source:"../assets/images/bi.png"
             width:100
             height:150
             x:90
@@ -261,7 +261,7 @@ Item {
         }
         Image{
           id:cao4
-          source:"images/cao3.png"
+          source:"../assets/images/cao3.png"
           width:50
           height:50
           x:160
@@ -269,7 +269,7 @@ Item {
         }
         Image{
           id:cao5
-          source:"images/cao2.png"
+          source:"../assets/images/cao2.png"
           width:50
           height:50
           x:140
@@ -277,7 +277,7 @@ Item {
         }
         Image{
           id:cao6
-          source:"images/cao3.png"
+          source:"../assets/images/cao3.png"
           width:50
           height:50
           x:120
@@ -285,7 +285,7 @@ Item {
         }
         Image{
           id:cao7
-          source:"images/cao2.png"
+          source:"../assets/images/cao2.png"
           width:50
           height:50
           x:100
@@ -293,7 +293,7 @@ Item {
         }
         Image{
           id:cao8
-          source:"images/cao3.png"
+          source:"../assets/images/cao3.png"
           width:50
           height:50
           x:80
@@ -301,7 +301,7 @@ Item {
         }
         Image{
           id:shuhua
-          source:"images/shuhua.png"
+          source:"../assets/images/shuhua.png"
           width:250
           height:300
           x:1000
@@ -328,7 +328,7 @@ Item {
         }
         Image{
           id:he
-          source:"images/he.png"
+          source:"../assets/images/he.png"
           width:150
           height:200
           x:900
@@ -356,7 +356,7 @@ Item {
         }
         Image{
           id:lv
-          source:"images/lvteng.png"
+          source:"../assets/images/lvteng.png"
           width:150
           height:200
           x:1000
@@ -364,7 +364,7 @@ Item {
         }
         Image{
           id:lv1
-          source:"images/lvteng.png"
+          source:"../assets/images/lvteng.png"
           width:150
           height:200
           x:1070
@@ -372,7 +372,7 @@ Item {
         }
         Image{
           id:lv2
-          source:"images/lvteng.png"
+          source:"../assets/images/lvteng.png"
           width:150
           height:200
           x:1120
@@ -380,7 +380,7 @@ Item {
         }
         Image{
           id:cao9
-          source:"images/cao3.png"
+          source:"../assets/images/cao3.png"
           width:50
           height:50
           x:1155
@@ -388,7 +388,7 @@ Item {
         }
         Image{
           id:cao10
-          source:"images/cao2.png"
+          source:"../assets/images/cao2.png"
           width:50
           height:50
           x:1125
@@ -396,7 +396,7 @@ Item {
         }
         Image{
           id:cao11
-          source:"images/cao3.png"
+          source:"../assets/images/cao3.png"
           width:50
           height:50
           x:1095
@@ -405,7 +405,7 @@ Item {
         }
         Image{
           id:cao12
-          source:"images/cao2.png"
+          source:"../assets/images/cao2.png"
           width:50
           height:50
           x:1065
@@ -413,7 +413,7 @@ Item {
         }
         Image{
           id:cao13
-          source:"images/cao3.png"
+          source:"../assets/images/cao3.png"
           width:50
           height:50
           x:1035
@@ -421,7 +421,7 @@ Item {
         }
         Image{
           id:cao14
-          source:"images/cao2.png"
+          source:"../assets/images/cao2.png"
           width:50
           height:50
           x:1015
@@ -429,7 +429,7 @@ Item {
         }
         Image{
           id:cao15
-          source:"images/cao3.png"
+          source:"../assets/images/cao3.png"
           width:50
           height:50
           x:985
@@ -437,7 +437,7 @@ Item {
         }
         Image{
           id:cao16
-          source:"images/cao3.png"
+          source:"../assets/images/cao3.png"
           width:50
           height:50
           x:885
@@ -445,7 +445,7 @@ Item {
         }
         Image{
           id:cao17
-          source:"images/cao2.png"
+          source:"../assets/images/cao2.png"
           width:50
           height:50
           x:855
@@ -453,7 +453,7 @@ Item {
         }
         Image{
           id:cao18
-          source:"images/cao2.png"
+          source:"../assets/images/cao2.png"
           width:50
           height:50
           x:865
@@ -461,7 +461,7 @@ Item {
         }
         Image{
           id:cao19
-          source:"images/cao1.png"
+          source:"../assets/images/cao1.png"
           width:50
           height:50
           x:900
@@ -469,7 +469,7 @@ Item {
         }
         Image{
           id:cao20
-          source:"images/cao3.png"
+          source:"../assets/images/cao3.png"
           width:50
           height:50
           x:930
@@ -477,23 +477,15 @@ Item {
         }
         Image{
           id:hua
-          source:"images/hua2.png"
+          source:"../assets/images/hua2.png"
           width:50
           height:50
           x:1095
           y:730
         }
-        // Image{
-        //   id:hua1
-        //   source:"images/hua1.png"
-        //   width:50
-        //   height:150
-        //   x:1145
-        //   y:620
-        // }
         Image{
           id:lv3
-          source:"images/lvteng.png"
+          source:"../assets/images/lvteng.png"
           width:150
           height:200
           x:1140
@@ -501,7 +493,7 @@ Item {
         }
         Image{
           id:lv4
-          source:"images/lvteng.png"
+          source:"../assets/images/lvteng.png"
           width:150
           height:200
           x:1040
@@ -509,7 +501,7 @@ Item {
         }
         Image{
           id:lv5
-          source:"images/lvteng.png"
+          source:"../assets/images/lvteng.png"
           width:150
           height:200
           x:940
@@ -517,7 +509,7 @@ Item {
         }
         Image{
             id:huo
-            source:"images/yinghuo.png"
+            source:"../assets/images/yinghuo.png"
             width:200
             height:300
             x:100
@@ -525,7 +517,7 @@ Item {
         }
         Image{
             id:huo1
-            source:"images/yinghuo.png"
+            source:"../assets/images/yinghuo.png"
             width:200
             height:300
             x:850

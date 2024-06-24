@@ -9,7 +9,7 @@ Item {
                 audioOutput: AudioOutput{
                 volume: 0.5 // 音量设置为50%
                 }
-                source: "music/shou.mp3" // 使用本地资源
+                source: "../assets/music/shou.mp3" // 使用本地资源
                 loops: MediaPlayer.Infinite // 无限循环播放
             }
         Image {
