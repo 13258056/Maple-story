@@ -44,13 +44,13 @@ Item {
                 id:image
                 width: 94
                 height:38
-                source:"image/image44.png"
+                source:"../assets/image/image44.png"
             }
             onPressed: {
-                image.source="image/image42.png"
+                image.source="../assets/image/image42.png"
             }
             onReleased: {
-                image.source = "image/image44.png"
+                image.source = "../assets/image/image44.png"
             }
 
             onClicked: {
@@ -95,7 +95,7 @@ Item {
             anchors.centerIn: parent
             width: parent.width*1.1
             height:parent.height*1.1
-            source: "image/bagDialog.png"
+            source: "../assets/image/bagDialog.png"
         }
 
     }
@@ -108,7 +108,7 @@ Item {
         width: 478*1.4
         height:353*1.4
         Image {
-            source: "image/attributeDialog.png"
+            source: "../assets/image/attributeDialog.png"
             anchors.centerIn: parent
             width: parent.width*1.1
             height:parent.height*1.1
@@ -125,7 +125,7 @@ Item {
         width: 463*1.8
         height:339*1.8
         Image {
-            source: "image/shopDialog.png"
+            source: "../assets/image/shopDialog.png"
             anchors.centerIn: parent
             width: parent.width*1.1
             height:parent.height*1.1

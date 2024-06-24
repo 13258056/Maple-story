@@ -3,6 +3,7 @@ import QtQuick.Controls
 import QtQuick.Window
 import QtMultimedia
 import QtQuick3D.Physics
+import Felgo
 //import "Player" as Player
 Item {
     /*游戏的各个关卡界面*/
@@ -111,7 +112,7 @@ Item {
     id:fireComponent
     Item{
         property var fire: [
-        "images/Obj_acc10.img.timeTemplefire.acc.3.0.png",
+            "../assets/images/Obj_acc10.img.timeTemplefire.acc.3.0.png",
             "../assets/images/Obj_acc10.img.timeTemplefire.acc.3.1.png",
             "../assets/images/Obj_acc10.img.timeTemplefire.acc.3.2.png",
             "../assets/images/Obj_acc10.img.timeTemplefire.acc.3.4.png",
@@ -1383,7 +1384,18 @@ Item{
             Player{
                 id:player
                 x:100
-                y:100
+                y:300
+                z:1
+            }
+            Keys.forwardTo: controller
+            TwoAxisController {
+              id: controller
+              onInputActionPressed: (actionName, isPressed) => {
+                console.debug("key pressed actionName " + actionName)
+                if(actionName == "up") {
+                  player.jump()
+                }
+              }
             }
 
             /*背景图片*/
@@ -2161,7 +2173,7 @@ Item{
                     height: 86
                     y:decorate.y
                     x:road04.x+150
-                    z:_Inter
+                    z:_Inter.z
                     fillMode: Image.PreserveAspectCrop
                 }
                 Image{
@@ -2197,7 +2209,7 @@ Item{
                     height: 86
                     y:road2.y+125
                     x:ladder1.x+299+400+229
-                    z:_Inter
+                    z:_Inter.z
                     fillMode: Image.PreserveAspectCrop
                 }
                 Loader{
@@ -2212,7 +2224,7 @@ Item{
                     height: 86
                     y:road12.y
                     x:road12.x+100
-                    z:_Inter
+                    z:_Inter.z
                     fillMode: Image.PreserveAspectCrop
                 }
                 Image {
@@ -2240,7 +2252,7 @@ Item{
                     height: 86
                     y:road2.y+125
                     x:road13.x+100
-                    z:_Inter
+                    z:_Inter.z
                     fillMode: Image.PreserveAspectCrop
                 }
                 Image {
@@ -2250,7 +2262,7 @@ Item{
                     height: 86
                     y:road12.y
                     x:road14.x+100
-                    z:_Inter
+                    z:_Inter.z
                     fillMode: Image.PreserveAspectCrop
                 }
                 Loader{
@@ -2265,7 +2277,7 @@ Item{
                     height: 119
                     y:road12.y-150
                     x:road15.x+120
-                    z:_Inter
+                    z:_Inter.z
                     fillMode: Image.PreserveAspectCrop
                 }
                 Image {
@@ -2275,7 +2287,7 @@ Item{
                     height: 119
                     y:step.y-150
                     x:step.x+220
-                    z:_Inter
+                    z:_Inter.z
                     fillMode: Image.PreserveAspectCrop
                 }
                 Loader{
@@ -2344,7 +2356,7 @@ Item{
                     height: 121
                     y:road16.y
                     x:road16.x+215
-                    z:_Inter
+                    z:_Inter.z
                     fillMode: Image.PreserveAspectCrop
                 }
                 Loader{
@@ -2364,7 +2376,7 @@ Item{
                     height: 121
                     y:road16.y-200
                     x:road16.x+215
-                    z:_Inter
+                    z:_Inter.z
                     fillMode: Image.PreserveAspectCrop
                 }
                 Loader{
@@ -2380,7 +2392,7 @@ Item{
                     height: 121
                     y:road16.y
                     x:road17.x+260
-                    z:_Inter
+                    z:_Inter.z
                     fillMode: Image.PreserveAspectCrop
                 }
                 Loader{
@@ -2419,7 +2431,7 @@ Item{
                     height: 121
                     y:road16.y
                     x:road18.x+260
-                    z:_Inter
+                    z:_Inter.z
                     fillMode: Image.PreserveAspectCrop
                 }
                 Loader{
@@ -2447,7 +2459,7 @@ Item{
                     height: 121
                     y:road2.y+80
                     x:road19.x+330
-                    z:_Inter
+                    z:_Inter.z
                     fillMode: Image.PreserveAspectCrop
                 }
                 Loader{
@@ -2467,7 +2479,7 @@ Item{
                     height: 121
                     y:road16.y
                     x:road20.x+330
-                    z:_Inter
+                    z:_Inter.z
                     fillMode: Image.PreserveAspectCrop
                 }
                 NumberAnimation {
@@ -2500,7 +2512,7 @@ Item{
                     height: 121
                     y:road20.y
                     x:road26.x+320
-                    z:_Inter
+                    z:_Inter.z
                     fillMode: Image.PreserveAspectCrop
                 }
                 Loader{
@@ -2515,7 +2527,7 @@ Item{
                     height: 121
                     y:road20.y
                     x:road28.x+260
-                    z:_Inter
+                    z:_Inter.z
                     fillMode: Image.PreserveAspectCrop
                 }
                 Loader{
@@ -2530,7 +2542,7 @@ Item{
                     height: 121
                     y:road20.y
                     x:road29.x+260
-                    z:_Inter
+                    z:_Inter.z
                     fillMode: Image.PreserveAspectCrop
                 }
                 Loader{
@@ -2595,7 +2607,7 @@ Item{
                     height: 88
                     y:road2801.y
                     x:road2801.x+180
-                    z:_Inter
+                    z:_Inter.z
                     fillMode: Image.PreserveAspectCrop
                 }
                 Image {
@@ -2605,7 +2617,7 @@ Item{
                     height: 88
                     y:road2801.y
                     x:road2802.x+180
-                    z:_Inter
+                    z:_Inter.z
                     fillMode: Image.PreserveAspectCrop
                 }
                 Image {
@@ -2615,7 +2627,7 @@ Item{
                     height: 88
                     y:road2801.y
                     x:road2803.x+180
-                    z:_Inter
+                    z:_Inter.z
                     fillMode: Image.PreserveAspectCrop
                 }
                 Image {

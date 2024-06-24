@@ -17,4 +17,5 @@ GameWindow {
     Contents{
         id:allContents
     }
+
 }
