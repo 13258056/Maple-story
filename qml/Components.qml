@@ -1385,8 +1385,8 @@ Item{
                 }
             Player{
                 id:player
-                x:65
-                y:400
+                x:66
+                y:300
                 z:1
             }
             Keys.forwardTo: controller
@@ -1409,8 +1409,8 @@ Item{
                 x: player.x
                 anchors.bottom: parent.bottom
                 onContact: {
-                  player.x = 65
-                  player.y = 400
+                  player.x = 60
+                  player.y = 300
                 }
                 Rectangle {
                   anchors.fill: parent

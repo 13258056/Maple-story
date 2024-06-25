@@ -21,8 +21,10 @@ EntityBase {
 
   BoxCollider{
       id:collider
-      height: parent.height
-      width: parent.width
+      height: 20
+      width: 50
+      anchors.bottom: parent.bottom
+      //anchors.left:parent.left
       anchors.horizontalCenter: parent.horizontalCenter
       bodyType: Body.Dynamic
       fixedRotation: true
