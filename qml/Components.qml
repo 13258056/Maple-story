@@ -1397,6 +1397,23 @@ Item{
                 }
               }
             }
+            ResetSensor{
+                width: player.width
+                height: 10
+                x: player.x
+                anchors.bottom: parent.bottom
+                // if the player collides with the reset sensor, he goes back to the start
+                onContact: {
+                  player.x = 100
+                  player.y = 300
+                }
+                // this is just for you to see how the sensor moves, in your real game, you should position it lower, outside of the visible area
+                Rectangle {
+                  anchors.fill: parent
+                  color: "yellow"
+                  opacity: 0.5
+                }
+            }
 
             /*背景图片*/
             Image {
