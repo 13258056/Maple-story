@@ -1368,7 +1368,9 @@ Item{
         id:_page0
         visible: false
 
-
+        EntityManager {
+          id: entityManager
+        }
         Rectangle{
             id:gameScene
             width: 1200
@@ -1383,8 +1385,8 @@ Item{
                 }
             Player{
                 id:player
-                x:100
-                y:300
+                x:65
+                y:400
                 z:1
             }
             Keys.forwardTo: controller
@@ -1397,17 +1399,19 @@ Item{
                 }
               }
             }
+            Level1{
+                id:level
+            }
+
             ResetSensor{
                 width: player.width
                 height: 10
                 x: player.x
                 anchors.bottom: parent.bottom
-                // if the player collides with the reset sensor, he goes back to the start
                 onContact: {
-                  player.x = 100
-                  player.y = 300
+                  player.x = 65
+                  player.y = 400
                 }
-                // this is just for you to see how the sensor moves, in your real game, you should position it lower, outside of the visible area
                 Rectangle {
                   anchors.fill: parent
                   color: "yellow"
