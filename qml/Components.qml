@@ -16,6 +16,7 @@ Item {
     property alias edgePage: _edgePage
     property int sceneWidth:5000
     property int scrollThreshold:900//触发滚动阈值
+    property alias background0:background0
     /*初始或结束点的树洞动画*/
     property var images: [
         "../assets/part2/Obj_acc2.img.shineWood.gate.0.0.png",
@@ -1368,6 +1369,36 @@ Item{
         id:_page0
         visible: false
 
+        Player{
+            id:player
+            x:66
+            y:300
+            z:1
+        }
+        focus:true
+        Keys.forwardTo: controller
+                    TwoAxisController {
+                      id: controller
+                      inputActionsToKeyCode: {
+                          "up":Qt.Key_K,
+                          "left":Qt.Key_A,
+                          "right":Qt.Key_D,
+                          "fire":Qt.Key_J
+                      }
+
+                      onInputActionPressed: (actionName, isPressed) => {
+                        console.debug("key pressed actionName " + actionName)
+                        if(actionName === "up") {
+                          player.jump()
+                        }
+                                                if(actionName==="left"){
+                                                    controller.xAxis=-1;
+                                                }
+                                                if(actionName==="right"){
+                                                    controller.xAxis=1;
+                                                }
+                      }
+                    }
         EntityManager {
           id: entityManager
         }
@@ -1383,22 +1414,7 @@ Item{
                     source: "../assets/music/Bgm01.img.BadGuys.mp3" // 使用本地资源
                     loops: MediaPlayer.Infinite // 无限循环播放
                 }
-            Player{
-                id:player
-                x:66
-                y:300
-                z:1
-            }
-            Keys.forwardTo: controller
-            TwoAxisController {
-              id: controller
-              onInputActionPressed: (actionName, isPressed) => {
-                console.debug("key pressed actionName " + actionName)
-                if(actionName == "up") {
-                  player.jump()
-                }
-              }
-            }
+
             Level1{
                 id:level
             }
@@ -1533,12 +1549,18 @@ Item{
                     source: "../assets/music/Bgm01.img.HighlandStar.mp3" // 使用本地资源
                     loops: MediaPlayer.Infinite // 无限循环播放
                 }
+            Level2{
+
+            }
             Image {
                 id: background1
                 width:1200
                 height: 900
                 source: "../assets/part2/Obj_acc1.img.lv200.magician.0.0.png"
                 fillMode: Image.PreserveAspectCrop
+
+
+
                 /*延长背景图背景图*/
                 Image {
                     id: background1B
@@ -1590,7 +1612,7 @@ Item{
                     width:850
                     height: 150*3
                     fillMode: Image.PreserveAspectCrop
-                    source: "../assets/part2/Obj_acc1.img.lv200.archer.2.0.png"
+                    source: "../assets/part2/Obj_acc1.img.lv200.archer.2.0.png"                    
                 }
 
                 /*下吊桥*/
