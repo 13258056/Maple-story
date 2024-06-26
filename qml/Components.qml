@@ -1389,12 +1389,19 @@ Item{
                 y:300
                 z:1
             }
+            Monster{
+                id:monster
+                x:700
+                y:500
+                z:1
+            }
+
             Keys.forwardTo: controller
             TwoAxisController {
               id: controller
               onInputActionPressed: (actionName, isPressed) => {
                 console.debug("key pressed actionName " + actionName)
-                if(actionName == "up") {
+                if(actionName === "up") {
                   player.jump()
                 }
               }
