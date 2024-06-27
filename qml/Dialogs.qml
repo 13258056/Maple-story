@@ -54,10 +54,10 @@ Item {
             }
 
             onClicked: {
-                _backgroundMusic.pause()
+               /* _backgroundMusic.pause()
                 _backgroundMusic2.pause()
                 _backgroundMusic3.pause()
-                _backgroundMusic4.pause()
+                _backgroundmusic4.pause()*/
                 components.page0.visible=false
                 components.page1.visible=false
                 components.page2.visible=false
@@ -66,6 +66,7 @@ Item {
                 components.edgePage.visible=false
                 //返回关卡选择界面
                 container.visible=true
+                backgroundMusic.source=Qt.resolvedUrl("../assets/music/shou.mp3")
                 backgroundMusic.play()
             }
         }

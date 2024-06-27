@@ -9,9 +9,25 @@ Item {
                 audioOutput: AudioOutput{
                 volume: 0.5 // 音量设置为50%
                 }
-                source: "../assets/music/shou.mp3" // 使用本地资源
+                source:Qt.resolvedUrl("../assets/music/shou.mp3")  // 使用本地资源
                 loops: MediaPlayer.Infinite // 无限循环播放
+                Component.onCompleted:play()
             }
+        /*GameSoundEffect{
+        id:back
+        loops:SoundEffect.Infinite
+        resources: Qt.resolvedUrl("../assets/shou.mp3")
+        Component.onCompleted:play()
+        }*/
+        /*BackgroundMusic{
+        id:backgroudmusic
+        source: Qt.resolvedUrl("../assets/music/shou.mp3")
+        volume: 0.5 // 音量设置为50%
+        loops: SoundEffect.Infinite
+        autoPlay: true
+        //Component.onCompleted:play()
+        }*/
+        //Component.onCompleted:{backgroundmusic.play()}
         Image {
             id: background
             source: "../assets/images/bj.jpg"
@@ -31,10 +47,12 @@ Item {
                 components.choose.visible=true
                 start.visible=false
                 components.container.visible=true
+
         }
     }
+        }
 }
-    }
+
     MyRectangle{
 
     }

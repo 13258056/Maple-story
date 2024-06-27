@@ -154,7 +154,7 @@ Item {
           }
         Image{
             id:qiu4
-            source:"i../assets/mages/qu4.png"
+            source:"../assets/images/qu4.png"
             width:50
             height:50
             x:25
