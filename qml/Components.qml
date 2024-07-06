@@ -2096,6 +2096,19 @@ Item{
             y:300
             z:1
         }
+        BoxCollider {
+          x:1100
+          y:550
+          width:100
+          height:50
+          bodyType: Body.Static
+          fixture.onBeginContact: (other, contactNormal) => {
+            var otherEntity = other.getBody().target
+            if(otherEntity.entityType === "player") {
+                dialogs.endDialog.open()
+                                      }
+          }
+        }
         focus:true
         Keys.forwardTo: controller
                     TwoAxisController {
@@ -2161,6 +2174,9 @@ Item{
             // }
             Level1{
                 id:level
+            }                                   
+            End1{
+                id:end1
             }
 
             ResetSensor{
