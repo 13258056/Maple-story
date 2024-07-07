@@ -2124,6 +2124,22 @@ Item{
             z:100
         }
 
+        /*重新游戏*/
+        Button{
+            width:120
+            height:40
+            text:"重新游戏"
+            x:90
+            y:750
+            z:50
+
+            onClicked: {
+            /*将当前页面关卡重置*/
+                player.x=66
+                player.y=300
+            }
+        }
+
         focus:true
 
         EntityManager {
@@ -2266,6 +2282,25 @@ Item{
     Page{
         id:_page1
         visible: false
+
+        /*重新游戏*/
+        Button{
+            width:120
+            height:40
+            text:"重新游戏"
+            x:90
+            y:750
+            z:50
+
+            onClicked: {
+            /*将当前页面关卡重置*/
+                _player2.x = 60
+                _player2.y = 300
+                  background1.x=0
+                  background1.y=0
+            }
+        }
+
         Rectangle{
             id:gameScene1
             width: 1200
@@ -2280,7 +2315,19 @@ Item{
                 x:66
                 y:300
                 z:1
+
+                onXChanged: {
+                    // 如果角色到达场景边缘的阈值
+                    if (_player2.x + _player2.width >scrollThreshold &&background1.x>-background1.width*3) {
+                        // 移动场景内容（背景和角色）
+                        var scrollDistance = _player2.x + _player2.width - scrollThreshold;
+                        background1.x -= scrollDistance;
+                        _player2.x=scrollThreshold-_player2.width
+                    }
+                    console.log("x:"+x+",y:"+y)
+                }
             }
+
             focus:true
             ResetSensor{
                 width: _player2.width
@@ -2290,6 +2337,8 @@ Item{
                 onContact: {
                   _player2.x = 60
                   _player2.y = 300
+                    background1.x=0
+                    background1.y=0
                 }
                 Rectangle {
                   anchors.fill: parent
@@ -2304,8 +2353,6 @@ Item{
                 height: 900
                 source: "../assets/part2/Obj_acc1.img.lv200.magician.0.0.png"
                 fillMode: Image.PreserveAspectCrop
-
-
 
                 /*延长背景图背景图*/
                 Image {
@@ -2465,42 +2512,7 @@ Item{
                         }
             }
 
-            /*背景的滚动*/
-            Rectangle {
-                        id: player1
-                        width: 50
-                        height: 50
-                        color: "red"
-                        radius: 25 // 使角色为圆形
-                        y:300
-                        x:0
 
-                        // 触发屏幕滚动
-                        onXChanged: {
-                            // 如果角色到达场景边缘的阈值
-                            if (x + width >scrollThreshold &&background1.x>-background1.width*3) {
-                                // 移动场景内容（背景和角色）
-                                var scrollDistance = x + width - scrollThreshold;
-                                background1.x -= scrollDistance;
-                                x=gameScene1.width*0.8-player1.width
-                            }
-                        }
-                        MouseArea {
-                                    id: dragArea1
-                                    anchors.fill: parent
-                                    drag.target: parent
-                                }
-                        // 使角色可以通过水平拖拽移动
-                        Drag.active: dragArea1.drag.active
-                        Drag.hotSpot.x: player1.width / 2
-                        Drag.hotSpot.y: player1.height / 2
-                        Drag.onActiveChanged: {
-                            if (!dragArea1.drag.active) {
-                                x = player1.x
-                                y = player1.y
-                            }
-                        }
-                }
         }
 
     }
@@ -5223,18 +5235,6 @@ Item{
             x:10
             y:_choose.height-exitButton.height-10
             onClicked: {dialogs.exitDialog.open()}
-        }
-
-        /*重新游戏*/
-        Button{
-            width:120
-            height:40
-            text:"重新游戏"
-            x:exitButton.width+30
-            y:exitButton.y
-            onClicked: {
-            /*将当前页面关卡重置*/
-            }
         }
     }
     /*Actions{
