@@ -2414,7 +2414,7 @@ Item{
                     height: 20
                     source: "../assets/part2/Obj_acc1.img.lv200.archer.2.0.png"
                     x:_bridge1.x+_bridge1.width+50
-                    y:_bridge1.y-60
+                    y:_bridge1.y-40
 
                 }
                 NumberAnimation {
