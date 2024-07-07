@@ -3,6 +3,9 @@
 
 #include <QQmlApplicationEngine>
 
+#include <QQmlContext>
+#include "bird.h"
+#include "monsterr.h"
 // uncomment this line to add the Live Client Module and use live reloading with your custom C++ code
 //#include <FelgoLiveClient>
 
@@ -12,6 +15,9 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
 
     FelgoApplication felgo;
+
+    qmlRegisterType<Monsterr>("QmlMonsterr", 1, 0, "Monsterr");
+    qmlRegisterType<Bird>("QmlBird", 1, 0, "Bird");
 
     // Use Felgo's default font instead of platform-specific fonts
     felgo.setPreservePlatformFonts(false);

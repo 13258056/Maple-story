@@ -34,6 +34,10 @@ list(REMOVE_ITEM AssetsFiles ${QmlFiles})
 
 qt_add_executable(appuntitled1
     main.cpp
+    bird.h
+    bird.cpp
+    monsterr.cpp
+    monsterr.h
     ${QmlFiles}
     ${AssetsFiles}
 )

@@ -7,6 +7,7 @@ EntityBase {
   width: 85
   height: 100
 
+  property int helth: 100
   property alias collider: collider
   property alias horizontalVelocity: collider.linearVelocity.x
 
@@ -58,5 +59,4 @@ EntityBase {
             collider.linearVelocity.y = -400
         }
     }
-
 }

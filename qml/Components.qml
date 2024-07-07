@@ -4,6 +4,8 @@ import QtQuick.Window
 import QtMultimedia
 import QtQuick3D.Physics
 import Felgo
+import QmlMonsterr
+import QmlBird
 //import "Player" as Player
 Item {
     /*游戏的各个关卡界面*/
@@ -2141,6 +2143,7 @@ Item{
                 y:500
                 z:1
             }
+
             Level1{
                 id:level
             }
@@ -2259,6 +2262,74 @@ Item{
                     }
                 }
             }
+        }
+        Bird{
+            id:bird_monster
+            onBulletfired: {
+                if(player.x > 500 && player.x < 800){
+                var bullet = bulletcom.createObject(parent);
+                bullet.x = bird_monster.position.x + birdvisal.width / 2
+                bullet.y = bird_monster.position.y + birdvisal.height / 2
+                bullet.bulletmove()
+                movebullet.start()
+                }
+            }
+        }
+        function createBirdMonster(){
+            var birdposition = [
+            {"x": 100, "y": 200},
+            {"x": 400, "y": 300}
+            ];
+            for(var i=0; i<birdposition.length; i++){
+                var birdmonster = bird_monster.createObject(parent)
+                birdmonster.x = birdposition[i].x
+                birdmonster.y = birdposition[i].y
+            }
+        }
+        Component.onCompleted: {
+            createBirdMonster()
+        }
+
+        Component{
+            id:bulletcom
+            Rectangle{
+                width: 20
+                height: 20
+                color: "transparent"
+                Image {
+                    id: bulletvisal
+                    anchors.fill: parent
+                    source: "../assets/part4/Obj_acc5.img.aquaRoad.fish.1.0.png"
+                }
+                property int speed: 5
+                function bulletmove(){
+                    y += speed
+                    if(x < 0){
+                        //bulletcom.destroyed()
+                    }
+                }
+                Timer{
+                    id:movebullet
+                    interval: 50
+                    repeat: true
+                    running: true
+                    onTriggered: bulletmove()
+                }
+            }
+        }
+        Rectangle{
+            id:birdvisal
+            height: 50
+            width: 50
+            color: "transparent"
+            Image {
+                id: birdmonsterviaal
+                anchors.fill: parent
+                source: "../assets/part1/image149.png"
+            }
+            x:bird_monster.position.x
+            y:bird_monster.position.y
+            //z:1
         }
 
     }
