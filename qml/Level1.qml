@@ -72,4 +72,18 @@ Item {
     Ground{x:1010;y:675;width:40;height: 10}
     Ground{x:975;y:790;width:40;height: 10}
     Ground{x:975;y:485;width:40;height: 10}
+
+    Ground{
+        x:1100
+        y:550
+        width:100
+        height:50
+    }
+
+    End{
+        x:1100
+        y:550
+        width:100
+        height:50
+    }
 }

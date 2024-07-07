@@ -2085,6 +2085,31 @@ Item{
         }
     }
 
+    Keys.forwardTo: controller
+                TwoAxisController {
+                  id: controller
+                  inputActionsToKeyCode: {
+                      "up":Qt.Key_K,
+                      "left":Qt.Key_A,
+                      "right":Qt.Key_D,
+                      "fire":Qt.Key_J
+                  }
+
+                  onInputActionPressed: (actionName, isPressed) => {
+                    console.debug("key pressed actionName " + actionName)
+                    if(actionName === "up") {
+                      player.jump()
+                                                _player2.jump()
+                    }
+                    if(actionName==="left"){
+                      controller.xAxis=-1;
+                    }
+                    if(actionName==="right"){
+                    controller.xAxis=1;
+                    }
+                  }
+                }
+
     /*关卡1*/
     Page{
         id:_page0
@@ -2094,90 +2119,30 @@ Item{
             id:player
             x:66
             y:300
-            z:1
+            z:100
         }
-        BoxCollider {
-          x:1100
-          y:550
-          width:100
-          height:50
-          bodyType: Body.Static
-          fixture.onBeginContact: (other, contactNormal) => {
-            var otherEntity = other.getBody().target
-            if(otherEntity.entityType === "player") {
-                dialogs.endDialog.open()
-                                      }
-          }
-        }
-        focus:true
-        Keys.forwardTo: controller
-                    TwoAxisController {
-                      id: controller
-                      inputActionsToKeyCode: {
-                          "up":Qt.Key_K,
-                          "left":Qt.Key_A,
-                          "right":Qt.Key_D,
-                          "fire":Qt.Key_J
-                      }
 
-                      onInputActionPressed: (actionName, isPressed) => {
-                        console.debug("key pressed actionName " + actionName)
-                        if(actionName === "up") {
-                          player.jump()
-                        }
-                        if(actionName==="left"){
-                          controller.xAxis=-1;
-                        }
-                        if(actionName==="right"){
-                        controller.xAxis=1;
-                        }
-                      }
-                    }
+        focus:true
+
         EntityManager {
           id: entityManager
         }
+
+
         Rectangle{
             id:gameScene
             width: 1200
             height: 800
-            /*BackgroundMusic{
-                    id: _backgroundmusic
-                    playing:false
-                    volume: 0.5 // 音量设置为50%
-                    source: Qt.resolvedUrl("../assets/music/Bgm01.img.BadGuys.mp3") // 使用本地资源
-                    loops: SoundEffect.Infinite // 无限循环播放
-                }*/
-//Component.onCompleted:_backgroundmusic.pause()
-
-            // Player{
-            //     id:player
-            //     x:66
-            //     y:300
-            //     z:1
-            // }
             Monster{
                 id:monster
                 x:700
                 y:500
                 z:1
             }
-
-            // Keys.forwardTo: controller
-            // TwoAxisController {
-            //   id: controller
-            //   onInputActionPressed: (actionName, isPressed) => {
-            //     console.debug("key pressed actionName " + actionName)
-            //     if(actionName === "up") {
-            //       player.jump()
-            //     }
-            //   }
-            // }
             Level1{
                 id:level
-            }                                   
-            End1{
-                id:end1
             }
+
 
             ResetSensor{
                 width: player.width
@@ -2195,6 +2160,7 @@ Item{
                 }
             }
 
+
             /*背景图片*/
             Image {
                 id: background0
@@ -2202,6 +2168,7 @@ Item{
                 width:2258
                 x:0
                 source: "../assets/part1/background3.png"
+
 
                 Loader{
                     sourceComponent: _cokeImage
@@ -2301,17 +2268,33 @@ Item{
             id:gameScene1
             width: 1200
             height: 800
-            /*BackgroundMusic{
-                    id: _backgroundmusic2
-                    volume: 0.5 // 音量设置为50%
-                    source: Qt.resolvedUrl("../assets/music/Bgm01.img.HighlandStar.mp3") // 使用本地资源
-                    loops: SoundEffect.Infinite // 无限循环播放
-                    playing:false
-                }
-            Component.onCompleted:_backgroundmusic2.pause()*/
-            //Level2{
 
-            //}
+            Level2{
+                id:level2
+            }
+
+            Player{
+                id:_player2
+                x:66
+                y:300
+                z:1
+            }
+            focus:true
+            ResetSensor{
+                width: _player2.width
+                height: 10
+                x: _player2.x
+                anchors.bottom: parent.bottom
+                onContact: {
+                  _player2.x = 60
+                  _player2.y = 300
+                }
+                Rectangle {
+                  anchors.fill: parent
+                  color: "yellow"
+                  opacity: 0.5
+                }
+            }
 
             Image {
                 id: background1

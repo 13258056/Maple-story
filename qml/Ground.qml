@@ -18,11 +18,17 @@ EntityBase {
       bodyType: Body.Static
       fixture.onBeginContact: (other, contactNormal) => {
         var otherEntity = other.getBody().target
-        if(otherEntity.entityType === "player") player.contacts++
+        if(otherEntity.entityType === "player") {
+                                      player.contacts++
+                                      _player2.contacts++
+                                  }
       }
       fixture.onEndContact: other => {
         var otherEntity = other.getBody().target
-        if(otherEntity.entityType === "player") player.contacts--
+        if(otherEntity.entityType === "player") {
+                                    player.contacts--
+                                    _player2.contacts--
+                                }
       }
     }
 }
