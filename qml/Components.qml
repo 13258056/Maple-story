@@ -420,6 +420,8 @@ Item{
         upDownAnimation.start()
         rightLeftAnimation1.start()
         upDownAnimation1.start()
+        path22move.start()
+        path30move.start()
         //jellyfloat.start()
             }
     /*关卡1 组件*/
@@ -1607,7 +1609,7 @@ Item{
             bluehorse0.source=bluehorse[bluehorseIndex]
         }
         }
-        /*NumberAnimation {
+       /* NumberAnimation {
            id:bluehousemove
            target: bluehorse0
            property: "x"
@@ -1747,11 +1749,11 @@ Item{
         Image {
             id: air02
             source: air2[air2Index]
-            width: 35*2
-            height:120*1.5
+            width: 29*2
+            height:52*1.5
         }
         Timer{
-        interval: 100
+        interval: 300
         running: true
         repeat: true
         onTriggered: {
@@ -1775,11 +1777,11 @@ Item{
         Image {
             id: air03
             source: air3[air3Index]
-            width: 108*1.5
-            height:86*1.5
+            width: 61*1.5
+            height:230*1.5
         }
         Timer{
-        interval: 100
+        interval: 200
         running: true
         repeat: true
         onTriggered: {
@@ -1847,7 +1849,7 @@ Item{
             height: 226
         }
         Timer{
-        interval: 200
+        interval: 150
         running: true
         repeat: true
         onTriggered: {
@@ -1889,24 +1891,24 @@ Item{
     id:preciousComponent
     Item{
         property var precious: [
-        "../assets/part4Obj_dungeon3.img.woodCave.gate.0.0.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.0.1.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.0.2.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.0.3.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.0.4.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.0.5.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.0.6.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.0.7.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.0.8.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.0.9.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.0.10.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.0.11.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.0.12.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.0.13.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.0.14.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.0.15.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.0.16.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.0.17.png",
+        "../assets/part4/Obj_dungeon3.img.woodCave.gate.0.0.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.0.1.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.0.2.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.0.3.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.0.4.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.0.5.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.0.6.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.0.7.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.0.8.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.0.9.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.0.10.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.0.11.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.0.12.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.0.13.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.0.14.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.0.15.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.0.16.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.0.17.png",
         ]
         property int preciousIndex: 0
         Image {
@@ -3524,14 +3526,14 @@ Item{
                     source: "../assets/part4/sea1.jpg"
                     fillMode: Image.PreserveAspectCrop
                 }
-                Image {
+                /*Image {
                     id: background3f
                     x:parent.width*5
                     width: 1300
                     height: 900
                     source: "../assets/part4/sea1.jpg"
                     fillMode: Image.PreserveAspectCrop
-                }
+                }*/
                 Loader{
                     id:magicloader
                     sourceComponent: magicComponent
@@ -3767,6 +3769,32 @@ Item{
                     y:path6.y
                     z:1
                     }
+                Image {
+                    id: rock
+                    source: "../assets/part4/Obj_acc5.img.aquaRoad.frontRock.0.0.png"
+                    width:310
+                    height: 196
+                    x:path10.x-50
+                    y:path10.y-150
+                }
+                Image {
+                    id: seastar
+                    source: "../assets/part4/Obj_acc5.img.aquaRoad2.acc.25.0.png"
+                    width:168*0.7
+                    height:76*0.7
+                    x:rock.x+100
+                    y:rock.y+45
+                }
+                Loader{
+                sourceComponent: lightComponent
+                x:path10.x+300
+                y:path10.y-500
+                }
+                Loader{
+                sourceComponent: airComponent3
+                x:path8.x+130
+                y:path10.y-210*1.5
+                }
                 Loader{
                 sourceComponent: lightComponent2
                 x:path10.x
@@ -3850,9 +3878,1159 @@ Item{
                 y:a1.y+100
                 }
                 Loader{
+                    id:a0
                 sourceComponent: perplejellyComponent
                 x:a2.x+100
                 y:a2.y-300
+                }
+                Loader{
+                    id:a3
+                sourceComponent: redjellyComponent
+                x:a2.x+300
+                y:a2.y+200
+                }
+                Image {
+                    id: path15
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.3.0.png"
+                    width: 203
+                    height: 107
+                    x:path14.x+120
+                    y:path14.y-100
+                    z:1
+                    }
+                Loader{
+                sourceComponent: lightComponent
+                x:path15.x+200
+                y:path15.y+100
+                }
+                Image {
+                    id: guidepost
+                    source: "../assets/part4/Obj_acc5.img.aquarium.zoo.15.0.png"
+                    width: 121
+                    height: 109
+                    x:path15.x
+                    y:path15.y-80
+                }
+                Image {
+                    id: path16
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.2.0.png"
+                    width: 149
+                    height: 64
+                    x:path15.x+180
+                    y:path15.y
+                    z:1
+                    }
+                Image {
+                    id: turtle
+                    source: "../assets/part4/Obj_acc5.img.aquarium.box.0.0.png"
+                    width: 112
+                    height: 49
+                    x:path16.x-80
+                    y:path16.y-20
+                }
+                Image {
+                    id: path17
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.0.0.png"
+                    width: 149
+                    height: 86
+                    x:path16.x+130
+                    y:path15.y
+                    z:1
+                    }
+                Image {
+                    id: path18
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.1.0.png"
+                    width: 149
+                    height: 86
+                    x:path17.x+130
+                    y:path15.y+30
+                    z:1
+                    }
+                Image {
+                    id: rock2
+                    source: "../assets/part4/Obj_acc5.img.aquaRoad.frontRock.1.0.png"
+                    width: 352*0.7
+                    height: 270*0.7
+                    x:path18.x-100
+                    y:path18.y-120
+                }
+                Loader{
+                sourceComponent: lightComponent
+                x:path18.x-100
+                y:path18.y-500
+                }
+                Image {
+                    id: path19
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.4.0.png"
+                    width: 125
+                    height: 88
+                    x:path18.x+200
+                    y:path15.y
+                    z:1
+                    }
+                Image {
+                    id: flower
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.16.0.png"
+                    width: 76
+                    height: 66
+                    x:path19.x
+                    y:path19.y-60
+                }
+                Loader{
+                sourceComponent: lightComponent
+                x:path19.x+200
+                y:path19.y+100
+                }
+                Image {
+                    id: path20
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.1.0.png"
+                    width: 150
+                    height: 88
+                    x:path19.x+120
+                    y:path15.y
+                    z:1
+                    }
+                Image {
+                    id: path21
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.3.0.png"
+                    width: 203
+                    height: 107
+                    x:path20.x+130
+                    y:path15.y-20
+                    z:1
+                    }
+                Image {
+                    id: flower1
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.17.0.png"
+                    width: 76
+                    height: 66
+                    x:path21.x+130
+                    y:path19.y-60
+                }
+                Loader{
+                sourceComponent: lightComponent
+                x:path21.x+200
+                y:path21.y-500
+                }
+                Image {
+                    id: path22
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.0.0.png"
+                    width: 150
+                    height: 88
+                    x:path21.x+200
+                    y:path15.y
+                    z:1
+                    }
+                NumberAnimation {
+                    id: path22move
+                    target: path22
+                    properties: "x"
+                    to: path22.x + 400
+                    duration: 2000
+                    easing.type: Easing.InOutQuad
+                    onFinished: path22move_return.start()
+                    }
+                NumberAnimation {
+                id: path22move_return
+                target: path22
+                properties: "x"
+                to: path22.x - 400
+                duration: 2000
+                easing.type: Easing.InOutQuad
+                onFinished:path22move.start()
+                }
+                Image {
+                    id: path23
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.2.0.png"
+                    width: 150
+                    height: 64
+                    x:path21.x+730
+                    y:path15.y
+                    z:1
+                    }
+                Loader{
+                sourceComponent: lightComponent
+                x:path23.x-300
+                y:path22.y-100
+                }
+                Loader{
+                sourceComponent: lightComponent
+                x:path23.x+200
+                y:path23.y+100
+                }
+                Image {
+                    id: path24
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.6.0.png"
+                    width: 170
+                    height: 63
+                    x:path23.x+120
+                    y:path23.y+50
+                    rotation: 15
+                    }
+                Image {
+                    id: path25
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.2.0.png"
+                    width: 150
+                    height: 64
+                    x:path24.x+150
+                    y:path24.y+70
+                    z:1
+                    }
+                Loader{
+                sourceComponent: lightComponent
+                x:path25.x+300
+                y:path25.y-400
+                }
+                Image {
+                    id: path26
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.1.0.png"
+                    width: 150
+                    height: 64
+                    x:path25.x+140
+                    y:path25.y
+                    z:1
+                    }
+                Loader{
+                sourceComponent: fishConponent
+                x:path26.x
+                y:path26.y-400
+                }
+                Image {
+                    id: path27
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.3.0.png"
+                    width: 203
+                    height: 107
+                    x:path26.x+140
+                    y:path25.y
+                    z:1
+                    }
+                Image {
+                    id: path28
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.4.0.png"
+                    width: 150
+                    height: 88
+                    x:path27.x+190
+                    y:path25.y
+                    z:1
+                    }
+                Image {
+                    id: path29
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.2.0.png"
+                    width: 150
+                    height: 88
+                    x:path28.x+140
+                    y:path25.y
+                    z:1
+                    }
+                Image {
+                    id: path30
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.2.0.png"
+                    width: 150
+                    height: 88
+                    x:path29.x+150
+                    y:path25.y+30
+                    z:1
+                    }
+                NumberAnimation {
+                    id:path30move
+                    target: path30
+                    property: "y"
+                    duration: 2000
+                    to:path30.y-400
+                    easing.type: Easing.InOutQuad
+                    onFinished: path30move_return.start()
+                }
+                NumberAnimation {
+                    id:path30move_return
+                    target: path30
+                    property: "y"
+                    duration: 2000
+                    to:path30.y+400
+                    easing.type: Easing.InOutQuad
+                    onFinished: path30move.start()
+                }
+                Loader{
+                sourceComponent: lightComponent
+                x:path30.x+100
+                y:path29.y-200
+                }
+                //shang
+                Image {
+                    id: path01
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.2.0.png"
+                    width: 150
+                    height: 88
+                    x:path30.x+150
+                    y:path29.y-300
+                    z:1
+                    }
+                Image {
+                    id: path02
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.1.0.png"
+                    width: 150
+                    height: 88
+                    x:path01.x+140
+                    y:path01.y
+                    z:1
+                    }
+                Image {
+                    id: path03
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.3.0.png"
+                    width: 203
+                    height: 107
+                    x:path02.x+140
+                    y:path01.y
+                    z:1
+                    }
+                Image {
+                    id: path04
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.4.0.png"
+                    width: 125
+                    height: 88
+                    x:path03.x+180
+                    y:path01.y
+                    z:1
+                    }
+                Image {
+                    id: path05
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.1.0.png"
+                    width: 150
+                    height: 88
+                    x:path04.x+110
+                    y:path01.y
+                    z:1
+                    }
+                Image {
+                    id: path06
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.3.0.png"
+                    width: 203
+                    height: 107
+                    x:path05.x+130
+                    y:path01.y
+                    z:1
+                    }
+                Image {
+                    id: path07
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.4.0.png"
+                    width: 125
+                    height: 88
+                    x:path06.x+180
+                    y:path01.y
+                    z:1
+                    }
+                Image {
+                    id: path08
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.2.0.png"
+                    width: 150
+                    height: 88
+                    x:path07.x+100
+                    y:path01.y
+                    z:1
+                    }
+                Image {
+                    id: path09
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.0.0.png"
+                    width: 150
+                    height: 88
+                    x:path08.x+130
+                    y:path01.y
+                    z:1
+                    }
+                Image {
+                    id: path010
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.1.0.png"
+                    width: 150
+                    height: 88
+                    x:path09.x+130
+                    y:path01.y
+                    z:1
+                    }
+                Image {
+                    id: house
+                    source: "../assets/part4/Obj_acc5.img.aquarium.market.13.0.png"
+                    width: 228
+                    height: 206
+                    x:path08.x+150
+                    y:path09.y-170
+                }
+                Image {
+                    id: lighttree
+                    source: "../assets/part4/Obj_acc6.img.folkvillige.moon1.18.0.png"
+                    width: 368
+                    height: 352
+                    x:path01.x
+                    y:path01.y-280
+                    rotation: 18
+                }
+                Image {
+                    id: lighttree1
+                    source: "../assets/part4/Obj_acc6.img.folkvillige.moon1.19.0.png"
+                    width: 270
+                    height: 288
+                    x:lighttree.x+350
+                    y:lighttree.y+40
+                }
+                Image {
+                    id: lighttree2
+                    source: "../assets/part4/Obj_acc6.img.folkvillige.moon1.20.0.png"
+                    width: 420
+                    height: 330
+                    x:lighttree1.x+300
+                    y:lighttree.y
+                    rotation: -12
+                }
+                Image {
+                    id: lightflower
+                    source: "../assets/part4/Obj_acc6.img.folkvillige.moon1.21.0.png"
+                    width: 54
+                    height: 59
+                    x:path01.x+50
+                    y:path01.y+75
+                    rotation: 200
+                }
+                Image {
+                    id: lightflower0
+                    source: "../assets/part4/Obj_acc6.img.folkvillige.moon1.22.0.png"
+                    width: 51
+                    height: 39
+                    x:lightflower.x+50
+                    y:lightflower.y
+                    rotation: 200
+                }
+                Image {
+                    id: lightflower1
+                    source: "../assets/part4/Obj_acc6.img.folkvillige.moon1.23.0.png"
+                    width: 47
+                    height:44
+                    x:lightflower0.x+50
+                    y:lightflower.y
+                    rotation: 200
+                }
+                Image {
+                    id: lightflower2
+                    source: "../assets/part4/Obj_acc6.img.folkvillige.moon1.24.0.png"
+                    width: 56
+                    height:44
+                    x:lightflower1.x+50
+                    y:lightflower.y-30
+                    rotation: 200
+                }
+                Image {
+                    id: lightflower3
+                    source: "../assets/part4/Obj_acc6.img.folkvillige.moon1.25.0.png"
+                    width: 50
+                    height:44
+                    x:lightflower2.x+50
+                    y:lightflower.y
+                    rotation: 200
+                }
+                Image {
+                    id: lightflower4
+                    source: "../assets/part4/Obj_acc6.img.folkvillige.moon1.26.0.png"
+                    width: 55
+                    height:60
+                    x:lightflower3.x+50
+                    y:lightflower.y-10
+                    rotation: 200
+                }
+                Image {
+                    id: lightflower5
+                    source: "../assets/part4/Obj_acc6.img.folkvillige.moon1.27.0.png"
+                    width: 78
+                    height:44
+                    x:lightflower4.x+50
+                    y:lightflower.y
+                    rotation: 200
+                }
+                Image {
+                    id: lightflower6
+                    source: "../assets/part4/Obj_acc6.img.folkvillige.moon1.27.0.png"
+                    width: 78
+                    height:44
+                    x:lightflower5.x+60
+                    y:lightflower.y
+                    rotation: 200
+                }
+                Image {
+                    id: lightflower7
+                    source: "../assets/part4/Obj_acc6.img.folkvillige.moon1.21.0.png"
+                    width: 54
+                    height: 59
+                    x:lightflower6.x+60
+                    y:lightflower.y
+                    rotation: 200
+                }
+                Image {
+                    id: lightflower8
+                    source: "../assets/part4/Obj_acc6.img.folkvillige.moon1.25.0.png"
+                    width: 50
+                    height:44
+                    x:lightflower6.x+50
+                    y:lightflower.y
+                    rotation: 200
+                }
+                Image {
+                    id: lightflower9
+                    source: "../assets/part4/Obj_acc6.img.folkvillige.moon1.26.0.png"
+                    width: 55
+                    height:60
+                    x:lightflower8.x+50
+                    y:lightflower.y-10
+                    rotation: 200
+                }
+                Image {
+                    id: lightflower10
+                    source: "../assets/part4/Obj_acc6.img.folkvillige.moon1.27.0.png"
+                    width: 78
+                    height:44
+                    x:lightflower9.x+80
+                    y:lightflower.y
+                    rotation: 200
+                }
+                Image {
+                    id: lightflower11
+                    source: "../assets/part4/Obj_acc6.img.folkvillige.moon1.27.0.png"
+                    width: 78
+                    height:44
+                    x:lightflower10.x+80
+                    y:lightflower.y
+                    rotation: 200
+                }
+                Image {
+                    id: lightflower12
+                    source: "../assets/part4/Obj_acc6.img.folkvillige.moon1.27.0.png"
+                    width: 78
+                    height:44
+                    x:lightflower11.x+80
+                    y:lightflower.y
+                    rotation: 200
+                }
+                Image {
+                    id: lightflower13
+                    source: "../assets/part4/Obj_acc6.img.folkvillige.moon1.27.0.png"
+                    width: 78
+                    height:44
+                    x:lightflower12.x+80
+                    y:lightflower.y
+                    rotation: 200
+                }
+                Image {
+                    id: lightflower14
+                    source: "../assets/part4/Obj_acc6.img.folkvillige.moon1.27.0.png"
+                    width: 78
+                    height:44
+                    x:lightflower13.x+80
+                    y:lightflower.y
+                    rotation: 180
+                }
+                Image {
+                    id: lightflower15
+                    source: "../assets/part4/Obj_acc6.img.folkvillige.moon1.27.0.png"
+                    width: 78
+                    height:44
+                    x:lightflower14.x+80
+                    y:lightflower.y
+                    rotation: 180
+                }
+                Image {
+                    id: lightflower16
+                    source: "../assets/part4/Obj_acc6.img.folkvillige.moon1.27.0.png"
+                    width: 78
+                    height:44
+                    x:lightflower15.x+80
+                    y:lightflower.y
+                    rotation: 180
+                }
+                Image {
+                    id: lightflower17
+                    source: "../assets/part4/Obj_acc6.img.folkvillige.moon1.27.0.png"
+                    width: 78
+                    height:44
+                    x:lightflower16.x+80
+                    y:lightflower.y
+                    rotation: 180
+                }
+                Loader{
+                sourceComponent: lightComponent
+                x:path04.x+200
+                y:path04.y-200
+                }
+                //xia
+                Image {
+                    id: path31
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.2.0.png"
+                    width: 150
+                    height: 88
+                    x:path30.x+150
+                    y:path29.y+90
+                    z:1
+                    }
+                Image {
+                    id: roadlight
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.29.0.png"
+                    width: 187
+                    height: 214
+                    x:path31.x+20
+                    y:path31.y-180
+                }
+                Image {
+                    id: path32
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.1.0.png"
+                    width: 150
+                    height: 88
+                    x:path31.x+140
+                    y:path31.y
+                    z:1
+                    }
+                Image {
+                    id: path33
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.3.0.png"
+                    width: 203
+                    height: 107
+                    x:path32.x+140
+                    y:path31.y
+                    z:1
+                    }
+                Image {
+                    id: path34
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.4.0.png"
+                    width: 125
+                    height: 88
+                    x:path33.x+180
+                    y:path31.y
+                    z:1
+                    }
+                Image {
+                    id: path35
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.1.0.png"
+                    width: 150
+                    height: 88
+                    x:path34.x+110
+                    y:path31.y
+                    z:1
+                    }
+                Image {
+                    id: path36
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.3.0.png"
+                    width: 203
+                    height: 107
+                    x:path35.x+130
+                    y:path31.y
+                    z:1
+                    }
+                Image {
+                    id: path37
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.4.0.png"
+                    width: 125
+                    height: 88
+                    x:path36.x+180
+                    y:path31.y
+                    z:1
+                    }
+                Image {
+                    id: path38
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.2.0.png"
+                    width: 150
+                    height: 88
+                    x:path37.x+100
+                    y:path31.y
+                    z:1
+                    }
+                Loader{
+                sourceComponent: lightComponent
+                x:path38.x+200
+                y:path37.y-100
+                }
+                Image {
+                    id: path39
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.0.0.png"
+                    width: 150
+                    height: 88
+                    x:path38.x+130
+                    y:path31.y
+                    z:1
+                    }
+                Image {
+                    id: path40
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.1.0.png"
+                    width: 150
+                    height: 88
+                    x:path39.x+130
+                    y:path31.y
+                    z:1
+                    }
+                Image {
+                    id: path41
+                    source: "../assets/part4/Obj_acc10.img.poisonForest.foot.3.0.png"
+                    width: 203
+                    height: 107
+                    x:path40.x+130
+                    y:path31.y
+                    z:1
+                    }
+                Loader{
+                sourceComponent: lightComponent
+                x:path04.x
+                y:path4.y-100
+                }
+                Image {
+                    id: grass8
+                    source: "../assets/part4/Obj_dungeon2.img.deepSee.nature.8.0.png"
+                    width: 198
+                    height: 93
+                    x:path31.x+20
+                    y:path31.y+50
+                }
+                Image {
+                    id: grass9
+                    source: "../assets/part4/Obj_dungeon2.img.deepSee.nature.8.0.png"
+                    width: 198
+                    height: 93
+                    x:grass8.x+150
+                    y:grass8.y
+                }
+                Image {
+                    id: grass10
+                    source: "../assets/part4/Obj_dungeon2.img.deepSee.nature.9.0.png"
+                    width: 198
+                    height: 93
+                    x:grass9.x+150
+                    y:grass8.y
+                }
+                Image {
+                    id: grass11
+                    source: "../assets/part4/Obj_dungeon2.img.deepSee.nature.9.0.png"
+                    width: 198
+                    height: 93
+                    x:grass10.x+150
+                    y:grass8.y
+                }
+                Image {
+                    id: grass12
+                    source: "../assets/part4/Obj_dungeon2.img.deepSee.nature.8.0.png"
+                    width: 198
+                    height: 93
+                    x:grass11.x+150
+                    y:grass8.y
+                }
+                Image {
+                    id: grass13
+                    source: "../assets/part4/Obj_dungeon2.img.deepSee.nature.8.0.png"
+                    width: 198
+                    height: 93
+                    x:grass12.x+150
+                    y:grass8.y
+                }
+                Image {
+                    id: grass14
+                    source: "../assets/part4/Obj_dungeon2.img.deepSee.nature.9.0.png"
+                    width: 198
+                    height: 93
+                    x:grass13.x+150
+                    y:grass8.y
+                }
+                Image {
+                    id: grass15
+                    source: "../assets/part4/Obj_dungeon2.img.deepSee.nature.9.0.png"
+                    width: 198
+                    height: 93
+                    x:grass14.x+150
+                    y:grass8.y
+                }
+                Image {
+                    id: grass16
+                    source: "../assets/part4/Obj_dungeon2.img.deepSee.nature.8.0.png"
+                    width: 198
+                    height: 93
+                    x:grass15.x+150
+                    y:grass8.y
+                }
+                Image {
+                    id: grass17
+                    source: "../assets/part4/Obj_dungeon2.img.deepSee.nature.8.0.png"
+                    width: 198
+                    height: 93
+                    x:grass16.x+150
+                    y:grass8.y
+                }
+                Image {
+                    id: flower00
+                    source: "../assets/part4/Obj_dungeon2.img.toyCastle2.acc5.27.0.png"
+                    width: 119
+                    height:134
+                    x:path37.x
+                    y:path37.y-140
+                }
+                Image {
+                    id: flower01
+                    source: "../assets/part4/Obj_dungeon2.img.toyCastle2.acc7.19.0.png"
+                    width: 47
+                    height:104
+                    x:path06.x
+                    y:path06.y+90
+                }
+                Image {
+                    id: flower02
+                    source: "../assets/part4/Obj_dungeon2.img.toyCastle2.acc7.16.0.png"
+                    width: 58
+                    height:136
+                    x:path04.x
+                    y:path35.y-150
+                }
+                Image {
+                    id: flower03
+                    source: "../assets/part4/Obj_dungeon2.img.toyCastle2.acc5.25.0.png"
+                    width: 140
+                    height:146
+                    x:path32.x
+                    y:path32.y-160
+                }
+                Loader{
+                sourceComponent: preciousComponent
+                x:path39.x-100
+                y:path39.y-350
+                }
+                Image {
+                    id: lan0
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.25.0.png"
+                    width: 63
+                    height: 39
+                    x:path0.x+50
+                    y:path0.y-10
+                    z:1
+                }
+                Image {
+                    id: lan01
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:lan0.x+63
+                    y:lan0.y-5
+                    z:1
+                }
+                Image {
+                    id: lan02
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:lan01.x+152
+                    y:lan0.y-5
+                    z:1
+                }
+                Image {
+                    id: lan03
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:lan02.x+152
+                    y:lan0.y-5
+                    z:1
+                }
+                Image {
+                    id: lan04
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.28.0.png"
+                    width: 63
+                    height: 39
+                    x:lan03.x+152
+                    y:lan0.y-5
+                    z:1
+                }
+                Image {
+                    id: lan05
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.25.0.png"
+                    width: 63
+                    height: 39
+                    x:path6.x+20
+                    y:path6.y-15
+                    z:1
+                }
+                Image {
+                    id: lan06
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:lan05.x+63
+                    y:lan05.y-5
+                    z:1
+                }
+                Image {
+                    id: lan07
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:lan06.x+152
+                    y:lan06.y
+                    z:1
+                }
+                Image {
+                    id: lan08
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:lan07.x+152
+                    y:lan06.y
+                    z:1
+                }
+                Image {
+                    id: lan09
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:lan08.x+152
+                    y:lan06.y
+                    z:1
+                }
+                Image {
+                    id: lan010
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.25.0.png"
+                    width: 63
+                    height: 39
+                    x:path15.x+20
+                    y:path15.y-15
+                    z:1
+                }
+                Image {
+                    id: lan011
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:lan010.x+63
+                    y:lan010.y
+                    z:1
+                }
+                Image {
+                    id: lan012
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:lan011.x+152
+                    y:lan010.y
+                    z:1
+                }
+                Image {
+                    id: lan013
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:lan012.x+152
+                    y:lan010.y
+                    z:1
+                }
+                Image {
+                    id: lan014
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.25.0.png"
+                    width: 63
+                    height: 39
+                    x:path19.x+20
+                    y:path19.y-15
+                    z:1
+                }
+                Image {
+                    id: lan015
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:lan014.x+63
+                    y:lan014.y-5
+                    z:1
+                }
+                Image {
+                    id: lan016
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:lan015.x+152
+                    y:lan015.y
+                    z:1
+                }
+                Image {
+                    id: lan017
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.28.0.png"
+                    width: 63
+                    height: 39
+                    x:lan016.x+152
+                    y:lan015.y
+                    z:1
+                }
+                Image {
+                    id: lan018
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.25.0.png"
+                    width: 80
+                    height: 39
+                    x:path22.x
+                    y:path22.y-10
+                    z:1
+                }
+                Image {
+                    id: lan0180
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.28.0.png"
+                    width: 63
+                    height: 39
+                    x:lan018.x+80
+                    y:lan018.y
+                    z:1
+                }
+                Image {
+                    id: lan019
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.25.0.png"
+                    width: 63
+                    height: 39
+                    x:path23.x+20
+                    y:path23.y-15
+                    z:1
+                }
+                Image {
+                    id: lan0190
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.28.0.png"
+                    width: 63
+                    height: 39
+                    x:lan019.x+63
+                    y:lan019.y
+                    z:1
+                }
+                Image {
+                    id: lan020
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:path25.x
+                    y:path25.y-15
+                    z:1
+                }
+                Image {
+                    id: lan021
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:lan020.x+152
+                    y:lan020.y
+                    z:1
+                }
+                Image {
+                    id: lan022
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:lan021.x+152
+                    y:lan020.y
+                    z:1
+                }
+                Image {
+                    id: lan023
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.28.0.png"
+                    width: 63
+                    height: 39
+                    x:lan022.x+152
+                    y:lan020.y
+                    z:1
+                }
+                Image {
+                    id: lan
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.25.0.png"
+                    width: 63
+                    height: 39
+                    x:path31.x+10
+                    y:path31.y-10
+                    z:1
+                }
+                Image {
+                    id: lan1
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.26.0.png"
+                    width: 76
+                    height: 39
+                    x:lan.x+63
+                    y:lan.y-5
+                    z:1
+                }
+                Image {
+                    id: lan2
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:lan1.x+76
+                    y:lan.y-5
+                    z:1
+                }
+                Image {
+                    id: lan3
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:lan2.x+152
+                    y:lan.y-5
+                    z:1
+                }
+                Image {
+                    id: lan4
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:lan3.x+152
+                    y:lan.y-5
+                    z:1
+                }
+                Image {
+                    id: lan5
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:lan4.x+152
+                    y:lan.y-5
+                    z:1
+                }
+                Image {
+                    id: lan6
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:lan5.x+152
+                    y:lan.y-5
+                    z:1
+                }
+                Image {
+                    id: lan7
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:lan6.x+152
+                    y:lan.y-5
+                    z:1
+                }
+                Image {
+                    id: lan8
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:lan7.x+152
+                    y:lan.y-5
+                    z:1
+                }
+                Image {
+                    id: lan9
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:lan8.x+152
+                    y:lan.y-5
+                    z:1
+                }
+                Image {
+                    id: lan10
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.27.0.png"
+                    width: 152
+                    height: 39
+                    x:lan9.x+152
+                    y:lan.y-5
+                    z:1
+                }
+                Image {
+                    id: lan11
+                    source: "../assets/part4/Obj_acc5.img.aquarium.acc.28.0.png"
+                    width: 63
+                    height: 39
+                    x:lan10.x+152
+                    y:lan.y-5
+                    z:1
                 }
                 }
             Rectangle {
@@ -3865,7 +5043,7 @@ Item{
                         x:0
                         onXChanged: {
                             // 如果角色到达场景边缘的阈值
-                            if (x + width >scrollThreshold &&background3.x>-background3.width*5) {
+                            if (x + width >scrollThreshold &&background3.x>-background3.width*4) {
                                 // 移动场景内容（背景和角色）
                                 var scrollDistance = x + width - scrollThreshold;
                                 background3.x -= scrollDistance;
