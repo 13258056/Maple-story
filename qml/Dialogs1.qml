@@ -7,7 +7,6 @@ Item {
     property alias bagDialog:_bagDialog
     property alias attributeDialog:_attributeDialog
     property alias shopDialog:_shopDialog
-    property alias endDialog:_endDialog
 
     /*退出游戏界面窗口*/
     Dialog{
@@ -131,22 +130,6 @@ Item {
             anchors.centerIn: parent
             width: parent.width*1.1
             height:parent.height*1.1
-        }
-    }
-
-    /*到达关卡终点*/
-    Dialog{
-        id:_endDialog
-        property real offsetX: (choose.width - width) / 2
-        property real offsetY: (choose.height - height) / 2
-        x: offsetX
-        y: offsetY
-        width: 800
-        height:400
-        Text{
-            text: qsTr("恭喜通关")
-            anchors.centerIn: parent
-            font.pointSize: 40
         }
     }
 }
