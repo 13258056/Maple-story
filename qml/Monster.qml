@@ -28,6 +28,8 @@ EntityBase{
                         player.contacts++
                         player.helth--
                         console.log(player.helth)
+                                                    healthFill.width-=20
+
                       }
                     }
 
