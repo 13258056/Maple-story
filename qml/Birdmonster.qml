@@ -15,4 +15,5 @@ EntityBase{
         width: parent.width
         height:parent.height
     }
+
 }

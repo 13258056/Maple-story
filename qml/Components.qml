@@ -2097,7 +2097,7 @@ Item{
                       "up":Qt.Key_K,
                       "left":Qt.Key_A,
                       "right":Qt.Key_D,
-                      "fire":Qt.Key_J
+                      //"fire":Qt.Key_Space
                   }
 
                   onInputActionPressed: (actionName, isPressed) => {
