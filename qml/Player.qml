@@ -7,6 +7,7 @@ EntityBase {
   width: 85
   height: 100
 
+  property int helth: 100
   property alias collider: collider
   property alias horizontalVelocity: collider.linearVelocity.x
 
@@ -22,8 +23,8 @@ EntityBase {
 
   BoxCollider{
       id:collider
-      height: 20
-      width: 50
+      height: 5
+      width: 10
       anchors.bottom: parent.bottom
       //anchors.left:parent.left
       anchors.horizontalCenter: parent.horizontalCenter
@@ -33,8 +34,8 @@ EntityBase {
       sleepingAllowed: false
       force: Qt.point(controller.xAxis*170*32,0)
       onLinearVelocityChanged: {
-        if(linearVelocity.x > 100) linearVelocity.x = 100
-        if(linearVelocity.x < -100) linearVelocity.x = -100
+        if(linearVelocity.x > 200) linearVelocity.x = 200
+        if(linearVelocity.x < -200) linearVelocity.x = -200
         }
     }
 
@@ -58,5 +59,4 @@ EntityBase {
             collider.linearVelocity.y = -400
         }
     }
-
 }

@@ -16,20 +16,31 @@ EntityBase{
         width: parent.width
         height:parent.height
     }
-
-    /*
     BoxCollider{
-        id:collider
-        height: 20
-        width: 50
-        anchors.bottom: parent.bottom
-        //anchors.left:parent.left
-        anchors.horizontalCenter: parent.horizontalCenter
-        bodyType: Body.Dynamic
-        fixedRotation: true
-        bullet: true
-    }
-    */
+                    id: collider
+                    anchors.fill: parent
+                    bodyType: Body.Static
+
+                    fixture.onBeginContact: (other, contactNormal) => {
+                      var otherEntity = other.getBody().target
+                      if(otherEntity.entityType === "player") {
+                        console.debug("contact platform begin")
+                        player.contacts++
+                        player.helth--
+                        console.log(player.helth)
+                      }
+                    }
+
+                    fixture.onEndContact: other => {
+                      var otherEntity = other.getBody().target
+                      if(otherEntity.entityType === "player") {
+                        console.debug("contact platform end")
+                          player.contacts--
+                          player.helth--
+                          console.log(player.helth)
+                      }
+                    }
+                  }
     SequentialAnimation on x{
         loops: Animation.Infinite
         PropertyAnimation{
