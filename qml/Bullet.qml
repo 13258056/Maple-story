@@ -8,10 +8,11 @@ EntityBase {
     width: 20
     height: 20
 
+    z:1
     property var velocity: Qt.point(0, 0)
 
     MultiResolutionImage {
-        source: "../assets/part4/Obj_acc5.img.aquarium.acc.34.0.png"
+        source:  Qt.resolvedUrl("../assets/part4/Obj_acc5.img.aquarium.acc.34.0.png")
         width: parent.width
         height: parent.height
     }

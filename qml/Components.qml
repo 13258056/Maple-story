@@ -2742,6 +2742,9 @@ Item{
                     }
                                             if(actionName==="fire"){
                                                 player.shoot()
+                                                _player2.shoot()
+                                                _player3.shoot()
+                                                _player4.shoot()
                                             }
                   }
                 }
@@ -2930,7 +2933,7 @@ Item{
                 if(player.x > 500 && player.x < 800){
                 var bullet = bulletcom.createObject(parent);
                 bullet.x = bird_monster.position.x + birdvisal.width / 2
-                bullet.y = bird_monster.position.y + birdvisal.height / 2
+                bullet.y = bird_monster.position.y + birdvisal.height
                 bullet.bulletmove()
                 movebullet.start()
                 }
@@ -2971,7 +2974,7 @@ Item{
                 }
                 Timer{
                     id:movebullet
-                    interval: 50
+                    interval: 100
                     repeat: true
                     running: true
                     onTriggered: bulletmove()
