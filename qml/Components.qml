@@ -17,7 +17,8 @@ Item {
     property alias page3:_page3
     property alias edgePage: _edgePage
     property int sceneWidth:5000
-    property int scrollThreshold:900//触发滚动阈值
+    property int scrollThreshold:900
+    property int scrollThreshold1:300//触发滚动阈值
     property alias background0:background0
     property alias healthFill:healthFill
     /*初始或结束点的树洞动画*/
@@ -95,22 +96,6 @@ Item {
     "../assets/images/Obj_acc11.img.erebTW.holybird.17.2.png",
     ]
     property int waterIndex: 0
-    // //火炉
-    // property var fire: [
-    // "images/Obj_acc3.img.christmas.inside.12.0.png",
-    //     "images/Obj_acc3.img.christmas.inside.12.1.png",
-    //     "images/Obj_acc3.img.christmas.inside.12.2.png",
-    //     "images/Obj_acc3.img.christmas.inside.12.3.png",
-    //     "images/Obj_acc3.img.christmas.inside.12.4.png",
-    //     "images/Obj_acc3.img.christmas.inside.12.5.png",
-    //     "images/Obj_acc3.img.christmas.inside.12.6.png",
-    //     "images/Obj_acc3.img.christmas.inside.12.7.png",
-    //     "images/Obj_acc3.img.christmas.inside.12.8.png",
-    //     "images/Obj_acc3.img.christmas.inside.12.9.png",
-    //     "images/Obj_acc3.img.christmas.inside.12.10.png",
-    //     "images/Obj_acc3.img.christmas.inside.12.11.png",
-    // ]
-    // property int fireIndex: 0
     //火
     Component{
     id:fireComponent
@@ -425,7 +410,33 @@ Item{
         upDownAnimation1.start()
         path22move.start()
         path30move.start()
-        //jellyfloat.start()
+        horse01move.start()
+        jellyfloat.start()
+        redjellyfloat01.start()
+        bluejellyfloat.start()
+        perplejellyfloat.start()
+        redjellyfloat.start()
+        bluehorsemove01.start()
+        redhorsemove01.start()
+        crabmove01.start()
+        blobmove01.start()
+        octopusmove01.start()
+        octopusmove02.start()
+        octopusmove03.start()
+        crabmove02.start()
+        blobmove02.start()
+        octopusmove04.start()
+        rabbitmove.start()
+        maomove.start()
+        maomove01.start()
+        maomove02.start()
+        unqmove.start()
+        ghost1move.start()
+        ghost2move.start()
+        ghost3move.start()
+        ghost3move01.start()
+        ghostmove.start()
+        ghost3move02.start()
             }
     /*关卡1 组件*/
     Component{
@@ -1247,6 +1258,417 @@ Item{
 
         }
     }
+    //关卡3
+    Component{
+    id:rabbitComponent
+    Item{
+        property var rabbit: [
+        "../assets/images/image795.png",
+            "../assets/images/image797.png",
+            "../assets/images/image799.png",
+            "../assets/images/image801.png",
+            "../assets/images/image803.png",
+            "../assets/images/image805.png",
+            "../assets/images/image807.png",
+        ]
+        property int rabbitIndex: 0
+        Image {
+            id: rabbit0
+            source: rabbit[rabbitIndex]
+            width: 47*1.2
+            height: 52*1.2
+        }
+        Timer{
+        interval: 200
+        running: true
+        repeat: true
+        onTriggered: {
+        rabbitIndex=(rabbitIndex+1)%rabbit.length
+            rabbit0.source=rabbit[rabbitIndex]
+        }
+        }
+    }
+    }
+    Component{
+    id:lrabbitComponent
+    Item{
+        property var lrabbit: [
+        "../assets/images/rabbit0.0.png",
+            "../assets/images/rabbit0.1.png",
+            "../assets/images/rabbit0.2.png",
+            "../assets/images/rabbit0.3.png",
+            "../assets/images/rabbit0.4.png",
+            "../assets/images/rabbit0.5.png",
+            "../assets/images/rabbit0.6.png",
+        ]
+        property int lrabbitIndex: 0
+        Image {
+            id: lrabbit0
+            source: lrabbit[lrabbitIndex]
+            width: 47*1.2
+            height: 52*1.2
+        }
+        Timer{
+        interval: 200
+        running: true
+        repeat: true
+        onTriggered: {
+        lrabbitIndex=(lrabbitIndex+1)%lrabbit.length
+            lrabbit0.source=lrabbit[lrabbitIndex]
+        }
+        }
+    }
+    }
+    Component{
+    id:maoComponent
+    Item{
+        property var mao: [
+        "../assets/images/image743.png",
+            "../assets/images/image745.png",
+            "../assets/images/image747.png",
+        ]
+        property int maoIndex: 0
+        Image {
+            id: mao0
+            source: mao[maoIndex]
+            width: 45*1.5
+            height: 41*1.5
+        }
+        Timer{
+        interval: 200
+        running: true
+        repeat: true
+        onTriggered: {
+        maoIndex=(maoIndex+1)%mao.length
+            mao0.source=mao[maoIndex]
+        }
+        }
+    }
+    }
+    Component{
+    id:lmaoComponent
+    Item{
+        property var lmao: [
+        "../assets/images/mao0.0.png",
+            "../assets/images/mao0.1.png",
+            "../assets/images/mao0.2.png",
+        ]
+        property int lmaoIndex: 0
+        Image {
+            id: lmao0
+            source: lmao[lmaoIndex]
+            width: 45*1.5
+            height: 41*1.5
+        }
+        Timer{
+        interval: 200
+        running: true
+        repeat: true
+        onTriggered: {
+        lmaoIndex=(lmaoIndex+1)%lmao.length
+            lmao0.source=lmao[lmaoIndex]
+        }
+        }
+    }
+    }
+    Component{
+    id:unqComponent
+    Item{
+        property var unq: [
+        "../assets/images/image358.png",
+            "../assets/images/image360.png",
+            "../assets/images/image362.png",
+        ]
+        property int unqIndex: 0
+        Image {
+            id: unq0
+            source: unq[unqIndex]
+            width: 60
+            height: 57
+        }
+        Timer{
+        interval: 200
+        running: true
+        repeat: true
+        onTriggered: {
+        unqIndex=(unqIndex+1)%unq.length
+            unq0.source=unq[unqIndex]
+        }
+        }
+    }
+    }
+    Component{
+    id:lunqComponent
+    Item{
+        property var lunq: [
+        "../assets/images/unq0.0.png",
+            "../assets/images/unq0.1.png",
+            "../assets/images/unq0.2.png",
+        ]
+        property int lunqIndex: 0
+        Image {
+            id: lunq0
+            source: lunq[lunqIndex]
+            width: 60
+            height: 57
+        }
+        Timer{
+        interval: 200
+        running: true
+        repeat: true
+        onTriggered: {
+        lunqIndex=(lunqIndex+1)%lunq.length
+            lunq0.source=lunq[lunqIndex]
+        }
+        }
+    }
+    }
+    Component{
+    id:ghostComponent
+    Item{
+        property var ghost: [
+        "../assets/images/image1.png",
+            "../assets/images/image3.png",
+            "../assets/images/image5.png",
+            "../assets/images/image7.png",
+            "../assets/images/image9.png",
+            "../assets/images/image11.png",
+            "../assets/images/image13.png",
+            "../assets/images/image15.png",
+            "../assets/images/image17.png",
+        ]
+        property int ghostIndex: 0
+        Image {
+            id: ghost0
+            source: ghost[ghostIndex]
+            width: 189
+            height: 266
+        }
+        Timer{
+        interval: 200
+        running: true
+        repeat: true
+        onTriggered: {
+        ghostIndex=(ghostIndex+1)%ghost.length
+            ghost0.source=ghost[ghostIndex]
+        }
+        }
+    }
+    }
+    Component{
+    id:lghostComponent
+    Item{
+        property var lghost: [
+        "../assets/images/gost0.0.png",
+            "../assets/images/gost0.1.png",
+            "../assets/images/gost0.2.png",
+            "../assets/images/gost0.3.png",
+            "../assets/images/gost0.4.png",
+            "../assets/images/gost0.5.png",
+            "../assets/images/gost0.6.png",
+            "../assets/images/gost0.8.png",
+            "../assets/images/gost0.9.png",
+        ]
+        property int lghostIndex: 0
+        Image {
+            id: lghost0
+            source: lghost[lghostIndex]
+            width: 189
+            height: 266
+        }
+        Timer{
+        interval: 200
+        running: true
+        repeat: true
+        onTriggered: {
+        lghostIndex=(lghostIndex+1)%lghost.length
+            lghost0.source=lghost[lghostIndex]
+        }
+        }
+    }
+    }
+    Component{
+    id:ghost1Component
+    Item{
+        property var ghost1: [
+        "../assets/images/image235.png",
+            "../assets/images/image237.png",
+            "../assets/images/image239.png",
+            "../assets/images/image241.png",
+            "../assets/images/image243.png",
+            "../assets/images/image245.png",
+            "../assets/images/image247.png",
+            "../assets/images/image249.png",
+        ]
+        property int ghost1Index: 0
+        Image {
+            id: ghost01
+            source: ghost1[ghost1Index]
+            width: 86
+            height: 77
+        }
+        Timer{
+        interval: 200
+        running: true
+        repeat: true
+        onTriggered: {
+        ghost1Index=(ghost1Index+1)%ghost1.length
+            ghost01.source=ghost1[ghost1Index]
+        }
+        }
+    }
+    }
+    Component{
+    id:lghost1Component
+    Item{
+        property var lghost1: [
+        "../assets/images/gost1.0.png",
+            "../assets/images/gost1.1.png",
+            "../assets/images/gost1.2.png",
+            "../assets/images/gost1.3.png",
+            "../assets/images/gost1.4.png",
+            "../assets/images/gost1.5.png",
+            "../assets/images/gost1.6.png",
+            "../assets/images/gost1.8.png",
+        ]
+        property int lghost1Index: 0
+        Image {
+            id: lghost01
+            source: lghost1[lghost1Index]
+            width: 86
+            height: 77
+        }
+        Timer{
+        interval: 200
+        running: true
+        repeat: true
+        onTriggered: {
+        lghost1Index=(lghost1Index+1)%lghost1.length
+            lghost01.source=lghost1[lghost1Index]
+        }
+        }
+    }
+    }
+    Component{
+    id:ghost2Component
+    Item{
+        property var ghost2: [
+        "../assets/images/image262.png",
+            "../assets/images/image264.png",
+            "../assets/images/image266.png",
+            "../assets/images/image268.png",
+            "../assets/images/image270.png",
+            "../assets/images/image272.png",
+            "../assets/images/image274.png",
+            "../assets/images/image276.png",
+        ]
+        property int ghost2Index: 0
+        Image {
+            id: ghost02
+            source: ghost2[ghost2Index]
+            width: 75
+            height: 77
+        }
+        Timer{
+        interval: 200
+        running: true
+        repeat: true
+        onTriggered: {
+        ghost2Index=(ghost2Index+1)%ghost2.length
+            ghost02.source=ghost2[ghost2Index]
+        }
+        }
+    }
+    }
+    Component{
+    id:lghost2Component
+    Item{
+        property var lghost2: [
+        "../assets/images/gost2.0.png",
+            "../assets/images/gost2.1.png",
+            "../assets/images/gost2.2.png",
+            "../assets/images/gost2.3.png",
+            "../assets/images/gost2.4.png",
+            "../assets/images/gost2.5.png",
+            "../assets/images/gost2.6.png",
+            "../assets/images/gost2.7.png",
+        ]
+        property int lghost2Index: 0
+        Image {
+            id: lghost02
+            source: lghost2[lghost2Index]
+            width: 75
+            height: 77
+        }
+        Timer{
+        interval: 200
+        running: true
+        repeat: true
+        onTriggered: {
+        lghost2Index=(lghost2Index+1)%lghost2.length
+            lghost02.source=lghost2[lghost2Index]
+        }
+        }
+    }
+    }
+    Component{
+    id:ghost3Component
+    Item{
+        property var ghost3: [
+        "../assets/images/image485.png",
+            "../assets/images/image487.png",
+            "../assets/images/image489.png",
+            "../assets/images/image491.png",
+            "../assets/images/image493.png",
+            "../assets/images/image495.png",
+        ]
+        property int ghost3Index: 0
+        Image {
+            id: ghost03
+            source: ghost3[ghost3Index]
+            width: 86
+            height: 83
+        }
+        Timer{
+        interval: 200
+        running: true
+        repeat: true
+        onTriggered: {
+        ghost3Index=(ghost3Index+1)%ghost3.length
+            ghost03.source=ghost3[ghost3Index]
+        }
+        }
+    }
+    }
+    Component{
+    id:lghost3Component
+    Item{
+        property var lghost3: [
+        "../assets/images/gost3.0.png",
+            "../assets/images/gost3.1.png",
+            "../assets/images/gost3.2.png",
+            "../assets/images/gost3.3.png",
+            "../assets/images/gost3.4.png",
+            "../assets/images/gost3.5.png",
+        ]
+        property int lghost3Index: 0
+        Image {
+            id: lghost03
+            source: lghost3[lghost3Index]
+            width: 86
+            height: 83
+        }
+        Timer{
+        interval: 200
+        running: true
+        repeat: true
+        onTriggered: {
+        lghost3Index=(lghost3Index+1)%lghost3.length
+            lghost03.source=lghost3[lghost3Index]
+        }
+        }
+    }
+    }
     //关卡4
     Component{
         id:whaleComponent
@@ -1446,18 +1868,6 @@ Item{
             jelly0.source=jelly[jellyIndex]
         }
         }
-        NumberAnimation {
-           id:jellyfloat
-           target: jelly0
-           property: "y"
-           duration: 22000
-           running:true
-           from: 700
-           to:0
-           easing.type: Easing.InOutQuad
-           onFinished: bluejellyfloat.start()
-
-        }
     }
     }
     Component{
@@ -1487,18 +1897,6 @@ Item{
         bluejellyIndex=(bluejellyIndex+1)%bluejelly.length
             bluejelly0.source=bluejelly[bluejellyIndex]
         }
-        }
-        NumberAnimation {
-           id:bluejellyfloat
-           target: bluejelly0
-           property: "y"
-           duration: 22000
-           running:true
-           from: 700
-           to:0
-           easing.type: Easing.InOutQuad
-           onFinished: redjellyfloat.start()
-
         }
     }
     }
@@ -1530,18 +1928,6 @@ Item{
             redjelly0.source=redjelly[redjellyIndex]
         }
         }
-        NumberAnimation {
-           id:redjellyfloat
-           target: redjelly0
-           property: "y"
-           duration: 22000
-           running:true
-           from: 700
-           to:0
-           easing.type: Easing.InOutQuad
-           onFinished: perplejellyfloat.start()
-
-        }
     }
     }
     Component{
@@ -1572,18 +1958,6 @@ Item{
             perplejelly0.source=perplejelly[perplejellyIndex]
         }
         }
-        NumberAnimation {
-           id:perplejellyfloat
-           target: perplejelly0
-           property: "y"
-           duration: 22000
-           running:true
-           from: 700
-           to:0
-           easing.type: Easing.InOutQuad
-           onFinished: jellyfloat.start()
-
-        }
     }
     }
     Component{
@@ -1612,18 +1986,34 @@ Item{
             bluehorse0.source=bluehorse[bluehorseIndex]
         }
         }
-       /* NumberAnimation {
-           id:bluehousemove
-           target: bluehorse0
-           property: "x"
-           duration: 12000
-           running:true
-           from: 700
-           to:0
-           easing.type: Easing.InOutQuad
-           onFinished: bluehousemove_return.start()
-
-        }*/
+    }
+    }
+    Component{
+    id:bluehorsereComponent
+    Item{
+        property var bluehorsere: [
+        "../assets/part4/horse1.0.png",
+            "../assets/part4/horse1.1.png",
+            "../assets/part4/horse1.2.png",
+            "../assets/part4/horse1.3.png",
+        ]
+        property int bluehorsereIndex: 0
+        Image {
+            id: bluehorsere0
+            source: bluehorsereIndex
+            width: 35*1.3
+            height: 34*1.5
+        }
+        Timer
+        {
+        interval: 100
+        running: true
+        repeat: true
+        onTriggered: {
+        bluehorsereIndex=(bluehorsereIndex+1)%bluehorsere.length
+            bluehorsere0.source=bluehorsere[bluehorsereIndex]
+        }
+        }
     }
     }
     Component{
@@ -1656,6 +2046,35 @@ Item{
     }
     }
     Component{
+    id:redhorsereComponent
+    Item{
+        property var redhorsere: [
+        "../assets/part4/horse2.0.png",
+        "../assets/part4/horse2.1.png",
+        "../assets/part4/horse2.2.png",
+            "../assets/part4/horse2.3.png",
+        ]
+        property int redhorsereIndex: 0
+        Image {
+            id: redhorsere0
+            source: redhorsereIndex
+            width: 35*1.3
+            height: 34*1.5
+        }
+        Timer
+        {
+        interval: 100
+        running: true
+        repeat: true
+        onTriggered: {
+        redhorsereIndex=(redhorsereIndex+1)%redhorsere.length
+            redhorsere0.source=redhorsere[redhorsereIndex]
+        }
+        }
+
+    }
+    }
+    Component{
     id:horseComponent
     Item{
         property var horse: [
@@ -1679,6 +2098,35 @@ Item{
         onTriggered: {
         horseIndex=(horseIndex+1)%horse.length
             horse0.source=horse[horseIndex]
+        }
+        }
+
+    }
+    }
+    Component{
+    id:horsereComponent
+    Item{
+        property var horsere: [
+
+            "../assets/part4/horse0.1.png",
+            "../assets/part4/horse0.2.png",
+            "../assets/part4/horse0.3.png",
+        ]
+        property int horsereIndex: 0
+        Image {
+            id: horsere0
+            source: horsereIndex
+            width: 35*1.3
+            height: 34*1.5
+        }
+        Timer
+        {
+        interval: 100
+        running: true
+        repeat: true
+        onTriggered: {
+        horsereIndex=(horsereIndex+1)%horsere.length
+            horsere0.source=horsere[horsereIndex]
         }
         }
 
@@ -1935,15 +2383,15 @@ Item{
     id:bronzeComponent
     Item{
         property var bronze: [
-        "../assets/part4Obj_dungeon3.img.woodCave.gate.2.0.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.2.1.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.2.2.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.2.3.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.2.4.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.2.5.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.2.6.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.2.7.png",
-            "../assets/part4Obj_dungeon3.img.woodCave.gate.2.8.png",
+        "../assets/part4/Obj_dungeon3.img.woodCave.gate.2.0.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.2.1.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.2.2.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.2.3.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.2.4.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.2.5.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.2.6.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.2.7.png",
+            "../assets/part4/Obj_dungeon3.img.woodCave.gate.2.8.png",
         ]
         property int bronzeIndex: 0
         Image {
@@ -1959,6 +2407,180 @@ Item{
         onTriggered: {
         bronzeIndex=(bronzeIndex+1)%bronze.length
             bronze0.source=bronze[bronzeIndex]
+        }
+        }
+    }
+    }
+    Component{
+        id:crabComponent
+    Item{
+        property var crab: [
+        "../assets/part4/image302.png",
+            "../assets/part4/image304.png",
+            "../assets/part4/image306.png",
+            "../assets/part4/image308.png",
+        ]
+        property int crabIndex: 0
+        Image {
+            id: crab0
+            source: crab[crabIndex]
+            width: 60*1.5
+            height: 46*1.5
+        }
+        Timer{
+        interval: 200
+        running: true
+        repeat: true
+        onTriggered: {
+        crabIndex=(crabIndex+1)%crab.length
+            crab0.source=crab[crabIndex]
+        }
+        }
+    }
+    }
+    Component{
+        id:lcrabComponent
+    Item{
+        property var lcrab: [
+        "../assets/part4/crab0.0.png",
+            "../assets/part4/crab0.1.png",
+            "../assets/part4/crab0.2.png",
+            "../assets/part4/crab0.3.png",
+        ]
+        property int lcrabIndex: 0
+        Image {
+            id: lcrab0
+            source: lcrab[lcrabIndex]
+            width: 60*1.5
+            height: 46*1.5
+        }
+        Timer{
+        interval: 200
+        running: true
+        repeat: true
+        onTriggered: {
+        lcrabIndex=(lcrabIndex+1)%lcrab.length
+            lcrab0.source=lcrab[lcrabIndex]
+        }
+        }
+    }
+    }
+    Component{
+    id:octopusComponent
+    Item{
+        property var octopus: [
+        "../assets/part4/image641.png",
+            "../assets/part4/image643.png",
+            "../assets/part4/image645.png",
+            "../assets/part4/image647.png",
+            "../assets/part4/image649.png",
+            "../assets/part4/image651.png",
+            "../assets/part4/image653.png",
+        ]
+        property int octopusIndex: 0
+        Image {
+            id: octopus0
+            source: octopus[octopusIndex]
+            width: 109
+            height: 80
+        }
+        Timer{
+        interval: 200
+        running: true
+        repeat: true
+        onTriggered: {
+        octopusIndex=(octopusIndex+1)%octopus.length
+            octopus0.source=octopus[octopusIndex]
+        }
+        }
+    }
+    }
+    Component{
+    id:loctopusComponent
+    Item{
+        property var loctopus: [
+        "../assets/part4/octopus0.0.png",
+            "../assets/part4/octopus0.1.png",
+            "../assets/part4/octopus0.2.png",
+            "../assets/part4/octopus0.3.png",
+            "../assets/part4/octopus0.4.png",
+            "../assets/part4/octopus0.5.png",
+            "../assets/part4/octopus0.6.png",
+        ]
+        property int loctopusIndex: 0
+        Image {
+            id: loctopus0
+            source: loctopus[loctopusIndex]
+            width: 109
+            height: 80
+        }
+        Timer{
+        interval: 200
+        running: true
+        repeat: true
+        onTriggered: {
+        loctopusIndex=(loctopusIndex+1)%loctopus.length
+            loctopus0.source=loctopus[loctopusIndex]
+        }
+        }
+    }
+    }
+    Component{
+    id:lblobComponent
+    Item{
+        property var lblob: [
+        "../assets/part4/blob0.0.png",
+            "../assets/part4/blob0.1.png",
+            "../assets/part4/blob0.2.png",
+            "../assets/part4/blob0.3.png",
+            "../assets/part4/blob0.4.png",
+            "../assets/part4/blob0.5.png",
+            "../assets/part4/blob0.6.png",
+        ]
+        property int lblobIndex: 0
+        Image{
+        id:lblob0
+        source: lblob[lblobIndex]
+        width: 75
+        height: 87
+        }
+        Timer{
+        interval: 200
+        running: true
+        repeat: true
+        onTriggered: {
+        lblobIndex=(lblobIndex+1)%lblob.length
+            lblob0.source=lblob[lblobIndex]
+        }
+        }
+    }
+    }
+    Component{
+    id:blobComponent
+    Item{
+        property var blob: [
+        "../assets/part4/image991.png",
+            "../assets/part4/image993.png",
+            "../assets/part4/image995.png",
+            "../assets/part4/image997.png",
+            "../assets/part4/image999.png",
+            "../assets/part4/image1001.png",
+            "../assets/part4/image1003.png",
+        ]
+        property int blobIndex: 0
+        Image{
+        id:blob0
+        source: blob[blobIndex]
+        width: 75
+        height: 87
+        }
+        Timer{
+        interval: 200
+        running: true
+        repeat: true
+        onTriggered: {
+        blobIndex=(blobIndex+1)%blob.length
+            blob0.source=blob[blobIndex]
         }
         }
     }
@@ -2024,6 +2646,7 @@ Item{
                                     _page1.visible=false
                                     _page2.visible=false
                                     _page3.visible=false
+                                    healthFill.width=200
                                     backgroundMusic.source=Qt.resolvedUrl("../assets/music/Bgm01.img.BadGuys.mp3")
                                     backgroundMusic.play()
                                 }
@@ -2032,6 +2655,7 @@ Item{
                                     _page0.visible=false
                                     _page2.visible=false
                                     _page3.visible=false
+                                    healthFill.width=200
                                     backgroundMusic.source=Qt.resolvedUrl("../assets/music/Bgm01.img.HighlandStar.mp3")
                                     backgroundMusic.play()
                                 }
@@ -2040,6 +2664,7 @@ Item{
                                     _page1.visible=false
                                     _page0.visible=false
                                     _page3.visible=false
+                                    healthFill.width=200
                                     backgroundMusic.source=Qt.resolvedUrl("../assets/music/Bgm00.img.SleepyWood.mp3")
                                     backgroundMusic.play()
                                 }
@@ -2048,6 +2673,7 @@ Item{
                                     _page1.visible=false
                                     _page2.visible=false
                                     _page0.visible=false
+                                    healthFill.width=200
                                     backgroundMusic.source=Qt.resolvedUrl("../assets/music/Bgm01.img.MoonlightShadow.mp3")
                                     backgroundMusic.play()
                                 }
@@ -2104,7 +2730,9 @@ Item{
                     console.debug("key pressed actionName " + actionName)
                     if(actionName === "up") {
                       player.jump()
-                                                _player2.jump()
+                      _player2.jump()
+                      _player3.jump()
+                      _player4.jump()
                     }
                     if(actionName==="left"){
                       controller.xAxis=-1;
@@ -2189,7 +2817,7 @@ Item{
                 onContact: {
                   player.x = 60
                   player.y = 300
-                    healthFill.width-=20
+                  healthFill.width-=20
                 }
                 Rectangle {
                   anchors.fill: parent
@@ -2610,10 +3238,74 @@ Item{
     Page{
         id:_page2
         visible: false
+        Button{
+            width:120
+            height:40
+            text:"重新游戏"
+            x:90
+            y:750
+            z:50
+
+            onClicked: {
+            /*将当前页面关卡重置*/
+                _player3.x = 90
+                _player3.y = 300
+                  background2.x=0
+                  background2.y=0
+                healthFill.width=200
+            }
+        }
         Rectangle{
             id:gameScene2
             width: 1200
             height: 800
+            Level3{
+                id:level3
+            }
+
+            Player{
+                id:_player3
+                x:90
+                y:300
+                z:1
+
+                onXChanged: {
+                    // 如果角色到达场景边缘的阈值
+                    if (_player3.x + _player3.width >scrollThreshold &&background2.x>-background2.width*4) {
+                        // 移动场景内容（背景和角色）
+                        var scrollDistance = _player3.x + _player3.width - scrollThreshold;
+                        background2.x -= scrollDistance;
+                        _player3.x=scrollThreshold-_player3.width
+                    }
+                    if (_player3.x < scrollThreshold1 && background2.x > -background2.width * 4&&background2.x!=0) {
+                        // 移动场景内容（背景和角色）
+                        var scrollDistance1 = scrollThreshold1 - _player3.x;
+                        background2.x += scrollDistance1;
+                        _player3.x = scrollThreshold1;
+                    }
+                    console.log("x:"+x+",y:"+y)
+                }
+            }
+
+            focus:true
+            ResetSensor{
+                width: _player3.width
+                height: 10
+                x: _player3.x
+                anchors.bottom: parent.bottom
+                onContact: {
+                  _player3.x = 60
+                  _player3.y = 300
+                   background2.x=0
+                   background2.y=0
+                   healthFill.width-=20
+                }
+                Rectangle {
+                  anchors.fill: parent
+                  color: "yellow"
+                  opacity: 0.5
+                }
+            }
             /*BackgroundMusic{
                     id: _backgroundmusic3
                     volume: 0.5 // 音量设置为50%
@@ -2853,6 +3545,52 @@ Item{
                 y:road4.y-210
                 x:road4.x+100
                 }
+                Loader{
+                id:lrabbit01
+                sourceComponent: lrabbitComponent
+                x:road5.x+50
+                y:road5.y-50
+                visible: true
+                z:2
+                }
+
+                NumberAnimation {
+                    id:rabbitmove
+                    target: lrabbit01
+                    property: "x"
+                    duration: 3000
+                    to:lrabbit01.x+200
+                    easing.type: Easing.InOutQuad
+                    onFinished: {
+                    rabbitmove_return.start()
+                        lrabbit01.visible=false
+                        lrabbit01.x=road5.x+50
+                        rabbit01.visible=true
+                    }
+                }
+                Loader{
+                id:rabbit01
+                sourceComponent: rabbitComponent
+                x:road5.x+50+200
+                y:road5.y-50
+                visible: false
+                z:2
+                }
+
+                NumberAnimation {
+                    id:rabbitmove_return
+                    target: rabbit01
+                    property: "x"
+                    duration: 3000
+                    to:rabbit01.x-200
+                    easing.type: Easing.InOutQuad
+                    onFinished: {
+                    rabbitmove.start()
+                        rabbit01.visible=false
+                        rabbit01.x=road5.x+50+200
+                        lrabbit01.visible=true
+                    }
+                }
                 Image {
                     id: road5
                     source: "../assets/images/toycloud1.png"
@@ -2922,6 +3660,138 @@ Item{
                     z:_Inter.z
                     fillMode: Image.PreserveAspectCrop
                 }
+                Loader{
+                    id:lmao01
+                    sourceComponent: lmaoComponent
+                    x:road8.x
+                    y:road8.y-50
+                    visible: true
+                    z:2
+                    }
+                NumberAnimation {
+                        id:maomove
+                        target: lmao01
+                        property: "x"
+                        duration: 3000
+                        to:lmao01.x+200
+                        easing.type: Easing.InOutQuad
+                        onFinished: {
+                        maomove_return.start()
+                            lmao01.visible=false
+                            lmao01.x=road8.x
+                            mao01.visible=true
+                        }
+                    }
+                Loader{
+                    id:mao01
+                    sourceComponent: maoComponent
+                    x:road8.x+200
+                    y:road8.y-50
+                    visible: false
+                    z:2
+                    }
+                NumberAnimation {
+                        id:maomove_return
+                        target: mao01
+                        property: "x"
+                        duration: 3000
+                        to:mao01.x-200
+                        easing.type: Easing.InOutQuad
+                        onFinished: {
+                        maomove.start()
+                            mao01.visible=false
+                            mao01.x=road8.x+200
+                            lmao01.visible=true
+                        }
+                    }
+                Loader{
+                        id:lmao02
+                        sourceComponent: lmaoComponent
+                        x:road8.x+50
+                        y:road8.y-50
+                        visible: true
+                        z:2
+                        }
+                NumberAnimation {
+                            id:maomove01
+                            target: lmao02
+                            property: "x"
+                            duration: 3000
+                            to:lmao02.x+300
+                            easing.type: Easing.InOutQuad
+                            onFinished: {
+                            maomove01_return.start()
+                                lmao02.visible=false
+                                lmao02.x=road8.x+50
+                                mao02.visible=true
+                            }
+                        }
+                Loader{
+                        id:mao02
+                        sourceComponent: maoComponent
+                        x:road8.x+50+300
+                        y:road8.y-50
+                        visible: false
+                        z:2
+                        }
+                NumberAnimation {
+                            id:maomove01_return
+                            target: mao02
+                            property: "x"
+                            duration: 3000
+                            to:mao02.x-300
+                            easing.type: Easing.InOutQuad
+                            onFinished: {
+                            maomove01.start()
+                                mao02.visible=false
+                                mao02.x=road8.x+50+300
+                                lmao02.visible=true
+                            }
+                        }
+                Loader{
+                            id:lmao03
+                            sourceComponent: lmaoComponent
+                            x:road8.x+80
+                            y:road8.y-50
+                            visible: true
+                            z:2
+                            }
+                NumberAnimation {
+                                id:maomove02
+                                target: lmao03
+                                property: "x"
+                                duration: 4000
+                                to:lmao03.x+400
+                                easing.type: Easing.InOutQuad
+                                onFinished: {
+                                maomove02_return.start()
+                                    lmao03.visible=false
+                                    lmao03.x=road8.x+80
+                                    mao03.visible=true
+                                }
+                            }
+                Loader{
+                            id:mao03
+                            sourceComponent: maoComponent
+                            x:road8.x+80+400
+                            y:road8.y-50
+                            visible: false
+                            z:2
+                            }
+                NumberAnimation {
+                                id:maomove02_return
+                                target: mao03
+                                property: "x"
+                                duration: 4000
+                                to:mao03.x-400
+                                easing.type: Easing.InOutQuad
+                                onFinished: {
+                                maomove02.start()
+                                    mao03.visible=false
+                                    mao03.x=road8.x+80+400
+                                    lmao03.visible=true
+                                }
+                            }
                 Image {
                     id: road9
                     source: "../assets/images/toycloud1.png"
@@ -3080,7 +3950,7 @@ Item{
                     target: stand
                     properties: "x"
                     to: stand.x + 400
-                    duration: 2000
+                    duration: 3000
                     easing.type: Easing.InOutQuad
                     onFinished: rightLeftAnimation_return1.start()
                     }
@@ -3089,7 +3959,7 @@ Item{
                 target: stand
                 properties: "x"
                 to: stand.x - 400
-                duration: 2000
+                duration: 3000
                 easing.type: Easing.InOutQuad
                 onFinished:rightLeftAnimation1.start()
                 }
@@ -3108,6 +3978,50 @@ Item{
                 y:road12.y-300
                 x:road12.x
                 }
+                Loader{
+                    id:lunq01
+                    sourceComponent: lunqComponent
+                    x:road12.x+50
+                    y:road12.y-50
+                    visible: true
+                    z:2
+                    }
+                NumberAnimation {
+                        id:unqmove
+                        target: lunq01
+                        property: "x"
+                        duration: 3000
+                        to:lunq01.x+250
+                        easing.type: Easing.InOutQuad
+                        onFinished: {
+                        unqmove_return.start()
+                            lunq01.visible=false
+                            lunq01.x=road12.x+50
+                            unq01.visible=true
+                        }
+                    }
+                Loader{
+                    id:unq01
+                    sourceComponent: unqComponent
+                    x:road12.x+50+250
+                    y:road12.y-50
+                    visible: false
+                    z:2
+                    }
+                NumberAnimation {
+                        id:unqmove_return
+                        target: unq01
+                        property: "x"
+                        duration: 3000
+                        to:unq01.x-250
+                        easing.type: Easing.InOutQuad
+                        onFinished: {
+                        unqmove.start()
+                            unq01.visible=false
+                            unq01.x=road12.x+50+250
+                            lunq01.visible=true
+                        }
+                    }
                 Image {
                     id: road13
                     source: "../assets/images/toycloud5.png"
@@ -3232,7 +4146,183 @@ Item{
                 y:road16.y-50
                 x:road16.x
                 }
-            Image {
+                Loader{
+                    id:lghost101
+                    sourceComponent: lghost1Component
+                    x:road16.x+50
+                    y:road16.y-50
+                    visible: true
+                    z:2
+                    }
+                NumberAnimation {
+                        id:ghost1move
+                        target: lghost101
+                        property: "x"
+                        duration: 3000
+                        to:lghost101.x+450
+                        easing.type: Easing.InOutQuad
+                        onFinished: {
+                        ghost1move_return.start()
+                            lghost101.visible=false
+                            lghost101.x=road16.x+50
+                            ghost101.visible=true
+                        }
+                    }
+                Loader{
+                    id:ghost101
+                    sourceComponent: ghost1Component
+                    x:road16.x+50+450
+                    y:road16.y-50
+                    visible: false
+                    z:2
+                    }
+                NumberAnimation {
+                        id:ghost1move_return
+                        target: ghost101
+                        property: "x"
+                        duration: 3000
+                        to:ghost101.x-450
+                        easing.type: Easing.InOutQuad
+                        onFinished: {
+                        ghost1move.start()
+                            ghost101.visible=false
+                            ghost101.x=road16.x+50+450
+                            lghost101.visible=true
+                        }
+                    }
+                Loader{
+                    id:lghost201
+                    sourceComponent: lghost2Component
+                    x:road16.x+90
+                    y:road16.y-50
+                    visible: true
+                    z:2
+                    }
+                NumberAnimation {
+                        id:ghost2move
+                        target: lghost201
+                        property: "x"
+                        duration: 5000
+                        to:lghost201.x+650
+                        easing.type: Easing.InOutQuad
+                        onFinished: {
+                        ghost2move_return.start()
+                            lghost201.visible=false
+                            lghost201.x=road16.x+90
+                            ghost201.visible=true
+                        }
+                    }
+                Loader{
+                    id:ghost201
+                    sourceComponent: ghost2Component
+                    x:road16.x+90+650
+                    y:road16.y-50
+                    visible: false
+                    z:2
+                    }
+                NumberAnimation {
+                        id:ghost2move_return
+                        target: ghost201
+                        property: "x"
+                        duration: 5000
+                        to:ghost201.x-650
+                        easing.type: Easing.InOutQuad
+                        onFinished: {
+                        ghost2move.start()
+                            ghost201.visible=false
+                            ghost201.x=road16.x+90+650
+                            lghost201.visible=true
+                        }
+                    }
+                Loader{
+                    id:ghost301
+                    sourceComponent: ghost3Component
+                    x:road16.x+50+750
+                    y:road16.y-50
+                    visible: false
+                    z:2
+                    }
+                NumberAnimation {
+                        id:ghost3move
+                        target: ghost301
+                        property: "x"
+                        duration: 3000
+                        to:ghost301.x-750
+                        easing.type: Easing.InOutQuad
+                        onFinished: {
+                        ghost3move_return.start()
+                            ghost301.visible=false
+                            ghost301.x=road16.x+50+750
+                            lghost301.visible=true
+                        }
+                    }
+                Loader{
+                    id:lghost301
+                    sourceComponent: lghost3Component
+                    x:road16.x+50
+                    y:road16.y-50
+                    visible: true
+                    z:2
+                    }
+                NumberAnimation {
+                        id:ghost3move_return
+                        target: lghost301
+                        property: "x"
+                        duration: 3000
+                        to:lghost301.x+750
+                        easing.type: Easing.InOutQuad
+                        onFinished: {
+                        ghost3move.start()
+                            lghost301.visible=false
+                            lghost301.x=road16.x+50
+                            ghost301.visible=true
+                        }
+                    }
+                Loader{
+                    id:lghost302
+                    sourceComponent: lghost3Component
+                    x:road16.x+100
+                    y:road16.y-50
+                    visible: true
+                    z:2
+                    }
+                NumberAnimation {
+                        id:ghost3move01
+                        target: lghost302
+                        property: "x"
+                        duration: 3000
+                        to:lghost302.x+750
+                        easing.type: Easing.InOutQuad
+                        onFinished: {
+                        ghost3move01_return.start()
+                            lghost302.visible=false
+                            lghost302.x=road16.x+100
+                            ghost302.visible=true
+                        }
+                    }
+                Loader{
+                    id:ghost302
+                    sourceComponent: ghost3Component
+                    x:road16.x+100+750
+                    y:road16.y-50
+                    visible: false
+                    z:2
+                    }
+                NumberAnimation {
+                        id:ghost3move01_return
+                        target: ghost302
+                        property: "x"
+                        duration: 3000
+                        to:ghost302.x-750
+                        easing.type: Easing.InOutQuad
+                        onFinished: {
+                        ghost3move01.start()
+                            ghost302.visible=false
+                            ghost302.x=road16.x+100+750
+                            lghost302.visible=true
+                        }
+                    }
+                Image {
                 id: crods
                 source: "../assets/images/Obj_acc10.img.timeTemplefire.pillar.10.0.png"
                 width: 366
@@ -3411,6 +4501,94 @@ Item{
                 y:road28.y-150
                 x:road28.x+100
                 }
+                Loader{
+                    id:lghost01
+                    sourceComponent: lghostComponent
+                    x:road28.x+100
+                    y:road28.y-150
+                    visible: true
+                    z:2
+                    }
+                NumberAnimation {
+                        id:ghostmove
+                        target: lghost01
+                        property: "x"
+                        duration: 3000
+                        to:lghost01.x+450
+                        easing.type: Easing.InOutQuad
+                        onFinished: {
+                        ghostmove_return.start()
+                            lghost01.visible=false
+                            lghost01.x=road28.x+100
+                            ghost01.visible=true
+                        }
+                    }
+                Loader{
+                    id:ghost01
+                    sourceComponent: ghostComponent
+                    x:road28.x+100+450
+                    y:road28.y-150
+                    visible: false
+                    z:2
+                    }
+                NumberAnimation {
+                        id:ghostmove_return
+                        target: ghost01
+                        property: "x"
+                        duration: 3000
+                        to:ghost01.x-450
+                        easing.type: Easing.InOutQuad
+                        onFinished: {
+                        ghostmove.start()
+                            ghost01.visible=false
+                            ghost01.x=road28.x+100+450
+                            lghost01.visible=true
+                        }
+                    }
+                Loader{
+                    id:ghost303
+                    sourceComponent: ghost3Component
+                    x:road28.x+50+350
+                    y:road28.y-50
+                    visible: false
+                    z:2
+                    }
+                NumberAnimation {
+                        id:ghost3move02
+                        target: ghost303
+                        property: "x"
+                        duration: 3000
+                        to:ghost303.x-350
+                        easing.type: Easing.InOutQuad
+                        onFinished: {
+                        ghost3move02_return.start()
+                            ghost303.visible=false
+                            ghost303.x=road28.x+50+350
+                            lghost303.visible=true
+                        }
+                    }
+                Loader{
+                    id:lghost303
+                    sourceComponent: lghost3Component
+                    x:road28.x+50
+                    y:road28.y-50
+                    visible: true
+                    z:2
+                    }
+                NumberAnimation {
+                        id:ghost3move02_return
+                        target: lghost303
+                        property: "x"
+                        duration: 3000
+                        to:lghost303.x+350
+                        easing.type: Easing.InOutQuad
+                        onFinished: {
+                        ghost3move02.start()
+                            lghost303.visible=false
+                            lghost303.x=road28.x+50
+                            ghost303.visible=true
+                        }
+                    }
                 Image {
                     id: road29
                     source: "../assets/images/Obj_acc3.img.skyStation.cloud.14.0.png"
@@ -3459,6 +4637,14 @@ Item{
                     z:2
                     fillMode: Image.PreserveAspectCrop
                 }
+                Loader{
+                    id:ghost02
+                    sourceComponent: ghostComponent
+                    x:road2801.x+300
+                    y:road2801.y-200
+                    visible: true
+                    z:2
+                    }
                 Image {
                     id: cords02
                     source: "../assets/images/Obj_acc10.img.timeTemplefire.pillar.9.0.png"
@@ -3536,40 +4722,7 @@ Item{
                 z:2
             }
             }
-            Rectangle {
-                        id: player2
-                        width: 50
-                        height: 50
-                        color: "red"
-                        radius: 25 // 使角色为圆形
-                        y:300
-                        x:0
-                        onXChanged: {
-                            // 如果角色到达场景边缘的阈值
-                            if (x + width >scrollThreshold &&background2.x>-background2.width*4) {
-                                // 移动场景内容（背景和角色）
-                                var scrollDistance = x + width - scrollThreshold;
-                                background2.x -= scrollDistance;
-                                x=gameScene2.width*0.8-player2.width
-                            }
-                        }
 
-                        MouseArea {
-                                  id: dragArea2
-                                    anchors.fill: parent
-                                    drag.target: parent
-                                }
-                        // 使角色可以通过水平拖拽移动
-                        Drag.active: dragArea2.drag.active
-                        Drag.hotSpot.x: player2.width / 2
-                        Drag.hotSpot.y: player2.height / 2
-                        Drag.onActiveChanged: {
-                            if (!dragArea2.drag.active) {
-                                x = player2.x
-                                y = player2.y
-                            }
-                        }
-                }
         }
     }
 
@@ -3577,10 +4730,76 @@ Item{
     Page{
         id:_page3
         visible: false
+        Button{
+            width:120
+            height:40
+            text:"重新游戏"
+            x:90
+            y:750
+            z:50
+
+            onClicked: {
+            /*将当前页面关卡重置*/
+                _player4.x = 90
+                _player4.y = 300
+                  background3.x=0
+                  background3.y=0
+                healthFill.width=200
+            }
+        }
         Rectangle{
             id:gameScene3
             width: 1200
             height: 800
+            Level4{
+                id:level4
+            }
+
+            Player{
+                id:_player4
+                x:90
+                y:300
+                z:1
+
+                onXChanged: {
+                    // 如果角色到达场景边缘的阈值
+                    if (_player4.x + _player4.width >scrollThreshold &&background3.x>-background3.width*4) {
+                        // 移动场景内容（背景和角色）
+                        var scrollDistance = _player4.x + _player4.width - scrollThreshold;
+                        background3.x -= scrollDistance;
+                        _player4.x=scrollThreshold-_player4.width
+                    }
+                    if (_player4.x < scrollThreshold1 && background3.x > -background3.width * 4&&background3.x!=0) {
+                        // 移动场景内容（背景和角色）
+                        var scrollDistance1 = scrollThreshold1 - _player4.x;
+                        background3.x += scrollDistance1;
+                        _player4.x = scrollThreshold1;
+                    }
+
+
+                    console.log("x:"+x+",y:"+y)
+                }
+            }
+
+            focus:true
+            ResetSensor{
+                width: _player4.width
+                height: 10
+                x: _player4.x
+                anchors.bottom: parent.bottom
+                onContact: {
+                  _player4.x = 60
+                  _player4.y = 300
+                    background3.x=0
+                    background3.y=0
+                   healthFill.width-=20
+                }
+                Rectangle {
+                  anchors.fill: parent
+                  color: "yellow"
+                  opacity: 0.5
+                }
+            }
             /*BackgroundMusic{
                     id: _backgroundmusic4
                     volume: 0.5 // 音量设置为50%
@@ -3802,6 +5021,94 @@ Item{
                 x:path6.x+100
                 y:500
                 }
+                Loader{
+                id:horse01
+                sourceComponent: horseComponent
+                visible:true
+                x:path6.x+50+500
+                y:670
+                z:2
+                }
+                NumberAnimation {
+                    id:horse01move
+                    target: horsere01
+                    property: "x"
+                    duration: 3000
+                    to:horsere01.x+500
+                    easing.type: Easing.InOutQuad
+                    onFinished:{
+                        horse01move_return.start()
+                        horsere01.visible=false
+                        horse01.visible=true
+                        horsere01.x=path6.x+50
+                    }
+                }
+                Loader{
+                id:horsere01
+                sourceComponent: horsereComponent
+                visible: false
+                x:path6.x+50
+                y:670
+                z:2
+                }
+                NumberAnimation {
+                    id:horse01move_return
+                    target: horse01
+                    property: "x"
+                    duration: 3000
+                    to:horse01.x-500
+                    easing.type: Easing.InOutQuad
+                    onFinished: {
+                        horse01move.start()
+                        horse01.visible=false
+                        horsere01.visible=true
+                        horse01.x=path6.x+50+500
+                    }
+                }
+                Loader{
+                id:loctopus01
+                sourceComponent: loctopusComponent
+                x:path6.x+80
+                y:670
+                z:2
+                visible: true
+                }
+                NumberAnimation {
+                    id:octopusmove01
+                    target: loctopus01
+                    property: "x"
+                    duration: 3500
+                    to:loctopus01.x+300
+                    easing.type: Easing.InOutQuad
+                    onFinished: {
+                    octopusmove01_return.start()
+                    loctopus01.visible=false
+                        loctopus01.x=path6.x+80
+                        octopus01.visible=true
+                    }
+                }
+                Loader{
+                id:octopus01
+                sourceComponent: octopusComponent
+                x:path6.x+80+300
+                y:670
+                z:2
+                visible: false
+                }
+                NumberAnimation {
+                    id:octopusmove01_return
+                    target: octopus01
+                    property: "x"
+                    duration: 3500
+                    to:octopus01.x-300
+                    easing.type: Easing.InOutQuad
+                    onFinished: {
+                    octopusmove01.start()
+                        octopus01.visible=false
+                        octopus01.x=path6.x+80+300
+                        loctopus01.visible=true
+                    }
+                }
                 Image {
                     id: grass3
                     source: "../assets/part4/Obj_dungeon2.img.deepSee.nature.8.0.png"
@@ -3962,33 +5269,183 @@ Item{
                     y:path14.y-200
                       }
                 Loader{
+                id:jelly01
                 sourceComponent: jellyComponent
                 x:path13.x
-                y:path13.y-200
+                y:500
+                 z:1
+                }
+                NumberAnimation {
+                   id:jellyfloat
+                   target: jelly01
+                   property: "y"
+                   duration: 8000
+                   running:true
+                   to:jelly01.y-500
+                   easing.type: Easing.InOutQuad
+                   onFinished: {
+                       jellyfloat_return.start()
+                   }
+                }
+                NumberAnimation {
+                   id:jellyfloat_return
+                   target: jelly01
+                   property: "y"
+                   duration: 8000
+                   running:true
+                   to:jelly01.y+500
+                   easing.type: Easing.InOutQuad
+                   onFinished: jellyfloat.start()
                 }
                 Loader{
-                    id:a1
+                id:a1
                 sourceComponent: bluejellyComponent
                 x:path14.x
-                y:path14.y-300
+                y:800
+                }
+                NumberAnimation {
+                   id:bluejellyfloat
+                   target: a1
+                   property: "y"
+                   duration: 8000
+                   running:true
+                   to:a1.y-500
+                   easing.type: Easing.InOutQuad
+                   onFinished: {
+                       bluejellyfloat_return.start()
+                   }
+                }
+                NumberAnimation {
+                   id:bluejellyfloat_return
+                   target: a1
+                   property: "y"
+                   duration: 8000
+                   running:true
+                   to:a1.y+500
+                   easing.type: Easing.InOutQuad
+                   onFinished: {
+                       bluejellyfloat.start()
+                   }
                 }
                 Loader{
                     id:a2
                 sourceComponent: redjellyComponent
                 x:a1.x+200
-                y:a1.y+100
+                y:300
+                }
+                NumberAnimation {
+                   id:redjellyfloat
+                   target: a2
+                   property: "y"
+                   duration: 8000
+                   running:true
+                   to:a2.y-500
+                   easing.type: Easing.InOutQuad
+                   onFinished: {
+                       redjellyfloat_return.start()
+                   }
+                }
+                NumberAnimation {
+                   id:redjellyfloat_return
+                   target: a2
+                   property: "y"
+                   duration: 8000
+                   running:true
+                   to:a2.y+500
+                   easing.type: Easing.InOutQuad
+                   onFinished: {
+                       redjellyfloat.start()
+                   }
                 }
                 Loader{
                     id:a0
                 sourceComponent: perplejellyComponent
                 x:a2.x+100
-                y:a2.y-300
+                y:700
+                }
+                NumberAnimation {
+                   id:perplejellyfloat
+                   target: a0
+                   property: "y"
+                   duration: 8000
+                   running:true
+                   to:a0.y-500
+                   easing.type: Easing.InOutQuad
+                   onFinished: {
+                       perplejellyfloat_return.start()
+                   }
+                }
+                NumberAnimation {
+                   id:perplejellyfloat_return
+                   target: a0
+                   property: "y"
+                   duration: 8000
+                   running:true
+                   to:a0.y+500
+                   easing.type: Easing.InOutQuad
+                   onFinished: {
+                       perplejellyfloat.start()
+                   }
                 }
                 Loader{
                     id:a3
                 sourceComponent: redjellyComponent
                 x:a2.x+300
-                y:a2.y+200
+                y:400
+                }
+                NumberAnimation {
+                   id:redjellyfloat01
+                   target: a3
+                   property: "y"
+                   duration: 8000
+                   running:true
+                   to:a3.y-500
+                   easing.type: Easing.InOutQuad
+                   onFinished: {
+                       redjellyfloat01_return.start()
+                   }
+                }
+                NumberAnimation {
+                   id:redjellyfloat01_return
+                   target: a3
+                   property: "y"
+                   duration: 8000
+                   running:true
+                   to:a3.y+500
+                   easing.type: Easing.InOutQuad
+                   onFinished: {
+                       redjellyfloat01.start()
+                   }
+                }
+                Loader{
+                    id:a4
+                sourceComponent: perplejellyComponent
+                x:a3.x+200
+                y:900
+                }
+                NumberAnimation {
+                   id:perplejellyfloat01
+                   target: a4
+                   property: "y"
+                   duration: 8000
+                   running:true
+                   to:a4.y-500
+                   easing.type: Easing.InOutQuad
+                   onFinished: {
+                       perplejellyfloat01_return.start()
+                   }
+                }
+                NumberAnimation {
+                   id:perplejellyfloat01_return
+                   target: a4
+                   property: "y"
+                   duration: 8000
+                   running:true
+                   to:a4.y+500
+                   easing.type: Easing.InOutQuad
+                   onFinished: {
+                       perplejellyfloat01.start()
+                   }
                 }
                 Image {
                     id: path15
@@ -4028,6 +5485,95 @@ Item{
                     height: 49
                     x:path16.x-80
                     y:path16.y-20
+                    z:2
+                }
+                Loader{
+                id:bluehorsere01
+                sourceComponent: bluehorsereComponent
+                x:guidepost.x+30
+                y:turtle.y
+                z:2
+                visible: true
+                }
+                NumberAnimation {
+                    id:bluehorsemove01
+                    target: bluehorsere01
+                    property: "x"
+                    duration: 3000
+                    to:bluehorsere01.x+400
+                    easing.type: Easing.InOutQuad
+                    onFinished: {
+                    bluehorsemove01_return.start()
+                        bluehorsere01.visible=false
+                        bluehorse01.visible=true
+                        bluehorsere01.x=guidepost.x+30
+                    }
+                }
+                Loader{
+                id:bluehorse01
+                sourceComponent: bluehorseComponent
+                x:guidepost.x+30+400
+                y:turtle.y
+                z:2
+                visible: false
+                }
+                NumberAnimation {
+                    id:bluehorsemove01_return
+                    target: bluehorse01
+                    property: "x"
+                    duration: 3000
+                    to:bluehorse01.x-400
+                    easing.type: Easing.InOutQuad
+                    onFinished: {
+                    bluehorsemove01.start()
+                        bluehorsere01.visible=true
+                        bluehorse01.visible=false
+                        bluehorse01.x=guidepost.x+30+400
+                    }
+                }
+                Loader{
+                id:redhorsere01
+                sourceComponent: redhorsereComponent
+                x:guidepost.x+50
+                y:turtle.y
+                z:2
+                visible: true
+                }
+                NumberAnimation {
+                    id:redhorsemove01
+                    target: redhorsere01
+                    property: "x"
+                    duration: 3000
+                    to:redhorsere01.x+300
+                    easing.type: Easing.InOutQuad
+                    onFinished: {
+                    redhorsemove01_return.start()
+                        redhorsere01.visible=false
+                        redhorse01.visible=true
+                        redhorsere01.x=guidepost.x+50
+                    }
+                }
+                Loader{
+                id:redhorse01
+                sourceComponent: redhorseComponent
+                x:guidepost.x+50+300
+                y:turtle.y
+                z:2
+                visible: false
+                }
+                NumberAnimation {
+                    id:redhorsemove01_return
+                    target: redhorse01
+                    property: "x"
+                    duration: 3000
+                    to:redhorse01.x-300
+                    easing.type: Easing.InOutQuad
+                    onFinished: {
+                    redhorsemove01.start()
+                        redhorsere01.visible=true
+                        redhorse01.visible=false
+                        redhorse01.x=guidepost.x+50+300
+                    }
                 }
                 Image {
                     id: path17
@@ -4081,6 +5627,94 @@ Item{
                 sourceComponent: lightComponent
                 x:path19.x+200
                 y:path19.y+100
+                }
+                Loader{
+                id:lcrab01
+                sourceComponent: lcrabComponent
+                x:flower.x+50
+                y:flower.y+20
+                z:2
+                visible: true
+                }
+                NumberAnimation {
+                    id:crabmove01
+                    target: lcrab01
+                    property: "x"
+                    duration: 3000
+                    to:lcrab01.x+200
+                    easing.type: Easing.InOutQuad
+                    onFinished: {
+                    crabmove01_return.start()
+                    lcrab01.visible=false
+                        lcrab01.x=flower.x+50
+                        crab01.visible=true
+                    }
+                }
+                Loader{
+                id:crab01
+                sourceComponent: crabComponent
+                x:flower.x+50+200
+                y:flower.y+20
+                z:2
+                visible: false
+                }
+                NumberAnimation {
+                    id:crabmove01_return
+                    target: crab01
+                    property: "x"
+                    duration: 3000
+                    to:crab01.x-200
+                    easing.type: Easing.InOutQuad
+                    onFinished: {
+                    crabmove01.start()
+                        crab01.visible=false
+                        crab01.x=flower.x+50+200
+                        lcrab01.visible=true
+                    }
+                }
+                Loader{
+                id:lblob01
+                sourceComponent: lblobComponent
+                x:flower.x+70
+                y:flower.y
+                z:2
+                visible: true
+                }
+                NumberAnimation {
+                    id:blobmove01
+                    target: lblob01
+                    property: "x"
+                    duration: 3000
+                    to:lblob01.x+300
+                    easing.type: Easing.InOutQuad
+                    onFinished: {
+                    blobmove01_return.start()
+                    lblob01.visible=false
+                        lblob01.x=flower.x+70
+                        blob01.visible=true
+                    }
+                }
+                Loader{
+                id:blob01
+                sourceComponent: blobComponent
+                x:flower.x+70+300
+                y:flower.y
+                z:2
+                visible: false
+                }
+                NumberAnimation {
+                    id:blobmove01_return
+                    target: blob01
+                    property: "x"
+                    duration: 3000
+                    to:blob01.x-300
+                    easing.type: Easing.InOutQuad
+                    onFinished: {
+                    blobmove01.start()
+                        blob01.visible=false
+                        blob01.x=flower.x+70+300
+                        lblob01.visible=true
+                    }
                 }
                 Image {
                     id: path20
@@ -4181,6 +5815,50 @@ Item{
                 sourceComponent: lightComponent
                 x:path25.x+300
                 y:path25.y-400
+                }
+                Loader{
+                id:loctopus02
+                sourceComponent: loctopusComponent
+                x:path25.x+80
+                y:path25.y-40
+                z:2
+                visible: true
+                }
+                NumberAnimation {
+                    id:octopusmove02
+                    target: loctopus02
+                    property: "x"
+                    duration: 3500
+                    to:loctopus02.x+400
+                    easing.type: Easing.InOutQuad
+                    onFinished: {
+                    octopusmove02_return.start()
+                    loctopus02.visible=false
+                        loctopus02.x=path25.x+80
+                        octopus02.visible=true
+                    }
+                }
+                Loader{
+                id:octopus02
+                sourceComponent: octopusComponent
+                x:path25.x+80+400
+                y:path25.y-40
+                z:2
+                visible: false
+                }
+                NumberAnimation {
+                    id:octopusmove02_return
+                    target: octopus02
+                    property: "x"
+                    duration: 3500
+                    to:octopus02.x-400
+                    easing.type: Easing.InOutQuad
+                    onFinished: {
+                    octopusmove02.start()
+                        octopus02.visible=false
+                        octopus02.x=path25.x+80+400
+                        loctopus02.visible=true
+                    }
                 }
                 Image {
                     id: path26
@@ -4354,6 +6032,17 @@ Item{
                     x:path08.x+150
                     y:path09.y-170
                 }
+                /*House{
+                id:house_G
+                x:background3.x+house.x
+                y:house.y
+                width: house.width
+                height: house.height
+                onContact: {
+                _player4.x=5600
+                _player4.y=400
+                }
+                }*/
                 Image {
                     id: lighttree
                     source: "../assets/part4/Obj_acc6.img.folkvillige.moon1.18.0.png"
@@ -4566,6 +6255,182 @@ Item{
                     y:path29.y+90
                     z:1
                     }
+                Loader{
+                id:loctopus03
+                sourceComponent: loctopusComponent
+                x:path31.x+80
+                y:path31.y-40
+                z:2
+                visible: true
+                }
+                NumberAnimation {
+                    id:octopusmove03
+                    target: loctopus03
+                    property: "x"
+                    duration: 4000
+                    to:loctopus03.x+600
+                    easing.type: Easing.InOutQuad
+                    onFinished: {
+                    octopusmove03_return.start()
+                    loctopus03.visible=false
+                        loctopus03.x=path31.x+80
+                        octopus03.visible=true
+                    }
+                }
+                Loader{
+                id:octopus03
+                sourceComponent: octopusComponent
+                x:path31.x+80+600
+                y:path31.y-40
+                z:2
+                visible: false
+                }
+                NumberAnimation {
+                    id:octopusmove03_return
+                    target: octopus03
+                    property: "x"
+                    duration: 4000
+                    to:octopus03.x-600
+                    easing.type: Easing.InOutQuad
+                    onFinished: {
+                    octopusmove03.start()
+                        octopus03.visible=false
+                        octopus03.x=path31.x+80+600
+                        loctopus03.visible=true
+                    }
+                }
+                Loader{
+                id:lblob02
+                sourceComponent: lblobComponent
+                x:path31.x+300
+                y:path31.y-50
+                z:2
+                visible: true
+                }
+                NumberAnimation {
+                    id:blobmove02
+                    target: lblob02
+                    property: "x"
+                    duration: 3500
+                    to:lblob02.x+600
+                    easing.type: Easing.InOutQuad
+                    onFinished: {
+                    blobmove02_return.start()
+                    lblob02.visible=false
+                        lblob02.x=path31.x+300
+                        blob02.visible=true
+                    }
+                }
+                Loader{
+                id:blob02
+                sourceComponent: blobComponent
+                x:path31.x+300+600
+                y:path31.y-50
+                z:2
+                visible: false
+                }
+                NumberAnimation {
+                    id:blobmove02_return
+                    target: blob02
+                    property: "x"
+                    duration: 3500
+                    to:blob02.x-600
+                    easing.type: Easing.InOutQuad
+                    onFinished: {
+                    blobmove02.start()
+                        blob02.visible=false
+                        blob02.x=path31.x+300+600
+                        lblob02.visible=true
+                    }
+                }
+                Loader{
+                id:lcrab02
+                sourceComponent: lcrabComponent
+                x:path31.x+400
+                y:path31.y-30
+                z:2
+                visible: true
+                }
+                NumberAnimation {
+                    id:crabmove02
+                    target: lcrab02
+                    property: "x"
+                    duration: 3500
+                    to:lcrab02.x+700
+                    easing.type: Easing.InOutQuad
+                    onFinished: {
+                    crabmove02_return.start()
+                    lcrab02.visible=false
+                        lcrab02.x=path31.x+400
+                        crab02.visible=true
+                    }
+                }
+                Loader{
+                id:crab02
+                sourceComponent: crabComponent
+                x:path31.x+400+700
+                y:path31.y-30
+                z:2
+                visible: false
+                }
+                NumberAnimation {
+                    id:crabmove02_return
+                    target: crab02
+                    property: "x"
+                    duration: 3500
+                    to:crab02.x-700
+                    easing.type: Easing.InOutQuad
+                    onFinished: {
+                    crabmove02.start()
+                        crab02.visible=false
+                        crab02.x=path31.x+400+700
+                        lcrab02.visible=true
+                    }
+                }
+                Loader{
+                id:loctopus04
+                sourceComponent: loctopusComponent
+                x:path31.x+200
+                y:path31.y-40
+                z:2
+                visible: true
+                }
+                NumberAnimation {
+                    id:octopusmove04
+                    target: loctopus04
+                    property: "x"
+                    duration: 5000
+                    to:loctopus04.x+900
+                    easing.type: Easing.InOutQuad
+                    onFinished: {
+                    octopusmove04_return.start()
+                    loctopus04.visible=false
+                        loctopus04.x=path31.x+200
+                        octopus04.visible=true
+                    }
+                }
+                Loader{
+                id:octopus04
+                sourceComponent: octopusComponent
+                x:path31.x+200+900
+                y:path31.y-40
+                z:2
+                visible: false
+                }
+                NumberAnimation {
+                    id:octopusmove04_return
+                    target: octopus04
+                    property: "x"
+                    duration: 4000
+                    to:octopus04.x-900
+                    easing.type: Easing.InOutQuad
+                    onFinished: {
+                    octopusmove04.start()
+                        octopus04.visible=false
+                        octopus04.x=path31.x+200+900
+                        loctopus04.visible=true
+                    }
+                }
                 Image {
                     id: roadlight
                     source: "../assets/part4/Obj_acc5.img.aquarium.acc.29.0.png"
@@ -4787,6 +6652,7 @@ Item{
                     y:path32.y-160
                 }
                 Loader{
+                    id:endcaton
                 sourceComponent: preciousComponent
                 x:path39.x-100
                 y:path39.y-350
@@ -5133,40 +6999,6 @@ Item{
                     y:lan.y-5
                     z:1
                 }
-                }
-            Rectangle {
-                        id: player3
-                        width: 50
-                        height: 50
-                        color: "red"
-                        radius: 25 // 使角色为圆形
-                        y:300
-                        x:0
-                        onXChanged: {
-                            // 如果角色到达场景边缘的阈值
-                            if (x + width >scrollThreshold &&background3.x>-background3.width*4) {
-                                // 移动场景内容（背景和角色）
-                                var scrollDistance = x + width - scrollThreshold;
-                                background3.x -= scrollDistance;
-                                x=gameScene3.width*0.8-player3.width
-                            }
-                        }
-
-                        MouseArea {
-                                  id: dragArea3
-                                    anchors.fill: parent
-                                    drag.target: parent
-                                }
-                        // 使角色可以通过水平拖拽移动
-                        Drag.active: dragArea3.drag.active
-                        Drag.hotSpot.x: player3.width / 2
-                        Drag.hotSpot.y: player3.height / 2
-                        Drag.onActiveChanged: {
-                            if (!dragArea3.drag.active) {
-                                x = player3.x
-                                y = player3.y
-                            }
-                        }
                 }
         }
     }

@@ -21,6 +21,8 @@ EntityBase {
         if(otherEntity.entityType === "player") {
                                       player.contacts++
                                       _player2.contacts++
+                                      _player3.contacts++
+                                      _player4.contacts++
                                   }
       }
       fixture.onEndContact: other => {
@@ -28,6 +30,8 @@ EntityBase {
         if(otherEntity.entityType === "player") {
                                     player.contacts--
                                     _player2.contacts--
+                                    _player3.contacts--
+                                    _player4.contacts--
                                 }
       }
     }

@@ -23,8 +23,10 @@ EntityBase {
 
   BoxCollider{
       id:collider
-      height: 30
-      width: 30
+      height: 5
+      width: 10
+      //height: 30
+      //width: 30
       anchors.bottom: parent.bottom
       //anchors.left:parent.left
       anchors.horizontalCenter: parent.horizontalCenter
