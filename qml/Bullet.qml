@@ -55,7 +55,8 @@ EntityBase {
           var collidingType = otherEntity.entityType
 
           if(collidingType === "monster" ||
-                  collidingType === "birdmonster") {
+                  collidingType === "birdmonster"
+             || collidingType === "player") {
               bullet.removeEntity()
 
               return

@@ -8,6 +8,7 @@ EntityBase{
     height: 80
 
     property int moveRange: 700
+    property int health: 100
 
     MultiResolutionImage {
         source: Qt.resolvedUrl("../assets/part1/image133.png")
@@ -21,7 +22,21 @@ EntityBase{
 
                     fixture.onBeginContact: (other, contactNormal) => {
                       var otherEntity = other.getBody().target
-                      if(otherEntity.entityType === "player") {
+
+                                                var fixture = other;
+                                                var body = other.getBody();
+                                                //var otherEntity = body.target
+                                                var collidingType = otherEntity.entityType
+
+                                                if(collidingType === "bullet") {
+                                                    monster.health -= 30
+                                                    if(monster.health <= 0){
+                                                        monster.removeEntity()
+                                                    }
+
+                                                    return
+                                                }
+                      if(collidingType === "player") {
                         console.debug("contact platform begin")
                         player.contacts++
                         _player3.contacts++
@@ -30,6 +45,7 @@ EntityBase{
                         _player3.health--
                         _player4.health--
                         console.log(player.health)
+                        healthFill.width-=20
                       }
                     }
 
@@ -44,98 +60,10 @@ EntityBase{
                           _player3.health--
                           _player4.health--
                           console.log(player.health)
+                          healthFill.width-=20
                       }
                     }
                   }
-    /*SequentialAnimation on x{
-        loops: Animation.Infinite
-        PropertyAnimation{
-            from: 500
-            to: moveRange
-            duration: 3000
-            easing.type:Easing.InOutQuad
-        }
-*/
-//    function takeDamage(amount) {
-//           health -= amount;
-//           if (health <= 0) {
-//               destroy();
-//           }
-//       }
-
-    /*BoxCollider {
-        id:collider0
-        width: monster.width
-        height: monster.height
-        anchors.centerIn: parent
-
-        bodyType: Body.Static
-//        fixture.onBeginContact: (other, contactNormal) => {
-//          var fixture = other;
-//          var body = other.getBody();
-//          var otherEntity = body.target
-//          var collidingType = otherEntity.entityType
-//          if(collidingType === "bullet") {
-//              bullet.removeEntity()
-//               console.log(monster.health)
-//               monster.health -= 10
-//               if(monster.health <= 0){
-//                     monster.removeEntity()
-//                }
-//          }
-//        }
-
-        fixture.onBeginContact: (other, contactNormal) => {
-                              var otherEntity = other.getBody().target
-                              if(otherEntity.entityType === "player") {
-                                console.debug("contact platform begin")
-                                player.contacts++
-                                console.log(player.helth)
-                                healthFill.width-=20
-
-                              }
-                            }
-
-                            fixture.onEndContact: other => {
-                              var otherEntity = other.getBody().target
-                              if(otherEntity.entityType === "player") {
-                                console.debug("contact platform end")
-                                  player.contacts--
-                                  console.log(player.helth)
-                                  healthFill.width-=20
-                              }
-                            }
-    }
-    SequentialAnimation on x{
-        loops: Animation.Infinite
-        PropertyAnimation{
-            from: 500
-            to: moveRange
-            duration: 3000
-            easing.type:Easing.InOutQuad
-        }
-
-        PropertyAnimation{
-            from: moveRange
-            to: 500
-            duration: 3000
-            easing.type:Easing.InOutQuad
-        }
-        fixture.onBeginContact: (other, contactNormal) => {
-          var fixture = other;
-          var body = other.getBody();
-          var otherEntity = body.target
-          var collidingType = otherEntity.entityType
-          if(collidingType === "bullet") {
-              bullet.removeEntity()
-               console.log(monster.health)
-               monster.health -= 10
-               if(monster.health <= 0){
-                     monster.removeEntity()
-                }
-          }
-        }
-    }*/
     SequentialAnimation on x{
        loops: Animation.Infinite
         PropertyAnimation{

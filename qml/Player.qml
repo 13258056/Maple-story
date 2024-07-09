@@ -7,7 +7,7 @@ EntityBase {
   width: 85
   height: 100
 
-  property int helth: 100
+  property int health: 100
   property alias collider: collider
   property alias horizontalVelocity: collider.linearVelocity.x
 
@@ -38,6 +38,18 @@ EntityBase {
       onLinearVelocityChanged: {
         if(linearVelocity.x > 200) linearVelocity.x = 200
         if(linearVelocity.x < -200) linearVelocity.x = -200
+        }
+      fixture.onBeginContact: (other, contactNormal) => {
+        var otherEntity = other.getBody().target
+        var fixture = other;
+        var body = other.getBody();
+        //var otherEntity = body.target
+        var collidingType = otherEntity.entityType
+
+        if(collidingType === "bullet") {
+            healthFill.width -= 10
+            return
+           }
         }
     }
 
