@@ -2097,7 +2097,7 @@ Item{
                       "up":Qt.Key_K,
                       "left":Qt.Key_A,
                       "right":Qt.Key_D,
-                      //"fire":Qt.Key_Space
+                      "fire":Qt.Key_J
                   }
 
                   onInputActionPressed: (actionName, isPressed) => {
@@ -2112,6 +2112,9 @@ Item{
                     if(actionName==="right"){
                     controller.xAxis=1;
                     }
+                                            if(actionName==="fire"){
+                                                player.shoot()
+                                            }
                   }
                 }
 
@@ -2157,8 +2160,19 @@ Item{
             height: 800
             Monster{
                 id:monster
-                x:700
                 y:500
+                z:1
+            }
+            Monster{
+                id:monster2
+                y:200
+                z:1
+            }
+
+            Birdmonster{
+                id:birdmonster
+                x:bird_monster.position.x
+                y:bird_monster.position.y
                 z:1
             }
 
@@ -2341,11 +2355,11 @@ Item{
             height: 50
             width: 50
             color: "transparent"
-            Image {
-                id: birdmonsterviaal
-                anchors.fill: parent
-                source: "../assets/part1/image149.png"
-            }
+//            Image {
+//                id: birdmonsterviaal
+//                anchors.fill: parent
+//                source: "../assets/part1/image149.png"
+//            }
             x:bird_monster.position.x
             y:bird_monster.position.y
             //z:1

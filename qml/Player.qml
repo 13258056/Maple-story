@@ -64,7 +64,7 @@ EntityBase {
             if (bulletComponent) {
                 var bullet = bulletComponent.createObject(parent, {
                     "x": x + width / 2,
-                    "y": y
+                    "y": y + height / 2
                 });
                 if (bullet) {
                     bullet.shootTowards(Qt.point(x + width / 2, y - height));
@@ -75,6 +75,4 @@ EntityBase {
                 console.log("Failed to load Bullet.qml");
             }
         }
-        focus: true
-        Keys.onSpacePressed: shoot()
 }

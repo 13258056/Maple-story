@@ -41,6 +41,7 @@ EntityBase {
             x += velocity.x / 60;
 
         }
+
     BoxCollider {
         width: bullet.width
         height: bullet.height
@@ -55,6 +56,7 @@ EntityBase {
           if(collidingType === "monster" ||
                   collidingType === "birdmonster") {
               bullet.removeEntity()
+
               return
           }
        }
