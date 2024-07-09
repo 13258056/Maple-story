@@ -11,7 +11,7 @@ GameWindow {
     PhysicsWorld{
         id: physicsWorld
         gravity: Qt.point(0, 25)
-        debugDrawVisible: false
+        debugDrawVisible: flase
         z: 1000
     }
     Contents{

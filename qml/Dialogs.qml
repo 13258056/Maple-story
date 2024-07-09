@@ -8,6 +8,7 @@ Item {
     property alias attributeDialog:_attributeDialog
     property alias shopDialog:_shopDialog
     property alias endDialog:_endDialog
+    property alias overDialog:_overDialog
 
     /*退出游戏界面窗口*/
     Dialog{
@@ -149,4 +150,27 @@ Item {
             font.pointSize: 40
         }
     }
+
+    /*血条清零*/
+    Dialog{
+        id:_overDialog
+        property real offsetX: (choose.width - width) / 2
+        property real offsetY: (choose.height - height) / 2
+        x: offsetX
+        y: offsetY
+        width: 800
+        height:400
+        Text{
+            text: qsTr("游戏失败")
+            anchors.centerIn: parent
+            font.pointSize: 40
+        }
+        Text{
+            text: qsTr("请点击重新游戏按钮重新开始游戏")
+            y:300
+            x:200
+            font.pointSize: 20
+        }
+    }
+
 }

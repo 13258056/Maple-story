@@ -20,6 +20,7 @@ Item {
     property int scrollThreshold:900
     property int scrollThreshold1:300//触发滚动阈值
     property alias background0:background0
+    property alias healthFill:healthFill
     /*初始或结束点的树洞动画*/
     property var images: [
         "../assets/part2/Obj_acc2.img.shineWood.gate.0.0.png",
@@ -2645,6 +2646,7 @@ Item{
                                     _page1.visible=false
                                     _page2.visible=false
                                     _page3.visible=false
+                                    healthFill.width=200
                                     backgroundMusic.source=Qt.resolvedUrl("../assets/music/Bgm01.img.BadGuys.mp3")
                                     backgroundMusic.play()
                                 }
@@ -2653,6 +2655,7 @@ Item{
                                     _page0.visible=false
                                     _page2.visible=false
                                     _page3.visible=false
+                                    healthFill.width=200
                                     backgroundMusic.source=Qt.resolvedUrl("../assets/music/Bgm01.img.HighlandStar.mp3")
                                     backgroundMusic.play()
                                 }
@@ -2661,6 +2664,7 @@ Item{
                                     _page1.visible=false
                                     _page0.visible=false
                                     _page3.visible=false
+                                    healthFill.width=200
                                     backgroundMusic.source=Qt.resolvedUrl("../assets/music/Bgm00.img.SleepyWood.mp3")
                                     backgroundMusic.play()
                                 }
@@ -2669,6 +2673,7 @@ Item{
                                     _page1.visible=false
                                     _page2.visible=false
                                     _page0.visible=false
+                                    healthFill.width=200
                                     backgroundMusic.source=Qt.resolvedUrl("../assets/music/Bgm01.img.MoonlightShadow.mp3")
                                     backgroundMusic.play()
                                 }
@@ -2718,7 +2723,7 @@ Item{
                       "up":Qt.Key_K,
                       "left":Qt.Key_A,
                       "right":Qt.Key_D,
-                      "fire":Qt.Key_J
+                      //"fire":Qt.Key_Space
                   }
 
                   onInputActionPressed: (actionName, isPressed) => {
@@ -2763,6 +2768,7 @@ Item{
             /*将当前页面关卡重置*/
                 player.x=66
                 player.y=300
+                healthFill.width=200
             }
         }
 
@@ -2797,6 +2803,7 @@ Item{
                 onContact: {
                   player.x = 60
                   player.y = 300
+                  healthFill.width-=20
                 }
                 Rectangle {
                   anchors.fill: parent
@@ -2993,6 +3000,7 @@ Item{
                 _player2.y = 300
                   background1.x=0
                   background1.y=0
+                healthFill.width=200
             }
         }
 
@@ -3034,6 +3042,7 @@ Item{
                   _player2.y = 300
                     background1.x=0
                     background1.y=0
+                    healthFill.width-=20
                 }
                 Rectangle {
                   anchors.fill: parent
@@ -3229,6 +3238,7 @@ Item{
                 _player3.y = 300
                   background2.x=0
                   background2.y=0
+                healthFill.width=200
             }
         }
         Rectangle{
@@ -3272,8 +3282,9 @@ Item{
                 onContact: {
                   _player3.x = 60
                   _player3.y = 300
-                    background2.x=0
-                    background2.y=0
+                   background2.x=0
+                   background2.y=0
+                   healthFill.width-=20
                 }
                 Rectangle {
                   anchors.fill: parent
@@ -4719,7 +4730,7 @@ Item{
                 _player4.y = 300
                   background3.x=0
                   background3.y=0
-                jellyfloat.start()
+                healthFill.width=200
             }
         }
         Rectangle{
@@ -4767,6 +4778,7 @@ Item{
                   _player4.y = 300
                     background3.x=0
                     background3.y=0
+                   healthFill.width-=20
                 }
                 Rectangle {
                   anchors.fill: parent
@@ -7041,13 +7053,19 @@ Item{
             y:10
             Rectangle {
                 id: healthFill
-                width: healthBar.width * 0.6 // 假设生命值为50%，所以宽度为血条宽度的一半
+                width: healthBar.width  // 假设生命值为50%，所以宽度为血条宽度的一半
                 height: healthBar.height
                 radius: 10
                 color: "green"
                 anchors.left: healthBar.left
                 anchors.top: healthBar.top
+                onWidthChanged: {
+                    if(width<=0){
+                        dialogs.overDialog.open()
+                    }
+                }
             }
+
         }
 
         /*蓝条*/
@@ -7079,7 +7097,7 @@ Item{
             y:healthBar.y+healthBar.height+20
             Rectangle {
                 id: magicFill
-                width: magicBar.width * 0.4 // 假设生命值为50%，所以宽度为血条宽度的一半
+                width: magicBar.width  // 假设生命值为50%，所以宽度为血条宽度的一半
                 height: magicBar.height
                 radius: 10
                 color: "blue"

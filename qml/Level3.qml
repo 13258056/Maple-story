@@ -23,6 +23,16 @@ Ground{x:road26_G.x-300;y:road20.y+10;width:road20.width;height:20}
 Ground{id:road26_G;x:background2.x+road26.x;y:road26.y;width: road26.width;height: road26.height}
 Ground{id:road28_G;x:road26_G.x+320;y:road28.y+20;width: road28.width+400;height: 20}
 Ground{x:road28_G.x;y:road2801.y+20;width: road2801.width+450;height: 20}
+/*Monster{x:background2.x+rabbit01.x;y:rabbit01.y;width: rabbit01.width;height: rabbit01.height}
+Monster{x:background2.x+lrabbit01.x;y:lrabbit01.y;width: lrabbit01.width;height: lrabbit01.height}
+Monster{x:background2.x+mao01.x;y:mao01.y;width: mao01.width;height: mao01.height}
+Monster{x:background2.x+lmao01.x;y:lmao01.y;width: lmao01.width;height: lmao01.height}
+Monster{x:background2.x+mao02.x;y:mao02.y;width: mao02.width;height: mao02.height}
+Monster{x:background2.x+lmao02.x;y:lmao02.y;width: lmao02.width;height: lmao02.height}
+Monster{x:background2.x+mao03.x;y:mao03.y;width: mao03.width;height: mao03.height}
+Monster{x:background2.x+lmao03.x;y:lmao03.y;width: lmao03.width;height: lmao03.height}
+Monster{x:background2.x+unq01.x;y:unq01.y;width: unq01.width;height: unq01.height}
+Monster{x:background2.x+lunq01.x;y:lunq01.y;width: lunq01.width;height: lunq01.height}*/
 End{
 x:road28_G.x+450;y:goddess.y+20;width: goddess.width;height: goddess.height
 }

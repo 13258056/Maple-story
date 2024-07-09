@@ -7,12 +7,11 @@ EntityBase{
     width: 85
     height: 100
 
-    property int moveRange: 700
+    //property int moveRange: 700
+    property int health: 100
 
     MultiResolutionImage {
-        source: monster.x < moveRange
-                ? Qt.resolvedUrl("../assets/part1/image133.png")
-                : Qt.resolvedUrl("../assets/part1/image133_turn.png")
+        source: Qt.resolvedUrl("../assets/part1/image133.png")
         width: parent.width
         height:parent.height
     }
@@ -26,8 +25,12 @@ EntityBase{
                       if(otherEntity.entityType === "player") {
                         console.debug("contact platform begin")
                         player.contacts++
-                        player.helth--
-                        console.log(player.helth)
+                        _player3.contacts++
+                        _player4.contacts++
+                        player.health--
+                        _player3.health--
+                        _player4.health--
+                        console.log(player.health)
                       }
                     }
 
@@ -36,8 +39,12 @@ EntityBase{
                       if(otherEntity.entityType === "player") {
                         console.debug("contact platform end")
                           player.contacts--
-                          player.helth--
-                          console.log(player.helth)
+                          _player3.contacts--
+                          _player4.contacts--
+                          player.health--
+                          _player3.health--
+                          _player4.health--
+                          console.log(player.health)
                       }
                     }
                   }
@@ -50,11 +57,49 @@ EntityBase{
             easing.type:Easing.InOutQuad
         }
 
-        PropertyAnimation{
-            from: moveRange
-            to: 500
-            duration: 3000
-            easing.type:Easing.InOutQuad
+//    function takeDamage(amount) {
+//           health -= amount;
+//           if (health <= 0) {
+//               destroy();
+//           }
+//       }
+
+    /*BoxCollider {
+        id:collider0
+        width: monster.width
+        height: monster.height
+        anchors.centerIn: parent
+
+        fixture.onBeginContact: (other, contactNormal) => {
+          var fixture = other;
+          var body = other.getBody();
+          var otherEntity = body.target
+          var collidingType = otherEntity.entityType
+          if(collidingType === "bullet") {
+              bullet.removeEntity()
+               console.log(monster.health)
+               monster.health -= 10
+               if(monster.health <= 0){
+                     monster.removeEntity()
+                }
+          }
         }
+    }*/
+//    SequentialAnimation on x{
+//        loops: Animation.Infinite
+//        PropertyAnimation{
+//            from: 500
+//            to: moveRange
+//            duration: 3000
+//            easing.type:Easing.InOutQuad
+//        }
+
+//        PropertyAnimation{
+//            from: moveRange
+//            to: 500
+//            duration: 3000
+//            easing.type:Easing.InOutQuad
+//        }
+//    }
     }
 }

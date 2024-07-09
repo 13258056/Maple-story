@@ -25,6 +25,8 @@ EntityBase {
       id:collider
       height: 5
       width: 10
+      //height: 30
+      //width: 30
       anchors.bottom: parent.bottom
       //anchors.left:parent.left
       anchors.horizontalCenter: parent.horizontalCenter
@@ -59,4 +61,22 @@ EntityBase {
             collider.linearVelocity.y = -400
         }
     }
+    function shoot() {
+            var bulletComponent = Qt.createComponent("Bullet.qml");
+            if (bulletComponent) {
+                var bullet = bulletComponent.createObject(parent, {
+                    "x": x + width / 2,
+                    "y": y
+                });
+                if (bullet) {
+                    bullet.shootTowards(Qt.point(x + width / 2, y - height));
+                } else {
+                    console.log("Failed to create bullet");
+                }
+            } else {
+                console.log("Failed to load Bullet.qml");
+            }
+        }
+        focus: true
+        Keys.onSpacePressed: shoot()
 }
